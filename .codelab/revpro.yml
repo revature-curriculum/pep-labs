@@ -1,0 +1,17 @@
+format: revpro-poly
+lab_pattern: "**/**"
+start: Intro_To_Java/Start
+current_lab: 
+labs:
+  - 
+    path: Collections/Lists
+    name: collections-lists
+    status: not-started
+    progress: 
+    current_branch: 
+  - 
+    path: Collections/Map
+    name: collections-map
+    status: not-started
+    current_branch: 
+  
