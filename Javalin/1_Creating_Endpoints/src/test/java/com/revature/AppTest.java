@@ -22,9 +22,9 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
-        String expectedResult = "Hello World!";
+        String expectedResult = "Hello World";
 
-        String actualResult = CommandLine.executeCommandPrompt("curl http://localhost:9000/");
+        String actualResult = CommandLine.executeCommandPrompt("curl http://localhost:9000/hello");
 
 
         if(actualResult.isEmpty()){
