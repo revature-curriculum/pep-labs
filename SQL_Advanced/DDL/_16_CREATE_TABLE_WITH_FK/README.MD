@@ -98,7 +98,11 @@ linked to specific users. It should have three columns: id, post, and user_fk.
 The user_fk column should be a foreign key that references the id column in the 
 users table. The table will look like this:
 
+<table><tr><th> posts </th></tr><tr><td>
+
 | id | post | user_fk |
 | -- | ---- | ------- |
 | ... | ... | ... |
 
+</td></tr>
+</table>
