@@ -1,9 +1,9 @@
 
 
 import Util.ConnectionUtil;
+import Util.FileUtil;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -53,7 +53,7 @@ public class AlterATable {
         /**
          * problem1: Use the ALTER keyword to add a "lastname" column to the "users" table.
          */
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem1.sql");
 
 
 
@@ -73,8 +73,7 @@ public class AlterATable {
          *  problem2: Use the ALTER keyword to remove the "firstname" column from the "users" table.
          */
         //Write SQL statement here
-        String sql = "Write SQL statement here...";
-
+        String sql = FileUtil.parseSQLFile("problem2.sql");
         try {
             Connection connection = ConnectionUtil.getConnection();
             Statement s = connection.createStatement();
