@@ -1,5 +1,6 @@
 
 import Util.ConnectionUtil;
+import Util.FileUtil;
 import kotlin.Pair;
 
 import java.sql.*;
@@ -83,7 +84,7 @@ public class InnerJoinActivity {
          * Note: There should not be a wild card (*) in your statement.
          * Hint: You will need to specify the column in your statement by writing table.column.
          */
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem1.sql");
 
 
 
@@ -112,7 +113,7 @@ public class InnerJoinActivity {
          * Hint: Use the IN keyword in your WHERE clause.
          */
 
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem2.sql");
 
 
         //The following code will execute your statement on the database
