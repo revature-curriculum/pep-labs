@@ -38,6 +38,7 @@ so they look like this:
 | 1 | Let It Be | 1 |
 | 2 | Imagine | 1 |
 | 3 | Kashmir | 3 |
+
 Note how the artist_fk column's values link the songs with the artists in the other table.
 With this column and a foreign key constraint in place the tables are linked. If we tried
 to add a new song to the songs table that did not first have a matching artist in the 
