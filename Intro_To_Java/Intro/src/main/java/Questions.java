@@ -1,6 +1,7 @@
 
 /*
 * Lets see if we can answer questions about the 3 new entities that we have learned about...
+* Please review the SuperHero.java class and answer the questions below.
 */
 public class Questions {
 
