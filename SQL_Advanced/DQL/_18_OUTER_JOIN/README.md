@@ -106,10 +106,10 @@ Consider the three tables below for the following problems:
 Problem 1: Use a LEFT OUTER JOIN to combine the faculty and students tables using the class column as the join on 
 column.   
 
-Hint: You should start with "SELECT * FROM faculty"
+Hint: You should start with `SELECT * FROM faculty`
 
 ## Problem 2
 Problem 2: Use a RIGHT OUTER JOIN to combine the faculty and textbooks tables using the class column as the join on 
 column.  
 
-Hint: You should start with "SELECT * FROM faculty" 
+Hint: You should start with `SELECT * FROM faculty`
