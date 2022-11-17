@@ -1,9 +1,9 @@
 
 
 import Util.ConnectionUtil;
+import Util.FileUtil;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -85,7 +85,7 @@ public class CreateTableWithForeignKey {
          *
          * Note: The post column will hold the content of the post and the user_fk column will be a foreign key to the users table's id.
          */
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem1.sql");
 
         try {
             Connection connection = ConnectionUtil.getConnection();

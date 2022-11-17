@@ -1,6 +1,6 @@
 
 import Util.ConnectionUtil;
-import kotlin.Pair;
+import Util.FileUtil;
 
 import java.sql.*;
 import java.util.HashSet;
@@ -89,7 +89,7 @@ public class OuterJoinActivity {
          * Hint: You should start with "SELECT * FROM faculty"
          */
 
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem1.sql");
 
 
 
@@ -117,7 +117,7 @@ public class OuterJoinActivity {
          * Hint: You should start with "SELECT * FROM faculty"
          */
 
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem2.sql");
 
 
 
