@@ -9,7 +9,8 @@ The most common way this is done is to match the foreign key column to the prima
 key in another table.
 
 For example we have two tables, artists and songs.  
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+| id | artist |
+| ---- | -------- |
+| 1 | The Beatles |
+| 2 | The Eagles |
+| 3 | Led Zeppelin |
