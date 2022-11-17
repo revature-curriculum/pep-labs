@@ -1,3 +1,4 @@
+# Outer Join
 We looked previously at INNER JOIN where we will only see data from the tables where there is a match between the
 columns we join ON. OUTER JOIN will return more results, including null data where the tables did not match based
 on the columns used for joining. There are three types of OUTER JOIN: FULL, LEFT, and RIGHT.
