@@ -1,3 +1,4 @@
+# Outer Join
 We looked previously at INNER JOIN where we will only see data from the tables where there is a match between the
 columns we join ON. OUTER JOIN will return more results, including null data where the tables did not match based
 on the columns used for joining. There are three types of OUTER JOIN: FULL, LEFT, and RIGHT.
@@ -60,11 +61,11 @@ The output of the join would create the following result set:
 </td></tr></table>
 
 ## Additional Resources
- -[Venn Diagram of Joins](https://stackoverflow.com/questions/13997365/sql-joins-as-venn-diagram)
- -[SQL Left Join](https://www.w3schools.com/sql/sql_join_left.asp)
- -[SQL Right Join](https://www.w3schools.com/sql/sql_join_right.asp)
+ - [Venn Diagram of Joins](https://stackoverflow.com/questions/13997365/sql-joins-as-venn-diagram)
+ - [SQL Left Join](https://www.w3schools.com/sql/sql_join_left.asp)
+ - [SQL Right Join](https://www.w3schools.com/sql/sql_join_right.asp)
 
-#Lab
+# Lab
 Consider the three tables below for the following problems:
 
 <table>
@@ -105,10 +106,10 @@ Consider the three tables below for the following problems:
 Problem 1: Use a LEFT OUTER JOIN to combine the faculty and students tables using the class column as the join on 
 column.   
 
-Hint: You should start with "SELECT * FROM faculty"
+Hint: You should start with `SELECT * FROM faculty`
 
 ## Problem 2
 Problem 2: Use a RIGHT OUTER JOIN to combine the faculty and textbooks tables using the class column as the join on 
 column.  
 
-Hint: You should start with "SELECT * FROM faculty" 
+Hint: You should start with `SELECT * FROM faculty`

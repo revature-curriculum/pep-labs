@@ -67,17 +67,12 @@ are no students taking biology.)
 
 ### Problem 1
 Problem 1: Write a query that will return the id, and name of each of Mr. McCarthy's students.  
-
 Note: There should not be a wild card (*) in your statement.  
-
 Hint: You will need to specify the column in your statement by writing table.column.  
 
 
 ### Problem 2
 Problem 2: Write a query that will return all information about science classes: Physics and Biology.  
-
 Note: You should use the wild card (*) for the columns to select.  
-
 Hint: The "class" column is common among all three tables.  
-
 Hint: Use the IN keyword in your WHERE clause.  
