@@ -23,9 +23,9 @@ Let's say we want to create a "users" table that has the following columns:
 The SQL syntax would be as follows:
 ```roomsql
 CREATE TABLE users (
-id SERIAL PRIMARY KEY,
-username varchar(100),
-password varchar(100)
+     id SERIAL PRIMARY KEY,
+     username varchar(100),
+     password varchar(100)
 );
 ```
 
@@ -46,4 +46,4 @@ songs table
 |2      |'Hotel California' |'Eagles'               | 
 |3      |'Kashmir'          |'Led Zeppelin'         |
 
-#### Problem 1: Create a new table in the "problem1.sql" file called "songs" with 2 columns "title" and "artist" (shown above).
+#### Problem 1: Create a table called "songs" that has 3 columns listed above. Column id should be the `PRIMARY KEY`
