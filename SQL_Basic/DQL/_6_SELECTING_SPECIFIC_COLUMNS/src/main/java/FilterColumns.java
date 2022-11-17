@@ -1,4 +1,5 @@
 import Util.ConnectionUtil;
+import Util.FileUtil;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -38,7 +39,7 @@ public class FilterColumns {
         /**
          * problem 1: Write the SQL statement to return only the 'firstname' column from the users table
          */
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem1.sql");
 
         List<User> users = new ArrayList<>();
         try {
@@ -61,7 +62,7 @@ public class FilterColumns {
          * problem 2: Write the SQL statement to return only the 'lastname' column from the users table
          */
         //Write SQL statement here
-        String sql = "CHANGE ME";
+        String sql = FileUtil.parseSQLFile("problem2.sql");
 
         List<User> users = new ArrayList<>();
         try {
@@ -86,7 +87,7 @@ public class FilterColumns {
          * problem 3: Write the SQL statement to return the 'firstname' AND 'lastname' column from the users table
          */
         //Write SQL statement here
-        String sql = "CHANGE ME";
+        String sql = FileUtil.parseSQLFile("problem3.sql");
 
         List<User> users = new ArrayList<>();
         try {
