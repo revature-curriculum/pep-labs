@@ -65,7 +65,7 @@ The output of the join would create the following result set:
  - [SQL Left Join](https://www.w3schools.com/sql/sql_join_left.asp)
  - [SQL Right Join](https://www.w3schools.com/sql/sql_join_right.asp)
 
-#Lab
+# Lab
 Consider the three tables below for the following problems:
 
 <table>
