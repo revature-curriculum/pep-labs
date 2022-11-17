@@ -35,7 +35,9 @@ These two tables could be related. 'Let It Be' and 'Imagine' are both by The Bee
 will match the primary key in the other table. Let's add this column to the songs table 
 so they look like this:
 
-
+<table>
+<tr><th> artists </th><th> songs </th></tr>
+<tr><td>
 
 | id | artist       |
 | ---- | --------     |
@@ -43,11 +45,15 @@ so they look like this:
 | 2 | The Eagles   |
 | 3 | Led Zeppelin |
 
+</td><td>
+
 | id | song | artist_fk |
 | ---- | ------- | ---- |
 | 1 | Let It Be | 1 |
 | 2 | Imagine | 1 |
 | 3 | Kashmir | 3 |
+
+</td></tr> </table>
 
 Note how the artist_fk column's values link the songs with the artists in the other table.
 With this column and a foreign key constraint in place the tables are linked. If we tried
