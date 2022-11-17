@@ -89,8 +89,7 @@ For the following problems, consider the users table below:
 |4      |'Brandon'             |'Smith'                 |
 |5      |'Adam'                |'Jones'                 |
 
-</td></tr>
-</table>
+</td></tr></table>
 
 ### Problem 1
 Create a new table in the file problem1.sql. This table will contain posts

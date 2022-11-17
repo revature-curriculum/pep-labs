@@ -1,5 +1,3 @@
-
-
 import Util.ConnectionUtil;
 import org.junit.After;
 import org.junit.Assert;
@@ -39,13 +37,9 @@ public class CreateTableWithForeignKeyTest {
 
         try {
             Connection connection = ConnectionUtil.getConnection();
-
             String sql = "INSERT INTO posts (post, user_fk) VALUES ('test post123', 1)";
-
             PreparedStatement ps = connection.prepareStatement(sql);
-
             ps.executeUpdate();
-
         } catch (SQLException e) {
             afterEach();
             System.out.println("problem1: " + e.getMessage() + '\n');
