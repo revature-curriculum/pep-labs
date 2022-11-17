@@ -1,5 +1,6 @@
 
 import Util.ConnectionUtil;
+import Util.FileUtil;
 
 import java.sql.*;
 import java.util.HashSet;
@@ -62,7 +63,7 @@ public class FilteringLogicActivity {
          * Problem 1: Write a statement that will query the above table for all employees named 'Steve' who earn
          * more than $75,000.
          */
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem1.sql");
 
 
         //The following code will execute your statement on the database
@@ -87,7 +88,7 @@ public class FilteringLogicActivity {
          * Problem 2: Write a statement that will query the above table for all employees who earn more than $100,000 or less
          * than $50,000
          */
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem2.sql");
 
 
         //The following code will execute your statement on the database
@@ -113,7 +114,7 @@ public class FilteringLogicActivity {
          * named 'Steve'
          * Hint: Look up the NOT and IN logical operators.
          */
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem3.sql");
 
 
         //The following code will execute your statement on the database
