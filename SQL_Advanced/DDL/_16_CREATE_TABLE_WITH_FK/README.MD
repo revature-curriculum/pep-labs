@@ -79,9 +79,8 @@ artist_fk holds INT type data and REFERENCES the id column of the artists table.
 
 # Lab
 For the following problems, consider the users table below:
-<table>
-<tr><th> users </th></tr>
-<tr><td>
+<table><tr><th> users </th></tr><tr><td>
+
 | id | firstname | lastname |
 | ----- | -------------------- | ---------------------- |
 |1      |'Steve'               |'Garcia'                |
@@ -90,10 +89,16 @@ For the following problems, consider the users table below:
 |4      |'Brandon'             |'Smith'                 |
 |5      |'Adam'                |'Jones'                 |
 
-</td></tr> </table>
+</td></tr>
+</table>
 
 ### Problem 1
+Create a new table in the file problem1.sql. This table will contain posts
+linked to specific users. It should have three columns: id, post, and user_fk.
+The user_fk column should be a foreign key that references the id column in the 
+users table. The table will look like this:
 
+| id | post | user_fk |
+| -- | ---- | ------- |
+| ... | ... | ... |
 
-
-### Problem 2
