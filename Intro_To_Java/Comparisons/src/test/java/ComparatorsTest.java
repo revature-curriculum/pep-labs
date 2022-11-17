@@ -175,4 +175,31 @@ public class ComparatorsTest {
         boolean actual = c.lessThanOrEqualTo(a, b);
         Assert.assertEquals(expected, actual);
     }
+
+
+
+    /**
+     * If notEqualTo is passed two numbers where a == b, then notEqualTo
+     * should return false.
+     */
+    @Test
+    public void notEqualToTest1(){
+        int a = 1;
+        int b = 1;
+        boolean expected = false;
+        boolean actual = c.notEqualTo(a, b);
+        Assert.assertEquals(expected, actual);
+    }
+    /**
+     * If notEqualTo is passed two numbers where a != b, then notEqualTo
+     * should return true.
+     */
+    @Test
+    public void notEqualToTest2(){
+        int a = 1;
+        int b = 2;
+        boolean expected = true;
+        boolean actual = c.notEqualTo(a, b);
+        Assert.assertEquals(expected, actual);
+    }
 }
