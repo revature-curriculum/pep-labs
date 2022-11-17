@@ -1,9 +1,9 @@
 
 
 import Util.ConnectionUtil;
+import Util.FileUtil;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -36,7 +36,7 @@ public class Truncate {
          * problem1: remove all the records from the table "users"
          */
 
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem1.sql");
 
 
 
@@ -62,7 +62,7 @@ public class Truncate {
         /**
          * problem2: remove all the records from the table "songs"
          */
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem2.sql");
 
 
 

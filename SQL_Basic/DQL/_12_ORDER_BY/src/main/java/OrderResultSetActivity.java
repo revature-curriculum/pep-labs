@@ -1,5 +1,6 @@
 
 import Util.ConnectionUtil;
+import Util.FileUtil;
 
 import java.sql.*;
 import java.util.LinkedList;
@@ -46,8 +47,7 @@ public class OrderResultSetActivity {
          * Problem 1: Write a statement below to query the database for all characters. Make sure the results are in
          * ascending order by last name, and first name as a tie-breaker.
          */
-        //String sql = "Write SQL statement here...";
-        String sql = "select * from characters order by last_name, first_name";
+        String sql = FileUtil.parseSQLFile("problem1.sql");
 
 
 
@@ -74,8 +74,7 @@ public class OrderResultSetActivity {
          * Problem 2: Write a statement below to query the database for all characters. This time reverse the order
          * so that the characters are in reverse alphabetical order by last name, then first name.
          */
-        //String sql = "Write SQL statement here...";
-        String sql = "select * from characters order by last_name DESC, first_name DESC";
+        String sql = FileUtil.parseSQLFile("problem2.sql");
 
 
         List<Character> resultList = new LinkedList<>();
@@ -89,7 +88,7 @@ public class OrderResultSetActivity {
             }
 
         } catch (SQLException e) {
-            System.out.println("problem1: " + e.getMessage() + '\n');
+            System.out.println("problem2: " + e.getMessage() + '\n');
         }
 
         return resultList;

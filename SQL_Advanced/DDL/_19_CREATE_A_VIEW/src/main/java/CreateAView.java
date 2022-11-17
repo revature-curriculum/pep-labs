@@ -1,9 +1,9 @@
 
 
 import Util.ConnectionUtil;
+import Util.FileUtil;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -70,9 +70,7 @@ public class CreateAView {
          * problem1: Create a view called "firstname_lastname" from the users table that only has the firstname and lastname columns.
          * NOTE: This table should NOT have the id and age.
          */
-        String sql = "Write SQL statement here...";
-
-
+        String sql = FileUtil.parseSQLFile("problem1.sql");
 
         try {
             Connection connection = ConnectionUtil.getConnection();

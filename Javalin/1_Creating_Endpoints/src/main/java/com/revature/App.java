@@ -5,18 +5,13 @@ import io.javalin.Javalin;
 
 public class App 
 {
-    /**
-     * Lab: Create an HTTP GET endpoint at the url: http://localhost:9000/hello that will return the string "Hello World" in the response.
-     * 
-     * NOTE: If this is your first time using javalin, refer to the JavalinLab.MD for assistance
-     * NOTE 2: Before running the test runner, make sure you run the main method first so that the webserver is running.
+    /*
+     * Please refer to the JavalinSingleton class for this lab.
      */
     public static void main( String[] args )
     {
-        Javalin app = Javalin.create().start(9000);
+        Javalin app = JavalinSingleton.getSingleton();
 
-        app.get("/hello", ctx -> {
-            ctx.result("Hello World");
-        });
+        app.start(9000);
     }
 }

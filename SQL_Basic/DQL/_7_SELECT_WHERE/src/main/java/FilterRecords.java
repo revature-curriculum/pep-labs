@@ -1,6 +1,7 @@
 
 
 import Util.ConnectionUtil;
+import Util.FileUtil;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -64,7 +65,7 @@ public class FilterRecords {
         /**
          * Problem 1: Given the above employees table, query all the records from the table that have the lastname "Smith"
          */
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem1.sql");
 
 
         List<User> users = new ArrayList<>();
@@ -88,7 +89,7 @@ public class FilterRecords {
         /**
          * Problem 2: Query the employees table for all records with a salary greater than $75,000
          */
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem2.sql");
 
 
         List<User> users = new ArrayList<>();
@@ -112,9 +113,9 @@ public class FilterRecords {
     public List<User> problem3(){
         /**
          * Problem 3: Query the employees table for all records with a first name that starts with 'A'
-         * HINT: Recall the LIKE keyword and the % wild card.
+         * HINT: Research the `LIKE` keyword.
          */
-        String sql = "Write SQL statement here...";
+         String sql = FileUtil.parseSQLFile("problem1.sql");
 
 
 

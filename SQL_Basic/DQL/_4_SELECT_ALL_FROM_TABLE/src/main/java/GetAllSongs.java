@@ -1,5 +1,6 @@
 
 import Util.ConnectionUtil;
+import Util.FileUtil;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class GetAllSongs {
         /**
          * Assignment: write the SQL statement below to retrieve all the rows and columns from the table "songs"
          */
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem1.sql");
 
 
         List<Song> songs = new ArrayList<>();

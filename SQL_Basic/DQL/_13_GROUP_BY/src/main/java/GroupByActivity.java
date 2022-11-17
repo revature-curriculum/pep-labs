@@ -1,5 +1,6 @@
 
 import Util.ConnectionUtil;
+import Util.FileUtil;
 
 import java.sql.*;
 import java.util.HashMap;
@@ -56,7 +57,7 @@ public class GroupByActivity {
          * HINT: You should avoid using the wild card (*) in your statement. All projected columns must either be used
          * in the GROUP BY clause or an aggregate function.
          */
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem1.sql");
 
 
 
@@ -85,7 +86,7 @@ public class GroupByActivity {
          * HINT: You cannot GROUP BY the result of an aggregate function, but you can ORDER BY it.
          */
 
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem2.sql");
 
 
 

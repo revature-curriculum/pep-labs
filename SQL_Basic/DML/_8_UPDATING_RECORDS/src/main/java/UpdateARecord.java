@@ -1,8 +1,8 @@
 
 import Util.ConnectionUtil;
+import Util.FileUtil;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -38,7 +38,7 @@ public class UpdateARecord {
         /**
          * Problem 1: Update Alexa's last name to be 'Rush' in the users table.
          */
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem1.sql");
 
         try {
             Connection connection = ConnectionUtil.getConnection();
@@ -57,7 +57,7 @@ public class UpdateARecord {
          * Problem 2: Update id 4 to have the firstname 'Chad' and the lastname 'Irving'
          */
         //Write SQL statement here
-        String sql = "CHANGE ME";
+        String sql = FileUtil.parseSQLFile("problem2.sql");
 
         try {
             Connection connection = ConnectionUtil.getConnection();
@@ -77,7 +77,7 @@ public class UpdateARecord {
          * HINT: How would you filter id 1 OR 3?
          */
         //Write SQL statement here
-        String sql = "CHANGE ME";
+        String sql = FileUtil.parseSQLFile("problem3.sql");
 
         try {
             Connection connection = ConnectionUtil.getConnection();
