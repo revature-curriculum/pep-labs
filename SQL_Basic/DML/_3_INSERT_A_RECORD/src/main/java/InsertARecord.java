@@ -1,8 +1,8 @@
 
 import Util.ConnectionUtil;
+import Util.FileUtil;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -37,7 +37,7 @@ public class InsertARecord {
         /**
          * Activity: Assuming the table "songs" already exists, write the sql statement that allows us to add a new record into the table "songs".
          */
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem1.sql");
 
 
         try {
