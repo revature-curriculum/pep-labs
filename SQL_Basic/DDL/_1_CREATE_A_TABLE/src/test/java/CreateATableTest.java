@@ -6,10 +6,8 @@ import org.junit.Test;
 import javax.xml.transform.Result;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 public class CreateATableTest {

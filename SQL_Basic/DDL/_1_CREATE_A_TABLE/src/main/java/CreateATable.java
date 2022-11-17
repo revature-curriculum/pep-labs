@@ -1,13 +1,11 @@
 
 import Util.ConnectionUtil;
+import Util.FileUtil;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Scanner;
 
 /**
  * SQL sublanguage: DDL (Data Definition Language)
@@ -65,7 +63,7 @@ public class CreateATable {
         /**
          * Assignment: Create a new table in our database called "songs" with 2 columns "title" and "artist".
          */
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem1.sql");
 
         try {
             Connection connection = ConnectionUtil.getConnection();
@@ -90,7 +88,7 @@ public class CreateATable {
         /**
          * Assignment: Create the same table as above however the title column should have the NOT NULL and UNIQUE constraint and the artist column should have the NOT NULL CONSTRAINT.
          */
-        String sql = "Write SQL statement here...";
+        String sql = FileUtil.parseSQLFile("problem2.sql");
 
 
         try {
