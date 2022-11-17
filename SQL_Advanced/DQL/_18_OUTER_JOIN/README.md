@@ -61,9 +61,9 @@ The output of the join would create the following result set:
 </td></tr></table>
 
 ## Additional Resources
- -[Venn Diagram of Joins](https://stackoverflow.com/questions/13997365/sql-joins-as-venn-diagram)
- -[SQL Left Join](https://www.w3schools.com/sql/sql_join_left.asp)
- -[SQL Right Join](https://www.w3schools.com/sql/sql_join_right.asp)
+ - [Venn Diagram of Joins](https://stackoverflow.com/questions/13997365/sql-joins-as-venn-diagram)
+ - [SQL Left Join](https://www.w3schools.com/sql/sql_join_left.asp)
+ - [SQL Right Join](https://www.w3schools.com/sql/sql_join_right.asp)
 
 #Lab
 Consider the three tables below for the following problems:
