@@ -73,3 +73,27 @@ CREATE TABLE songs (
 Note that this syntax isn't uniform across all flavors of SQL. The line
 `artist_fk INT REFERENCES artists(id)` adds our foreign key constraint. The column,
 artist_fk holds INT type data and REFERENCES the id column of the artists table.
+
+## Additional Reference Material
+ - [Foreign Keys](https://www.w3schools.com/sql/sql_foreignkey.asp)
+
+# Lab
+For the following problems, consider the users table below:
+<table>
+<tr><th> users </th></tr>
+<tr><td>
+| id | firstname | lastname |
+| ----- | -------------------- | ---------------------- |
+|1      |'Steve'               |'Garcia'                |
+|2      |'Alexa'               |'Smith'                 |
+|3      |'Steve'               |'Jones'                 |
+|4      |'Brandon'             |'Smith'                 |
+|5      |'Adam'                |'Jones'                 |
+
+</td></tr> </table>
+
+### Problem 1
+
+
+
+### Problem 2
