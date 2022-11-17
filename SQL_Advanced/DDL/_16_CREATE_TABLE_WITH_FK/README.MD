@@ -10,11 +10,17 @@ key in another table.
 
 For example we have two tables, artists and songs.  
 
+<table>
+<tr><th> artists </th><th> songs </th></tr>
+<tr><td>
+
 | id | artist |
 | ---- | -------- |
 | 1 | The Beatles |
 | 2 | The Eagles |
 | 3 | Led Zeppelin |
+
+</td><td>
 
 | id | song |
 | ---- | ------- |
@@ -22,15 +28,19 @@ For example we have two tables, artists and songs.
 | 2 | The Eagles |
 | 3 | Kashmir |
 
+</td></tr> </table>
+
 These two tables could be related. 'Let It Be' and 'Imagine' are both by The Beetles.
 'Kashmir' is Led Zeppelin. One of the two tables will need a foreign key column which
 will match the primary key in the other table. Let's add this column to the songs table 
 so they look like this:
 
-| id | artist |
-| ---- | -------- |
-| 1 | The Beatles |
-| 2 | The Eagles |
+
+
+| id | artist       |
+| ---- | --------     |
+| 1 | The Beatles  |
+| 2 | The Eagles   |
 | 3 | Led Zeppelin |
 
 | id | song | artist_fk |
