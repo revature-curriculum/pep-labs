@@ -3,6 +3,10 @@
  * In order to make our programs even more impressive and interactive, we need to learn how to better leverage
  * boolean expressions. This will allow our programs to follow their own logic. For this example, you should look into
  * the different operators for basic boolean expressions.
+ * 
+ * Additional Resource if needed: https://www.freejavaguide.com/boolean_operators.htm
+ * 
+ * NOTE: All of these problems can be solved with one line with boolean operators.
  */
 public class Expressions {
     /**
