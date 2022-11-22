@@ -1,6 +1,7 @@
-# Javalin Lab: Changing the Status Code in a HTTP Response
+# Javalin Lab: Changing the Status Code in an HTTP Response
 
-As we mentioned in the first javalin lab, status codes are how we tell the client machine how successful the HTTP Request was. HTTP Responses have 5 main categories of status codes:
+As we mentioned in the first Javalin lab, status codes are how we tell the client machine how successful the HTTP 
+Request was. HTTP Responses have 5 main categories of status codes:
 
 There are 5 categories of status code responses:
 - `100`: Request was informational
@@ -13,11 +14,13 @@ There are 5 categories of status code responses:
 ## Changing the status code in Javalin
 
 ```java
-app.get("/server-side-err", ctx -> {
-    ctx.status(500);
+app.get("/request-was-accepted", ctx -> {
+    ctx.status(202);
 });
 ```
 
-The only line we need to add to achieve this is `ctx.status(500);` 
-
-500 represents a server side error (as shown int the notes above)
+The only line we need to add to achieve this is `ctx.status(code);` Appropriate codes should be sent back. For instance:
+ - 500 represents a server-side error - you should look to the server for a stack trace or other debugging info
+ - 400 represents a client-side error
+   - 404 This means your request did not match any endpoint.
+   - 415 Could mean that the body has an unrecognized content type.

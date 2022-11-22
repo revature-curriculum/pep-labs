@@ -18,6 +18,11 @@ import io.javalin.Javalin;
 public class AppTest 
 {
     Javalin app = JavalinSingleton.getInstance();
+
+    /**
+     * Starts the server on port 9001, and pauses thread for 3 seconds to let it spin up.
+     * @throws InterruptedException
+     */
     @Before
     public void beforeEach() throws InterruptedException{
         app.start(9001);
@@ -25,11 +30,18 @@ public class AppTest
         Thread.sleep(3000);
     }
 
+    /**
+     * Stops the server.
+     */
     @After
     public void afterEach(){
         app.stop();
     }
 
+    /**
+     * This test will use curl to send a GET request to the Javalin server looking for the "Hello, World" response.
+     * Curl is a command that can be used in the terminal to send HTTP requests.
+     */
     @Test
     public void shouldAnswerWithTrue()
     {
