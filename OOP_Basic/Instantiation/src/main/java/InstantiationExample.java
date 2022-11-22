@@ -9,6 +9,12 @@ public class InstantiationExample {
      * It doesn't matter what type of object you use.
      * If you're not feeling creative, you can use the Object class.
      *
+     * Example:
+     *      Type reference = new Type();
+     *      return reference;
+     *
+     * Note: Null is a special type which represents the absence of an object.
+     *
      * @return any object.
      */
     public Object instantiateANewObject(){

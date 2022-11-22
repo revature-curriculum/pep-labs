@@ -15,7 +15,7 @@ public class InstantiationTest {
      * For now, let's just focus on the 'new' keyword.)
      */
     @Test
-    public void funnyTest(){
+    public void testObjectNotNull(){
         Assert.assertNotNull(i.instantiateANewObject());
     }
 }
