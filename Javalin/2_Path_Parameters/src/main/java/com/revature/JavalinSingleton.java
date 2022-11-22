@@ -9,10 +9,8 @@ public class JavalinSingleton {
      * If this is your first time working with path parameters, 
      *      please read the PathParameters.MD file for assistance.
      * 
-     * NOTE: make sure you have the webserver running before running the tests.
-
      */
-    public static Javalin getSingleton(){
+    public static Javalin getInstance(){
         Javalin app = Javalin.create();
         
         /**
@@ -28,7 +26,7 @@ public class JavalinSingleton {
          * Assignment: retrieve the firstname and lastname from the path parameters and return the firstname and lastname with a space between.
          * For example if we sent the following GET request: 
          *      http://localhost:9000/firstnameandlastname/Steve/Jobs
-         * Then the return in the response body should be the folowing string "Steve Jobs"
+         * Then the return in the response body should be the following string "Steve Jobs"
          * 
         */
         app.get("/firstnameandlastname/{first}/{last}", ctx -> {

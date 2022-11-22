@@ -10,7 +10,7 @@ public class JavalinSingleton {
      * 
      * NOTE: If this is your first time using javalin, refer to the JavalinLab.MD for assistance
      */
-    public static Javalin getSingleton(){
+    public static Javalin getInstance(){
         Javalin app = Javalin.create();
         
         //write endpoint here

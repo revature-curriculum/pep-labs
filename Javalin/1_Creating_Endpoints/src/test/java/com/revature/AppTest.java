@@ -15,15 +15,13 @@ import com.revature.util.CommandLine;
 
 import io.javalin.Javalin;
 
-/**
- * Unit test for simple App.
- */
 public class AppTest 
 {
-    Javalin app = JavalinSingleton.getSingleton();
+    Javalin app = JavalinSingleton.getInstance();
     @Before
     public void beforeEach() throws InterruptedException{
         app.start(9001);
+        //wait 3 seconds so the server starts up
         Thread.sleep(3000);
     }
 

@@ -1,14 +1,14 @@
-## Javalin Lab: Retrieving Data from Path Parameters
+# Javalin Lab: Retrieving Data from Path Parameters
 
-Now that we have learned how to create a webserver and define endpoints with Javalin, we need to learn how to retrieve data from these HTTP requests.
+Now that we have learned how to create a webserver and define endpoints with Javalin, we need to learn how to retrieve data from the HTTP requests.
 
 The most common ways to retrieve data from the HTTP requests:
-    - <mark>Path parameters</mark>
-    - HTTP Request body
+- Path parameters
+- HTTP Request body
 
 For this lab we will be looking at Path Parameters
 
-#### Path Parameters
+## Path Parameters
 
 Path parameters are variables that are in the URL path.
 

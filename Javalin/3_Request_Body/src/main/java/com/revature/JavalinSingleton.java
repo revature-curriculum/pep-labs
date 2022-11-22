@@ -11,7 +11,7 @@ import io.javalin.Javalin;
  */
 public class JavalinSingleton {
 
-    public static Javalin getSingleton(){
+    public static Javalin getInstance(){
         Javalin app = Javalin.create();
         
         /**

@@ -20,7 +20,7 @@ import io.javalin.Javalin;
  */
 public class AppTest 
 {
-    Javalin app = JavalinSingleton.getSingleton();
+    Javalin app = JavalinSingleton.getInstance();
     
     @Before
     public void beforeEach() throws InterruptedException{
