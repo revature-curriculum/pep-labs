@@ -1,2 +1,41 @@
-source: revpro
-repo_format: multiple
+---
+:lab_name: pep-labs
+:repo_path: "/workspace/pep-labs"
+:previous_lab: 
+:current_lab: 
+:origin_remote: https://github.com/aviflombaum/pep-labs
+:repo_clone_folder: "/workspace/pep-labs"
+:github_username: aviflombaum
+:git_name: Avi Flombaum
+:git_email: avi@flombaum.com
+:gitpod:
+  :gitpod_workspace_context:
+    isFile: false
+    path: ''
+    title: aviflombaum/pep-gitpod-workspace - main
+    ref: main
+    refType: branch
+    revision: 4a30146d96263061abba5ebee08a256fddaf9894
+    repository:
+      cloneUrl: https://github.com/aviflombaum/pep-gitpod-workspace.git
+      host: github.com
+      name: pep-gitpod-workspace
+      owner: aviflombaum
+      private: true
+      fork:
+        parent:
+          cloneUrl: https://github.com/revature-curriculum/pep-gitpod-workspace.git
+          host: github.com
+          name: pep-gitpod-workspace
+          owner: revature-curriculum
+          private: true
+    normalizedContextURL: https://github.com/aviflombaum/pep-gitpod-workspace
+    checkoutLocation: pep-gitpod-workspace
+    upstreamRemoteURI: https://github.com/revature-curriculum/pep-gitpod-workspace.git
+  :gitpod_workspace:
+    :workspace_id: aviflombaum-pepgitpodwo-ocfreoyjcn4
+    :workspace_url: https://aviflombaum-pepgitpodwo-ocfreoyjcn4.ws-us77.gitpod.io
+    :repo_root: "/workspace/pep-gitpod-workspace"
+    :git_user_email: avi@flombaum.com
+    :git_user_name: Avi Flombaum
+:progress: {}
