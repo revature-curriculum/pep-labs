@@ -4,6 +4,8 @@
  * depending on the current state of the program.
  * Therefore, we're inevitably going to run into boolean expressions (ie true/false statements).
  * Let's start with the different ways to compare two numbers, in this case a and b.
+ * 
+ * Additional Resource if needed: https://www.oreilly.com/library/view/java-for-dummies/9781118239742/a17.html
  */
 public class Comparators {
     /**
@@ -45,6 +47,15 @@ public class Comparators {
      * @return true if a is less than or equal to b, false otherwise.
      */
     public boolean lessThanOrEqualTo(int a, int b){
+        return false;
+    }
+
+    /**
+     * @param a the first number to be compared.
+     * @param b the second number to be compared.
+     * @return true if a is not equal to b, false otherwise.
+     */
+    public boolean notEqualTo(int a, int b){
         return false;
     }
 }
