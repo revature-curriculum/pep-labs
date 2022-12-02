@@ -6,7 +6,7 @@
  * Strings are actually immutable, which means that changing a string actually generates a brand new String,
  * and creating a new string that is the same as an already-existing string will just reuse the old String in memory.
  * 
- * Additional Resource if needed: https://docs.oracle.com/javase/7/docs/api/java/lang/String.html
+ * Official String documentation: https://docs.oracle.com/javase/7/docs/api/java/lang/String.html
  */
 public class SimpleStringMethods {
     /**
