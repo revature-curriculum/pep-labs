@@ -1,2 +1,16 @@
-source: revpro
-repo_format: multiple
+---
+:lab_name: pep-labs
+:repo_path: "/home/akilan/my-projects/revature-projects/revpro-cli/pep-labs.git"
+:previous_lab: 
+:current_lab: 
+:origin_remote: https://github.com/akilan-revature/pep-labs.git
+:repo_clone_folder: "/home/akilan/my-projects/revature-projects/revpro-cli/pep-labs.git"
+:github_username: git@github.com:akilan-revature
+:git_name: 
+:git_email: 
+:gitpod:
+  :gitpod_workspace_context: {}
+  :gitpod_workspace: 
+:progress: {}
+previous_lab: "/home/akilan/my-projects/revature-projects/revpro-cli/pep-labs.git/Intro_To_Java/Start"
+current_lab: "/home/akilan/my-projects/revature-projects/revpro-cli/pep-labs.git/Intro_To_Java/Start"
