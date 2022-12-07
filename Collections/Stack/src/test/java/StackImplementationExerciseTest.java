@@ -2,6 +2,7 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import java.util.Deque;
 import java.util.Stack;
 
 public class StackImplementationExerciseTest {
@@ -16,7 +17,7 @@ public class StackImplementationExerciseTest {
      */
     @Test
     public void createStackTest(){
-        Stack<String> stack = se.createNewStack();
+        Deque<String> stack = se.createNewStack();
         Assert.assertNotNull(stack);
     }
     /**
@@ -24,7 +25,7 @@ public class StackImplementationExerciseTest {
      */
     @Test
     public void getSizeTest1(){
-        Stack<String> stack = se.createNewStack();
+        Deque<String> stack = se.createNewStack();
         Assert.assertEquals(se.getSize(stack), 0);
     }
     /**
@@ -32,7 +33,7 @@ public class StackImplementationExerciseTest {
      */
     @Test
     public void getSizeTest2(){
-        Stack<String> stack = se.createNewStack();
+        Deque<String> stack = se.createNewStack();
         se.addToTopOfStack(stack, "Crime and Punishment");
         Assert.assertEquals(se.getSize(stack), 1);
     }
@@ -41,7 +42,7 @@ public class StackImplementationExerciseTest {
      */
     @Test
     public void addToTopOfStackTest1(){
-        Stack<String> stack = se.createNewStack();
+        Deque<String> stack = se.createNewStack();
         se.addToTopOfStack(stack, "Crime and Punishment");
         se.addToTopOfStack(stack, "Finnegan's Wake");
         Assert.assertEquals(se.getSize(stack), 2);
@@ -53,7 +54,7 @@ public class StackImplementationExerciseTest {
      */
     @Test
     public void removeFromTopOfStackTest1(){
-        Stack<String> stack = se.createNewStack();
+        Deque<String> stack = se.createNewStack();
         se.addToTopOfStack(stack, "Crime and Punishment");
         se.addToTopOfStack(stack, "Finnegan's Wake");
         se.addToTopOfStack(stack, "Don Quixote");
@@ -67,7 +68,7 @@ public class StackImplementationExerciseTest {
      */
     @Test
     public void removeFromTopOfStackTest2(){
-        Stack<String> stack = se.createNewStack();
+        Deque<String> stack = se.createNewStack();
         se.addToTopOfStack(stack, "Crime and Punishment");
         se.addToTopOfStack(stack, "Finnegan's Wake");
         se.addToTopOfStack(stack, "Don Quixote");
@@ -83,7 +84,7 @@ public class StackImplementationExerciseTest {
      */
     @Test
     public void getTopOfStackWithoutRemovingTest1(){
-        Stack<String> stack = se.createNewStack();
+        Deque<String> stack = se.createNewStack();
         se.addToTopOfStack(stack, "Crime and Punishment");
         se.addToTopOfStack(stack, "Finnegan's Wake");
         se.addToTopOfStack(stack, "Don Quixote");

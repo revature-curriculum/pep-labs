@@ -6,19 +6,34 @@ import java.util.Queue;
 
 /**
  * Queues are FIFO - first in, first out, like a checkout line. They are used in algorithms where it is needed to keep
- * track of the ordering that elements were inserted.
+ * track of the order that the elements were inserted in. For instance, tech support tickets may be
+ * waiting in a queue until a tech support specialist can clear them.
+ *
+ * ArrayDeque fills the role of *both* queues and stacks. You could think of a Deque as a deck of cards (pronounced the
+ * same) where you could remove cards  from either the top or bottom. You can use ArrayDeque
+ * to perform queue operations. You can read about ArrayDeque in the official Javadocs here:
+ * https://docs.oracle.com/javase/7/docs/api/java/util/ArrayDeque.html
+ * And you can read about the queue interface here:
+ * https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html
+ * Notice that ArrayDeque implements multiple interfaces, including Queue!
+ *
+ * PriorityQueue is another implementation of Queue that has additional functionality
+ * to handle multiple 'priorities' of items. You can read about PriorityQueue here:
+ * https://www.geeksforgeeks.org/priority-queue-class-in-java/
  */
 public class QueueExercise {
     /**
-     * @return an instantiated Queue. Queue, by itself, doesn't have a class, so you should use a class that implements
-     * the Queue interface, such as ArrayDeque. Deques contain all the methods required for both Queue and Stack
-     * behavior.
+     * Instantiate and return some type of Queue.
+     * @return an instantiated Queue. Queue, by itself, doesn't have a class, so you should use a class that
+     * implements the Queue interface, such as ArrayDeque. Deques contain all the methods required for both Queue and
+     * Stack behavior.
      */
     public Queue<String> createQueue(){
         return null;
     }
 
     /**
+     * Return the ssize of a queue.
      * @param queue a Queue<String> object.
      * @return the length of queue.
      */
@@ -27,7 +42,7 @@ public class QueueExercise {
     }
 
     /**
-     * add an item to the end of the queue - the queue will be able to return to that item once all the items
+     * Add an item to the end of the queue - the queue will be able to return to that item once all the items
      * in front of it have been removed.
      * @param queue a Queue<String> object.
      * @param item a String that should be added to Queue.

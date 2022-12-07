@@ -3,7 +3,7 @@ public class Add {
     /**
      * Let's say we're making a calculator app!
      *
-     * This method should return the sum of two integers (ints).
+     * Instead of returning 0, this method should return the sum of two integers (ints).
      * Ints represent whole numbers in Java.
      *
      * @param a first number to be added.
