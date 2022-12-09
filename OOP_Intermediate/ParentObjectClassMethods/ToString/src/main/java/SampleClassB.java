@@ -7,27 +7,22 @@
  * have seen the default implementation before if you tried to print an object and got random letters and numbers.)
  * So, we must override the inherited method by writing a toString method in this class.
  *
- * The test cases here will check if the toString contains information about the fields of this object. The string may
- * be formatted in any way.
+ * for instance, the method
+ * public String toString(){
+ *     //code here
+ * }
+ * will override the default toString() method. The String that is returned is the String representation of this object.
+ *
+ * The test cases here will check if the toString contains information about the fields of this object. Essentially,
+ * you just need to append them to the String that is returned by toString. The string may be formatted in any way.
  *
  * In the future, your IDE should have a way to automatically generate constructors, getters, setters, equals, and
- * toString. In Intellij, you can find this meny by either right clicking and locating 'generate' or pressing
- * alt+insert.
+ * toString.
  */
-public class ImplementToStringMethod {
+public class SampleClassB {
     int a;
-    int b;
-    boolean c;
+    boolean b;
 
-    /**
-     * No need to touch this constructor - it is used for the purpose of the test.
-     * @param a
-     * @param b
-     * @param c
-     */
-    public ImplementToStringMethod(int a, int b, boolean c){
-        this.a = a;
-        this.b = b;
-        this.c = c;
-    }
+    //implement a toString() method here.
+
 }
