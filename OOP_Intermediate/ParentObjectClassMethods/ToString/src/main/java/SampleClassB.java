@@ -16,6 +16,10 @@
  * The test cases here will check if the toString contains information about the fields of this object. Essentially,
  * you just need to append them to the String that is returned by toString. The string may be formatted in any way.
  *
+ * You can read more about toString here: https://www.educative.io/answers/how-to-use-the-tostring-in-java
+ * You can also read about all of the methods inherited from the Object class, including toString, in the Oracle docs:
+ * https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html
+ *
  * In the future, your IDE should have a way to automatically generate constructors, getters, setters, equals, and
  * toString.
  */

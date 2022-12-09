@@ -26,6 +26,9 @@ import java.util.Objects;
  * of an object in memory. Two objects can have equivalent values of a,b, and c but == could resolve to false because
  * the equivalent object is located in a different place in memory. == will resolve to true only if two variables
  * represent literally the same object in memory.
+ *
+ * You can read about all of the methods inherited from the Object class, including .equals, in the Oracle docs:
+ * https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html
  */
 public class SampleClassA {
     public int a;
