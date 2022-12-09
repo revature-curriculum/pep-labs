@@ -3,24 +3,24 @@
 :repo_path: "/workspace/revpro-cli/pep-labs"
 :previous_lab: 
 :current_lab: 
-:origin_remote: https://github.com/revature-curriculum/pep-labs
+:origin_remote: https://github.com/akilan-revature/pep-labs.git
 :repo_clone_folder: "/workspace/revpro-cli/pep-labs"
-:github_username: revature-curriculum
-:git_name: ubshreenath
-:git_email: sreenathb@revature.com
+:github_username: akilan-revature
+:git_name: akilan-revature
+:git_email: akilan.arasu@revature.com
 :gitpod:
   :gitpod_workspace_context:
     isFile: false
     path: ''
-    title: ubshreenath/revpro-cli - main
+    title: akilan-revature/revpro-cli - main
     ref: main
     refType: branch
     revision: 7f9c4472ee6ba45f99a2da4b3eb53df2af9fea81
     repository:
-      cloneUrl: https://github.com/ubshreenath/revpro-cli.git
+      cloneUrl: https://github.com/akilan-revature/revpro-cli.git
       host: github.com
       name: revpro-cli
-      owner: ubshreenath
+      owner: akilan-revature
       private: true
       fork:
         parent:
@@ -29,7 +29,7 @@
           name: revpro-cli
           owner: revature-curriculum
           private: true
-    normalizedContextURL: https://github.com/ubshreenath/revpro-cli
+    normalizedContextURL: https://github.com/akilan-revature/revpro-cli.git
     checkoutLocation: revpro-cli
     upstreamRemoteURI: https://github.com/revature-curriculum/revpro-cli.git
     additionalFiles:
@@ -43,9 +43,9 @@
 
 
   :gitpod_workspace:
-    :workspace_id: ubshreenath-revprocli-yizgvuzg2kj
-    :workspace_url: https://ubshreenath-revprocli-yizgvuzg2kj.ws-us77.gitpod.io
+    :workspace_id: akilanrevatur-revprocli-a4hw7i6excc
+    :workspace_url: https://akilanrevatur-revprocli-a4hw7i6excc.ws-us78.gitpod.io
     :repo_root: "/workspace/revpro-cli"
-    :git_user_email: sreenathb@revature.com
-    :git_user_name: ubshreenath
+    :git_user_email: akilan.arasu@revature.com
+    :git_user_name: akilan-revature
 :progress: {}
