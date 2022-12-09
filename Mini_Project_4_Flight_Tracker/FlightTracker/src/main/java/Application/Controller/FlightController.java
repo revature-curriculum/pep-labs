@@ -12,11 +12,14 @@ import io.javalin.http.Context;
  * startAPI method is called.
  *
  *  You can interact with the Javalin controller by
- *  a) for GET requests, navigating to the endpoint in your web browser (eg localhost:8080/flights)
- *  b) for GET requests, using the CURL command in your terminal (eg curl localhost:8080/flights). you can use post,
- *     but it's difficult to format within CURL.
- *  c) using the desktop version of Postman for any type of request. Be sure to set the request type to the intended
- *     one (GET/POST/PUT/DELETE), and to properly format the body (setting the body content type to raw JSON).
+ *
+ *  a) for GET requests, using the CURL command in your terminal (eg curl localhost:8080/flights). you can use post,
+ *     but it's trickier to format with CURL: https://linuxize.com/post/curl-post-request/
+ *  b) If you are working on your local machine and not in a browser-based IDE, navigating to an endpoint in your web
+ *     browser (eg localhost:8080/flights) will perform a GET request.
+ *  c) If you are working on your local machine and not in a browser-based IDE, using the desktop version of Postman
+ *     for any type of request. Be sure to set the request type to the intended one (GET/POST/PUT/DELETE), and to
+ *     properly format the body (setting the body content type to raw JSON).
  *
  *  The four included endpoints:
  *
@@ -28,9 +31,8 @@ import io.javalin.http.Context;
  *      localhost/8080/flights/departing/tampa/arriving/dallas.
  *
  *  POST localhost:8080/flights : post a new flight. a new flight should be contained in the body of the request as a
- *      JSON representation. example:
+ *      JSON representation, but without a flight_id (this should be generated automatically by the backend). example:
  *          {
- *              "flight_id":1234,
  *              "departure_city":"Reston",
  *              "arrival_city":"Tampa"
  *          }
@@ -54,22 +56,22 @@ public class FlightController {
     /**
      * Method defines the structure of the Javalin Flights API. Javalin methods will use handler methods
      * to manipulate the Context object, which is a special object provided by Javalin which contains information about
-     * HTTP requests and can generate responses.
+     * HTTP requests and can generate responses. There is no need to change anything in this method.
      */
-    public void startAPI(){
+    public Javalin startAPI(){
         Javalin app = Javalin.create();
         app.post("/flights", this::postFlightHandler);
         app.put("/flights/{flight_id}", this::updateFlightHandler);
         app.get("/flights", this::getAllFlightsHandler);
         app.get("/flights/departing/{departure_city}/arriving/{arrival_city}",
                 this::getAllFlightsDepartingFromCityArrivingToCityHandler);
-        app.start(8080);
+        return app;
     }
     /**
-     * handler to post a new flight.
+     * Handler to post a new flight.
      * The Jackson ObjectMapper will automatically convert the JSON of the POST request into a Flight object.
      * If flightService returns a null flight (meaning posting a flight was unsuccessful, the API will return a 400
-     * message (client error).
+     * message (client error). There is no need to change anything in this method.
      * @param ctx the context object handles information HTTP requests and generates responses within Javalin. It will
      *            be available to this method automatically thanks to the app.post method.
      * @throws JsonProcessingException will be thrown if there is an issue converting JSON into an object.
@@ -86,12 +88,13 @@ public class FlightController {
     }
 
     /**
-     * handler to update a flight.
+     * Handler to update a flight.
      * The Jackson ObjectMapper will automatically convert the JSON of the POST request into a Flight object.
      * to conform to RESTful standards, the flight that is being updated is identified from the path parameter,
      * but the information required to update a flight is retrieved from the request body.
      * If flightService returns a null flight (meaning updating a flight was unsuccessful), the API will return a 400
-     * message (client error).
+     * status (client error). There is no need to change anything in this method.
+     *
      * @param ctx the context object handles information HTTP requests and generates responses within Javalin. It will
      *            be available to this method automatically thanks to the app.put method.
      * @throws JsonProcessingException will be thrown if there is an issue converting JSON into an object.
@@ -110,7 +113,7 @@ public class FlightController {
     }
 
     /**
-     * handler to retrieve all flights.
+     * Handler to retrieve all flights. There is no need to change anything in this method.
      * @param ctx the context object handles information HTTP requests and generates responses within Javalin. It will
      *            be available to this method automatically thanks to the app.put method.
      */
@@ -118,8 +121,8 @@ public class FlightController {
         ctx.json(flightService.getAllFlights());
     }
     /**
-     * handler to retrieve all flights departing from a particular city and arriving at another city.
-     * both cities are retrieved from the path.
+     * Handler to retrieve all flights departing from a particular city and arriving at another city.
+     * both cities are retrieved from the path. There is no need to change anything in this method.
      * @param ctx the context object handles information HTTP requests and generates responses within Javalin. It will
      *            be available to this method automatically thanks to the app.put method.
      */

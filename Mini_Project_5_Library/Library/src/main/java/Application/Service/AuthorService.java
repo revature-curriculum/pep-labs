@@ -36,18 +36,17 @@ public class AuthorService {
     }
     /**
      * TODO: Use the AuthorDAO to retrieve all authors.
+     *
      * @return all authors
      */
     public List<Author> getAllAuthors() {
         return null;
     }
     /**
-     * TODO: Use the AuthorDAO to persist an author.
-     * Method should check if an author already exists before this is done.
+     * TODO: Use the AuthorDAO to persist an author. The given Author will not have an id provided.
      *
      * @param author an author object.
-     * @return The persisted author if the persistence is successful, null if unsuccessful (eg if the author id already
-     * exists in the database.)
+     * @return The persisted author if the persistence is successful.
      */
     public Author addAuthor(Author author) {
         return null;

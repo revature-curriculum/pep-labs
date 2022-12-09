@@ -2,9 +2,14 @@
 import java.util.Scanner;
 
 /**
+ * Let's build a slightly more complicated app than the guessing game. This app can represent interacting with someone's
+ * bank account. You will need to implement the methods in BankService for a fully functioning application. The app will
+ * be considered functional when all test cases pass.
+ *
  * There is no need to change anything in this class. It does not affect the outcome of the test cases.
  * The purpose of this class is for you to interact with a functional Console Line menu, so that you can
- * see how your code works from the user's end.
+ * see how your code works from the user's end. You can run this method and interact with the app through your
+ * IDE's terminal.
  */
 public class BankMenu {
     public static void main(String[] args) {

@@ -13,6 +13,8 @@ import java.util.List;
  */
 public class ListExercise {
     /**
+     * Instantiate and return a List of Integers.
+     *
      * List<Integer> list = new List<>(); is not valid code.
      * Two interesting things here: First, List is actually an interface, not a class: its only ability is to define
      * potential behavior, but it does not provide implementation code.
@@ -31,6 +33,8 @@ public class ListExercise {
     }
 
     /**
+     * Get the size of a list.
+     *
      * @param list a List<Integer> object.
      * @return the size of List (number of items it holds.)
      */
@@ -39,6 +43,7 @@ public class ListExercise {
     }
 
     /**
+     * Add an item to a list.
      * When we add a value to a list, it gets appended to the end.
      *
      * @param list a List<Integer> object that we would like to modify.
@@ -49,6 +54,7 @@ public class ListExercise {
     }
 
     /**
+     * Get a particular index of a list.
      * Lists, like arrays, are zero-indexed, so they start counting at zero. For instance,
      *      index 0 of {0,2,4,6} is 0.
      *      index 1 of {0,2,4,6} is 2.
@@ -64,7 +70,8 @@ public class ListExercise {
     }
 
     /**
-     * we can remove an item from the list, which will cause all items after it to reduce their index by 1 (they are
+     * Remove an index from a list.
+     * We can remove an item from the list, which will cause all items after it to reduce their index by 1 (they are
      * all still ordered, without any empty spaces in the list.)
      *
      * @param list a List<Integer> object that we would like to modify.
@@ -76,6 +83,7 @@ public class ListExercise {
     }
 
     /**
+     * Update an index of a list.
      * We can update a value in the list, which will overwrite a value at a certain position.
      *
      * @param list a List<Integer> object that we would like to modify.

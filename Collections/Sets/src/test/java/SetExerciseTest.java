@@ -35,7 +35,7 @@ public class SetExerciseTest {
     @Test
     public void getSizeTest2(){
         Set<Integer> set = se.createSet();
-        set = se.addUniqueItem(set, 1);
+        se.addUniqueItem(set, 1);
         Assert.assertEquals(se.getSize(set), 1);
     }
 
@@ -45,7 +45,7 @@ public class SetExerciseTest {
     @Test
     public void addItemTest1(){
         Set<Integer> set = se.createSet();
-        set = se.addUniqueItem(set, 1);
+        se.addUniqueItem(set, 1);
         Assert.assertTrue(set.contains(1));
         Assert.assertFalse(set.contains(2));
     }
@@ -56,8 +56,8 @@ public class SetExerciseTest {
     @Test
     public void addItemTest2(){
         Set<Integer> set = se.createSet();
-        set = se.addUniqueItem(set, 1);
-        set = se.addUniqueItem(set, 2);
+        se.addUniqueItem(set, 1);
+        se.addUniqueItem(set, 2);
         Assert.assertTrue(set.contains(1));
         Assert.assertTrue(set.contains(2));
     }
@@ -69,9 +69,9 @@ public class SetExerciseTest {
     @Test
     public void removeItemTest1(){
         Set<Integer> set = se.createSet();
-        set = se.addUniqueItem(set, 1);
-        set = se.addUniqueItem(set, 2);
-        set = se.removeItem(set, 2);
+        se.addUniqueItem(set, 1);
+        se.addUniqueItem(set, 2);
+        se.removeItem(set, 2);
         Assert.assertTrue(set.contains(1));
         Assert.assertFalse(set.contains(2));
     }

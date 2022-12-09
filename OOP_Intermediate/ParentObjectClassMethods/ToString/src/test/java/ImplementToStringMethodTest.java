@@ -8,7 +8,9 @@ public class ImplementToStringMethodTest {
      */
     @Test
     public void toStringTest1(){
-        ImplementToStringMethod ts = new ImplementToStringMethod(1,1,true);
+        SampleClassB ts = new SampleClassB();
+        ts.a=1;
+        ts.b=true;
         String output = ts.toString();
         Assert.assertTrue(output.contains("1"));
         Assert.assertFalse(output.contains("2"));
@@ -21,9 +23,11 @@ public class ImplementToStringMethodTest {
      */
     @Test
     public void toStringTest2(){
-        ImplementToStringMethod ts = new ImplementToStringMethod(1,2,true);
+        SampleClassB ts = new SampleClassB();
+        ts.a=2;
+        ts.b=true;
         String output = ts.toString();
-        Assert.assertTrue(output.contains("1"));
+        Assert.assertFalse(output.contains("1"));
         Assert.assertTrue(output.contains("2"));
         Assert.assertTrue(output.contains("true"));
         Assert.assertFalse(output.contains("false"));
@@ -34,7 +38,9 @@ public class ImplementToStringMethodTest {
      */
     @Test
     public void toStringTest3(){
-        ImplementToStringMethod ts = new ImplementToStringMethod(1,1,false);
+        SampleClassB ts = new SampleClassB();
+        ts.a=1;
+        ts.b=false;
         String output = ts.toString();
         Assert.assertTrue(output.contains("1"));
         Assert.assertFalse(output.contains("2"));
@@ -47,9 +53,11 @@ public class ImplementToStringMethodTest {
      */
     @Test
     public void toStringTest4(){
-        ImplementToStringMethod ts = new ImplementToStringMethod(1,2,false);
+        SampleClassB ts = new SampleClassB();
+        ts.a=2;
+        ts.b=false;
         String output = ts.toString();
-        Assert.assertTrue(output.contains("1"));
+        Assert.assertFalse(output.contains("1"));
         Assert.assertTrue(output.contains("2"));
         Assert.assertFalse(output.contains("true"));
         Assert.assertTrue(output.contains("false"));

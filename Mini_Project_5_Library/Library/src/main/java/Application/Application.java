@@ -12,6 +12,10 @@ import java.sql.SQLException;
  * access the API endpoints.
  */
 public class Application {
+    /**
+     * You can run this main method to run the API.
+     * @param args
+     */
     public static void main(String[] args) {
         databaseSetup();
         LibraryController libraryController = new LibraryController();
@@ -20,7 +24,7 @@ public class Application {
     /**
      * For the purpose of this short exercise, this method will destroy and set up new book and author tables.
      * This is not a normal way to set up your tables, in real projects you should set up your database
-     * schema in a SQL editor such as DBeaver or DataGrip.
+     * schema in a SQL editor such as DBeaver or DataGrip. Do not change anything in this method.
      */
     public static void databaseSetup(){
         try {
@@ -30,7 +34,7 @@ public class Application {
             PreparedStatement ps2 = conn.prepareStatement("drop table if exists author");
             ps2.executeUpdate();
             PreparedStatement ps3 = conn.prepareStatement("create table author(" +
-                    "id int primary key, " +
+                    "id int primary key auto_increment, " +
                     "name varchar(255)); ");
             ps3.executeUpdate();
             PreparedStatement ps4 = conn.prepareStatement("create table book(" +
@@ -41,23 +45,23 @@ public class Application {
                     "foreign key (author_id) references author(id));");
             ps4.executeUpdate();
             PreparedStatement ps5 = conn.prepareStatement(
-                    "insert into author (id, name) values " +
-                            "(0, 'jorge luis borges')," +
-                            "(1, 'italo calvino')," +
-                            "(2, 'thomas pynchon')," +
-                            "(3, 'marshall mcluhan')," +
-                            "(4, 'immanuel kant')");
+                    "insert into author (name) values " +
+                            "('jorge luis borges')," +
+                            "('italo calvino')," +
+                            "('thomas pynchon')," +
+                            "('marshall mcluhan')," +
+                            "('immanuel kant')");
             ps5.executeUpdate();
             PreparedStatement ps6 = conn.prepareStatement(
                     "insert into book (isbn, author_id, title, copies_available) values " +
-                            "(100, 0, 'ficciones', 2)," +
-                            "(101, 0, 'book of sand', 0)," +
-                            "(102, 1, 'mr palomar', 1)," +
-                            "(103, 1, 'invisible cities', 3)," +
-                            "(104, 2, 'crying of lot 49', 0)," +
-                            "(105, 2, 'mason and dixon', 0)," +
-                            "(106, 3, 'understanding media', 1)," +
-                            "(107, 4, 'critique of pure reason', 7);");
+                            "(100, 1, 'ficciones', 2)," +
+                            "(101, 1, 'book of sand', 0)," +
+                            "(102, 2, 'mr palomar', 1)," +
+                            "(103, 2, 'invisible cities', 3)," +
+                            "(104, 3, 'crying of lot 49', 0)," +
+                            "(105, 3, 'mason and dixon', 0)," +
+                            "(106, 4, 'understanding media', 1)," +
+                            "(107, 5, 'critique of pure reason', 7);");
             ps6.executeUpdate();
         }catch(SQLException e){
             e.printStackTrace();

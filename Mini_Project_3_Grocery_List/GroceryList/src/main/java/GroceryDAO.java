@@ -13,12 +13,13 @@ import java.util.List;
  *
  * We may assume that the database has already created a table named 'groceries'.
  * It contains a single column, named 'grocery_name' of type varchar(255).
+ * The table will be automatically created by the databaseSetup() method in GroceryMain.java.
  */
 public class GroceryDAO {
 
 
     /**
-     * Select all of the rows of the Grocery table.
+     * TODO: Select all of the rows of the Grocery table.
      * You only need to change the sql String, the rest of the method is already complete.
      * @return a List of all the groceries contained within the database.
      */
@@ -39,7 +40,7 @@ public class GroceryDAO {
         return groceries;
     }
     /**
-     * Insert a new row into the Grocery table, with the sole column containing groceryName.
+     * TODO: Insert a new row into the Grocery table, with the sole column containing groceryName.
      * You only need to change the sql String, the rest of the method is already complete.
      * @param groceryName the name of the grocery passed in from the GroceryService.
      */

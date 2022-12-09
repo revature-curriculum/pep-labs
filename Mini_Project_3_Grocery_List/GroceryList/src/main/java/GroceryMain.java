@@ -8,7 +8,7 @@ import java.util.Scanner;
  * There is no need to change anything in this class.
  * It does not affect the outcome of the test cases.
  * You can, however, run this class to play with a CLI menu that interacts with the code you write in
- * GroceryService and GroceryRepository.
+ * GroceryDAO.
  */
 public class GroceryMain {
 
