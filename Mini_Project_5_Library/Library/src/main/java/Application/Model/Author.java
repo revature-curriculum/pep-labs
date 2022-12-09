@@ -16,6 +16,10 @@ public class Author {
 
     }
 
+    public Author(String name) {
+        this.name = name;
+    }
+
     /**
      * An all-args constructor for creating new Author objects in DAO and service classes.
      * @param id

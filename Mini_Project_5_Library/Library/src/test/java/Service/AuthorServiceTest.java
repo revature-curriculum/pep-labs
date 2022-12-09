@@ -47,31 +47,11 @@ public class AuthorServiceTest {
      * the added author, and the insertAuthor method of authorDAO should have been called at some point.
      */
     @Test
-    public void addAuthorOnSuccessfulAdd(){
-        List<Author> authors = new ArrayList<>();
-        Author a1 = new Author(1, "James Joyce");
-        Author a2 = new Author(2, "Leo Tolstoy");
-        Author a3 = new Author(2, "Stanislaw Lem");
-        authors.add(a1);
-        authors.add(a2);
-        Mockito.when(mockAuthorDAO.getAllAuthors()).thenReturn(authors);
-        Mockito.when(mockAuthorDAO.getAuthorById(1)).thenReturn(null);
-        Assert.assertEquals(a3, authorService.addAuthor(a3));
-        Mockito.verify(mockAuthorDAO).insertAuthor(a3);
-    }
-
-    /**
-     * When addAuthor is called and the mockAuthorDAO already contains the author, the method should return null
-     * and the insertAuthor method of authorDAO should not have been called.
-     */
-    @Test
-    public void addAuthorReturnNullOnUnsuccessfulAdd(){
-        List<Author> authors = new ArrayList<>();
-        Author a1 = new Author(1, "James Joyce");
-        authors.add(a1);
-        Mockito.when(mockAuthorDAO.getAllAuthors()).thenReturn(authors);
-        Mockito.when(mockAuthorDAO.getAuthorById(1)).thenReturn(a1);
-        Assert.assertEquals(null, authorService.addAuthor(a1));
-        Mockito.verify(mockAuthorDAO, Mockito.never()).insertAuthor(a1);
+    public void addAuthorTest(){
+        Author newAuthor = new Author("James Joyce");
+        Author persistedAuthor = new Author(1, "James Joyce");
+        Mockito.when(mockAuthorDAO.insertAuthor(newAuthor)).thenReturn(persistedAuthor);
+        Author actualAuthor = authorService.addAuthor(newAuthor);
+        Assert.assertEquals(persistedAuthor, actualAuthor);
     }
 }

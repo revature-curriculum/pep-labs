@@ -44,7 +44,8 @@ public class BookService {
     }
     /**
      * TODO: Use the bookDAO to persist a book to the database.
-     * Method should check if the book already exists before it attempts to persist it.
+     * An ISBN will be provided in Book. Method should check if the book ISBN already exists before it attempts to
+     * persist it.
      * @param book a book object.
      * @return book if it was successfully persisted, null if it was not successfully persisted (eg if the book primary
      * key was already in use.)

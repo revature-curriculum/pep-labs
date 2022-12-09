@@ -16,8 +16,8 @@ import java.util.List;
  *
  * We may assume that the database has already created a table named 'book'.
  * It contains similar values as the Author class:
- * isbn, which is of type int,
- * author_id, which is of type int, and is a primary key associated with the column 'id' of 'author',
+ * isbn, which is of type int and is a primary key,
+ * author_id, which is of type int, and is a foreign key associated with the column 'id' of 'author',
  * name, which is of type varchar(255),
  * copies_available, which is of type int.
  */
@@ -49,7 +49,7 @@ public class BookDAO {
     }
 
     /**
-     * TODO: retrieve an book from the Books table, identified by its id.
+     * TODO: retrieve an book from the Book table, identified by its id.
      * You only need to change the sql String and leverage PreparedStatement's setString and setInt methods.
      * @return a book identified by id.
      */
@@ -78,9 +78,12 @@ public class BookDAO {
 
     /**
      * TODO: insert an book into the Book table.
+     * Unlike some of the other insert problems, the primary key here will be provided by the client as part of the
+     * Book object. Given the specific nature of an ISBN as both a numerical organization of books outside of this
+     * database, and as a primary key, it would make sense for the client to submit an ISBN when submitting a book.
      * You only need to change the sql String and leverage PreparedStatement's setString and setInt methods.
      */
-    public void insertBook(Book book){
+    public Book insertBook(Book book){
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
@@ -90,12 +93,14 @@ public class BookDAO {
             //write preparedStatement's setString and setInt methods here.
 
             preparedStatement.executeUpdate();
+            return book;
         }catch(SQLException e){
             e.printStackTrace();
         }
+        return null;
     }
     /**
-     * TODO: retrieve all books with a book_count over zero.
+     * TODO: retrieve all books from the Book table with a book_count over zero.
      * You only need to change the sql String and leverage PreparedStatement's setString and setInt methods.
      * @returnall books with book count > 0.
      */

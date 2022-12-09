@@ -39,14 +39,10 @@ public class FlightService {
 
     /**
      * TODO: Use the FlightDAO to add a new flight to the database.
-     * You should check that the flight ID is not already taken by another row, as this would violate the primary
-     * key constraint. To do this, you could use an if statement that checks if flightDAO.getFlightById returns null
-     * for the flight's ID, as this would indicate that the flight id is already in use.
      *
      * @param flight an object representing a Flight.
-     * @return the newly added flight if the add operation was successful. Return null if the add operation is
-     *         impossible (such as when the flight ID is already contained in the database. We do this to inform
-     *         our application about successful/unsuccessful operations.
+     * @return the newly added flight if the add operation was successful, including the flight_id. We do this to
+     *         inform our provide the front-end client with information about the added Flight.
      */
     public Flight addFlight(Flight flight){
         return null;
@@ -55,8 +51,8 @@ public class FlightService {
     /**
      * TODO: Use the FlightDAO to update an existing flight from the database.
      * You should first check that the flight ID already exists. To do this, you could use an if statement that checks
-     * if flightDAO.getFlightById returns null for the flight's ID, as this would indicate that the flight id is
-     * already in use.
+     * if flightDAO.getFlightById returns null for the flight's ID, as this would indicate that the flight id does not
+     * exist.
      *
      * @param flight_id the ID of the flight to be modified.
      * @param flight an object containing all data that should replace the values contained by the existing flight_id.

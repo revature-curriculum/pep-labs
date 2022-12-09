@@ -19,9 +19,18 @@ public class Flight {
     public Flight(){
 
     }
-
     /**
-     * an all args constructor for use in DAO and Service classes.
+     * a constructor without a flight_id for when persisting a flight to the database where the flight_id has not been
+     * created yet.
+     * @param departure_city
+     * @param arrival_city
+     */
+    public Flight(String departure_city, String arrival_city) {
+        this.departure_city = departure_city;
+        this.arrival_city = arrival_city;
+    }
+    /**
+     * an all args constructor for use when retrieving a flight from the database.
      * @param flight_id
      * @param departure_city
      * @param arrival_city
