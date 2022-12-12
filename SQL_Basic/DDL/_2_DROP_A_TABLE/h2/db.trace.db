@@ -1,6 +1,0 @@
-2022-11-17 09:03:13 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SONGS" not found (this database is empty); SQL statement:
-INSERT INTO songs (Title, Artist) VALUES ('Let it be', 'Beatles'); [42104-214]
-2022-11-17 09:03:13 jdbc[3]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SONGS" not found; SQL statement:
-DROP TABLE songs [42102-214]
