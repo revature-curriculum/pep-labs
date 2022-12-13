@@ -28,15 +28,15 @@
     Type: "lab"
   - Novice_Coding_Challenges/Add:
     Week: 1
-    Order: 1
+    Order: 8
     Type: "challenge"
   - Novice_Coding_Challenges/Subtract:
     Week: 1
-    Order: 2
+    Order: 9
     Type: "challenge"
   - Novice_Coding_Challenges/GreaterOrLesser:
     Week: 1
-    Order: 3
+    Order: 10
     Type: "challenge"
   - OOP_Basic/IntroToOOP:
     Week: 2
