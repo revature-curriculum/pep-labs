@@ -22,7 +22,7 @@ Additional reference material if needed: https://www.w3schools.com/sql/sql_selec
 # Lab
 
 ## Problem 1
-users table
+user table
 |   id  |     firstname        |        lastname        |
 |-------|----------------------|------------------------|
 |1      |'Steve'               |'Garcia'                |
@@ -31,32 +31,4 @@ users table
 |4      |'Brandon'             |'Smith'                 |
 |5      |'Adam'                |'Jones'                 |
 
-#### Problem 1: Write the SQL statement to return only the 'firstname' column from the users table
-
-- - -
-
-## Problem 2 
-users table
-|   id  |     firstname        |        lastname        |
-|-------|----------------------|------------------------|
-|1      |'Steve'               |'Garcia'                |
-|2      |'Alexa'               |'Smith'                 |
-|3      |'Steve'               |'Jones'                 |
-|4      |'Brandon'             |'Smith'                 |
-|5      |'Adam'                |'Jones'                 |
-
-#### Problem 2: Write the SQL statement to return only the 'lastname' column from the users table
-
-- - -
-
-## Problem 3 
-users table
-|   id  |     firstname        |        lastname        |
-|-------|----------------------|------------------------|
-|1      |'Steve'               |'Garcia'                |
-|2      |'Alexa'               |'Smith'                 |
-|3      |'Steve'               |'Jones'                 |
-|4      |'Brandon'             |'Smith'                 |
-|5      |'Adam'                |'Jones'                 |
-
-#### Problem 3: Write the SQL statement to return the 'firstname' AND 'lastname' column from the users table
+#### Problem 1: Write the SQL statement to return only the 'firstname' column from the user table

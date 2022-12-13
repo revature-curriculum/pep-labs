@@ -18,11 +18,11 @@ NOTE: The documentation in W3 schools has a TRUNCATE demo under the DROP TABLE d
 # Lab
 
 ## Problem
-Songs Table Diagram:
+Song Table Diagram:
 |      title        |        artist         |
 |-------------------|-----------------------|
 |'Let it be'        |'Beatles'              |
 |'Imagine'          |'Beatles'              |
 |'Kashmir'          |'Led Zeppelin'         |
 
-#### Problem : remove all the records from the table "songs"
+#### Problem : remove all the records from the table "song"

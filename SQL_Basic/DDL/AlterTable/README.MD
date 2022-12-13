@@ -32,11 +32,11 @@ Additional reference material if needed: https://www.w3schools.com/sql/sql_alter
 # Lab
 
 ## Problem 1
-users table
+user table
 |    id    |     firstname     |
 |----------|-------------------|
 |1         |'Kevin'            |
 |2         |'Brian'            |
 |3         |'Charles'          |
 
-#### Problem 1: Use the ALTER keyword to add a "lastname" column to the "users" table.
+#### Problem 1: Use the ALTER keyword to add a "lastname" column to the "user" table.

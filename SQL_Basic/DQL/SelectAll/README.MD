@@ -17,13 +17,13 @@ Additional reference material if needed: https://www.w3schools.com/sql/sql_selec
 # Lab
 
 ## Problem 1
-songs table
+song table
 |      title        |        artist         |
 |-------------------|-----------------------|
 |"Let it be"        |Beatles                |
 |"Hotel California" |Eagles                 |
 |"Kashmir"          |Led Zeppelin           |
 
-#### Problem 1: Write the SQL statement in "problem1.sql" to retrieve all the rows and columns from the table "songs"
+#### Problem 1: Write the SQL statement in "problem1.sql" to retrieve all the rows and columns from the table "song"
 
 - - -

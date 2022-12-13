@@ -12,8 +12,8 @@ import java.util.List;
  *
  * Now that we know how to query all records from a table utilizing the "SELECT" keyword, it might be beneficial to filter what records are given to us from a table.
  *
- * For example lets look at the "employees" table below:
- *      employees table
+ * For example lets look at the "employee" table below:
+ *      employee table
  *      |  id  |   first_name   |   last_name   |  salary  |
  *      ----------------------------------------------------
  *      |1     |'Steve'         |'Garcia'       |67400.00  |
@@ -25,7 +25,7 @@ import java.util.List;
  * Let's say we wanted to query all the records from the table that have the first name "Steve".
  *
  * The statement that will be utilized is as follows:
- * SELECT * FROM employees WHERE first_name = 'Steve';
+ * SELECT * FROM employee WHERE first_name = 'Steve';
  *
  * In the above statement, the "WHERE" keyword allows us to filter the records based on the condition defined after the keyword.
  * The condition that we specified is that the first_name column must have the value "Steve".
@@ -50,7 +50,7 @@ import java.util.List;
 public class FilterRecords {
 
     /**
-     * Problem 1: Given the employees table, write a query in the problem1.sql file to retrieve all the records
+     * Problem 1: Given the employee table, write a query in the problem1.sql file to retrieve all the records
      * from the employee table that have the lastname "Smith"
      *
      *   employee table
@@ -88,7 +88,7 @@ public class FilterRecords {
         return users;
     }
     /**
-     * Problem 3: Given the employees table, write a query in the problem2.sql file to retrieve all the records
+     * Problem 3: Given the employee table, write a query in the problem2.sql file to retrieve all the records
      * from the employee table that have a salary greater than $75000
      *
      *   employee table

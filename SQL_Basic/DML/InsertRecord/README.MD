@@ -19,7 +19,7 @@ in the above statement:
 # Lab
 
 ## Problem 1
-songs Table Diagram:
+song Table Diagram:
 |      title        |        artist         |
 |-------------------|-----------------------|
 |'Let it be'        |'Beatles'              |
@@ -28,6 +28,6 @@ songs Table Diagram:
 
 Note: when inserting strings, you wrap the string in a single quote.
 
-#### Problem 1: Assuming the table "songs" already exists, write the sql statement that allows us to add a new record into the table "songs".
+#### Problem 1: Assuming the table "song" already exists, write the sql statement that allows us to add a new record into the table "song".
 
 - - -

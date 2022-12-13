@@ -18,7 +18,7 @@ Additional Resource if needed: https://www.w3schools.com/sql/sql_update.asp
 # Lab
 
 ## Problem 1
-users table:
+site_user table:
 |   id  |     firstname        |        lastname        |
 |-------|----------------------|------------------------|
 |1      |'Steve'               |'Garcia'                |
@@ -27,4 +27,4 @@ users table:
 |4      |'Brandon'             |'Smith'                 |
 |5      |'Adam'                |'Jones'                 |
 
-#### Problem 1: Update Alexa's last name to be 'Rush' in the users table.
+#### Problem 1: Update Alexa's last name to be 'Rush' in the site_user table.
