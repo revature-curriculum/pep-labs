@@ -3,25 +3,17 @@ Sometimes we want to query results from multiple tables. We can achieve this by 
 other tables. We start with SELECT FROM left_table, and we can JOIN right_table.  
 
 There are several types of joins. We will be looking at INNER JOIN here. INNER JOIN is when we query two or more 
-tables on some criteria, and only see results where there are matching rows in all tables. For example:
-```sql
-SELECT * FROM table_left INNER JOIN table_right 
-ON table_left.column1 = table_right.column3;
-```
-
+tables on some criteria, and only see results where there are matching rows in all tables. For example: 
+```SQL
+SELECT * FROM table_left 
+INNER JOIN table_right ON table_left.column1 = table_right.column3;
+``` 
 Note: The text added to a simple select statement includes INNER, JOIN, and ON keywords. We join one table to 
 another based on some condition that matches rows from both tables together. In the above example we are matching 
 rows from table_left which have the same value in column 1 as those in table_right column 3. 
 
-You can add more parts to this SQL query, for instance, you can also filter within this query. Example:
-```sql
-SELECT * FROM table_left INNER JOIN table_right
-ON table_left.column1 = table_right.column3
-WHERE table_left.column1 = value;
-```
-
 <table>
-<tr><th> class </th><th> student </th></tr>
+<tr><th> faculty </th><th> students </th></tr>
 <tr><td>
 
 | id |    teacher    |   class   |    
@@ -46,8 +38,8 @@ WHERE table_left.column1 = value;
 
 We can query these tables with an INNER JOIN ON the "class" column in each table:
 ```SQL
-SELECT * FROM class
-INNER JOIN students ON class.class_title = students.class.class_title;
+SELECT * FROM faculty
+INNER JOIN students ON faculty.class = students.class;
 ```
 
 The output of the join would create the following result set:
@@ -73,10 +65,14 @@ are no students taking biology.)
 
 # Lab
 
-Problem 1: Write a query that will return the id, and name of each of Ms. Lovelace's students. Notice that
-Ms. Lovelace teaches two classes, but which classes she teaches aren't known from the data in the student
-table. This means that you will need a way to combine the data from the two tables (inner join). You will
-need to simultaneously filter those results WHERE class.teacher_name = student.student_name.
+### Problem 1
+Problem 1: Write a query that will return the id, and name of each of Mr. McCarthy's students.  
+Note: There should not be a wild card (*) in your statement.  
+Hint: You will need to specify the column in your statement by writing table.column.  
 
-Note: There should not be a wild card (*) in your statement. You will need to specify the column in your
-statement by writing table.column, because the column names may be ambiguous between class and student.
+
+### Problem 2
+Problem 2: Write a query that will return all information about science classes: Physics and Biology.  
+Note: You should use the wild card (*) for the columns to select.  
+Hint: The "class" column is common among all three tables.  
+Hint: Use the IN keyword in your WHERE clause.  

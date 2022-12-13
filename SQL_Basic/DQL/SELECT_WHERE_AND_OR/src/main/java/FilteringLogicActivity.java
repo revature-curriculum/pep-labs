@@ -20,7 +20,7 @@ import java.util.Set;
  *
  *
  * Consider the example:
- *      SELECT * FROM employee WHERE last_name = 'Jones' OR first_name = 'Steve';
+ *      SELECT * FROM employees WHERE last_name = 'Jones' OR first_name = 'Steve';
  *
  *   |  id  |   first_name   |   last_name   |
  *   -----------------------------------------
@@ -48,7 +48,7 @@ import java.util.Set;
 
 public class FilteringLogicActivity {
     /**
-     *   employee table
+     *   employees table
      *   |  id  |   first_name   |   last_name   |  salary  |
      *   --------------------------------------------------
      *   |1     |'Steve'         |'Garcia'       |67400.00  |

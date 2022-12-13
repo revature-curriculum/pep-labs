@@ -39,11 +39,11 @@ Additional reference material if needed: https://www.w3schools.com/sql/sql_prima
 # Lab
 
 ## Problem 1
-song table
+songs table
 |   id  |      title        |        artist         |
 |-------|-------------------|-----------------------|
 |1      |'Let it be'        |'Beatles'              |
 |2      |'Hotel California' |'Eagles'               | 
 |3      |'Kashmir'          |'Led Zeppelin'         |
 
-#### Problem 1: Create a table called "song" that has 3 columns listed above. Column id should be the `PRIMARY KEY`
+#### Problem 1: Create a table called "songs" that has 3 columns listed above. Column id should be the `PRIMARY KEY`

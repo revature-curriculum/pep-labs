@@ -15,11 +15,11 @@ DROP TABLE table_name;
 # Lab
 
 ## Problem 1
-song table
+songs table
 | title     | artist  |    	    
 |-----------|---------|
 | Let it be | Beatles |          
 | Hotel California   | Eagles |
 | Kashmir   | Led Zeppelin |
 
-#### Problem 1: In the "problem1.sql", drop the table "song"
+#### Problem 1: In the "problem1.sql", drop the table "songs"

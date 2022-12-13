@@ -25,6 +25,32 @@ public class GroupByTest {
 
     }
 
+    @Test
+    public void problem2Test() {
+        String expectedAlbum = "IV";
+        String resultAlbum = groupByActivity.problem2();
+
+        Assert.assertEquals(expectedAlbum, resultAlbum);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @BeforeClass
     public static void getConnection() {
@@ -35,7 +61,7 @@ public class GroupByTest {
     @Before
     public void setup() {
         try {
-            String createTable = "CREATE TABLE song (" +
+            String createTable = "CREATE TABLE songs (" +
                     "id SERIAL PRIMARY KEY," +
                     "artist VARCHAR(255)," +
                     "album VARCHAR(255)," +
@@ -44,7 +70,7 @@ public class GroupByTest {
             PreparedStatement createTableStatement = conn.prepareStatement(createTable);
             createTableStatement.executeUpdate();
 
-            String insertData = "INSERT INTO song (artist, album, song) VALUES" +
+            String insertData = "INSERT INTO songs (artist, album, song) VALUES" +
                     "('The Beatles', 'Abbey Road', 'Come Together')," +
                     "('The Beatles', 'Let It Be', 'Let It Be' )," +
                     "('Led Zeppelin', 'IV', 'Black Dog')," +
@@ -63,7 +89,7 @@ public class GroupByTest {
         try {
             conn = ConnectionUtil.getConnection();
 
-            String dropTable = "DROP TABLE IF EXISTS song";
+            String dropTable = "DROP TABLE IF EXISTS songs";
             PreparedStatement createTableStatement = conn.prepareStatement(dropTable);
             createTableStatement.executeUpdate();
 

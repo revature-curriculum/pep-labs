@@ -1,3 +1,4 @@
+
 import Util.ConnectionUtil;
 import kotlin.Pair;
 import org.junit.*;
@@ -15,16 +16,54 @@ public class InnerJoinTest {
     @Test
     public void testActivityInnerJoin1() {
         Set<Pair<Integer, String>> expected = new HashSet<>();
-        expected.add(new Pair<Integer, String>(2, "Stephen Colbert"));
-        expected.add(new Pair<Integer, String>(3, "Samantha Bee"));
-        expected.add(new Pair<Integer, String>(5, "Robert Riggle"));
-
+        expected.add(new Pair<Integer, String>(1, "John Stewart"));
+        expected.add(new Pair<Integer, String>(4, "Aasif Mandvi"));
 
         Set<Pair<Integer, String>> result = innerJoinActivity.problem1();
 
         Assert.assertEquals(expected, result);
 
     }
+
+    @Test
+    public void testActivityInnerJoin2() {
+        Set<ExampleEntity> expected = new HashSet<>();
+        expected.add(new ExampleEntity("Physics", "Mr. Tyson", "Stephen Colbert", "Motion 101"));
+        expected.add(new ExampleEntity("Physics", "Mr. Tyson", "Robert Riggle", "Motion 101"));
+
+        Set<ExampleEntity> result = innerJoinActivity.problem2();
+
+        Assert.assertEquals(expected, result);
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @BeforeClass
     public static void beforeAll() {
@@ -35,16 +74,16 @@ public class InnerJoinTest {
     @Before
     public void beforeEach() {
         try {
-            String facultyTable = "CREATE TABLE class (" +
+            String facultyTable = "CREATE TABLE faculty (" +
                     "id SERIAL PRIMARY KEY," +
-                    "teacher_name VARCHAR(255)," +
-                    "class_title VARCHAR(255)" +
+                    "teacher VARCHAR(255)," +
+                    "class VARCHAR(255)" +
                     ");";
             PreparedStatement facultyTableStatement = conn.prepareStatement(facultyTable);
             facultyTableStatement.executeUpdate();
 
-            String insertFaculty = "INSERT INTO class (teacher_name, class_title) VALUES" +
-                    "('Ms. Lovelace', 'Physics')," +
+            String insertFaculty = "INSERT INTO faculty (teacher, class) VALUES" +
+                    "('Mr. Tyson', 'Physics')," +
                     "('Ms. Lovelace', 'Math')," +
                     "('Mr. McCarthy', 'Writing')," +
                     "('Ms. Goodall', 'Biology');";
@@ -52,15 +91,15 @@ public class InnerJoinTest {
             insertFacultyData.executeUpdate();
 
 
-            String studentsTable = "CREATE TABLE student (" +
+            String studentsTable = "CREATE TABLE students (" +
                     "id SERIAL PRIMARY KEY," +
-                    "student_name VARCHAR(255)," +
-                    "class_title VARCHAR(255)" +
+                    "student VARCHAR(255)," +
+                    "class VARCHAR(255)" +
                     ");";
             PreparedStatement studentsTableStatement = conn.prepareStatement(studentsTable);
             studentsTableStatement.executeUpdate();
 
-            String insertStudents = "INSERT INTO student (student_name, class_title) VALUES" +
+            String insertStudents = "INSERT INTO students (student, class) VALUES" +
                     "('John Stewart', 'Writing')," +
                     "('Stephen Colbert', 'Physics')," +
                     "('Samantha Bee', 'Math')," +
@@ -70,8 +109,25 @@ public class InnerJoinTest {
             PreparedStatement insertStudentsData = conn.prepareStatement(insertStudents);
             insertStudentsData.executeUpdate();
 
+
+            String textbooksTable = "CREATE TABLE textbooks (" +
+                    "id SERIAL PRIMARY KEY," +
+                    "class VARCHAR(255)," +
+                    "textbook VARCHAR(255)" +
+                    ");";
+            PreparedStatement textbooksTableStatement = conn.prepareStatement(textbooksTable);
+            textbooksTableStatement.executeUpdate();
+
+            String insertTextbooks = "INSERT INTO textbooks (class, textbook) VALUES" +
+                    "('Physics' , 'Motion 101')," +
+                    "('Math', 'What even is modulus anyway?')," +
+                    "('Biology', 'Lions, Tigers, and Organs 5th ed')," +
+                    "('Writing', 'The Story Circle Workbook')," +
+                    "('Art', 'Teenage Mutant Ninja Turtles #10');";
+            PreparedStatement insertTextbooksStatement = conn.prepareStatement(insertTextbooks);
+            insertTextbooksStatement.executeUpdate();
+
         } catch(SQLException e) {
-            e.printStackTrace();
         }
     }
 
@@ -80,7 +136,7 @@ public class InnerJoinTest {
         try {
             conn = ConnectionUtil.getConnection();
 
-            String dropTable = "DROP TABLE IF EXISTS class, student";
+            String dropTable = "DROP TABLE IF EXISTS faculty, students, textbooks";
             PreparedStatement createTableStatement = conn.prepareStatement(dropTable);
             createTableStatement.executeUpdate();
 

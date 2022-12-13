@@ -44,7 +44,7 @@ SELECT * FROM table WHERE value NOT IN ('value1', 'value2');
 # Lab
 
 ## Problem 1
-employee table
+employees table
 |  id  |   first_name   |   last_name   |  salary  |
 |------|----------------|---------------|----------|
 |1     |'Steve'         |'Garcia'       |67400.00  |
@@ -58,7 +58,7 @@ employee table
 - - -
 
 ## Problem 2 
-employee table
+employees table
 |  id  |   first_name   |   last_name   |  salary  |
 |------|----------------|---------------|----------|
 |1     |'Steve'         |'Garcia'       |67400.00  |
@@ -72,7 +72,7 @@ employee table
 - - -
 
 ## Problem 3 
-employee table
+employees table
 |  id  |   first_name   |   last_name   |  salary  |
 |------|----------------|---------------|----------|
 |1     |'Steve'         |'Garcia'       |67400.00  |

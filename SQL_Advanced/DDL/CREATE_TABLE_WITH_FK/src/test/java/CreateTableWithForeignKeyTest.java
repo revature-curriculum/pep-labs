@@ -37,7 +37,7 @@ public class CreateTableWithForeignKeyTest {
 
         try {
             Connection connection = ConnectionUtil.getConnection();
-            String sql = "INSERT INTO post (post, user_fk) VALUES ('test post123', 1)";
+            String sql = "INSERT INTO posts (post, user_fk) VALUES ('test post123', 1)";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.executeUpdate();
         } catch (SQLException e) {
@@ -72,14 +72,14 @@ public class CreateTableWithForeignKeyTest {
         try {
             Connection connection = ConnectionUtil.getConnection();
 
-            String sql = "INSERT INTO post (post, user_fk) VALUES ('test post123', 100)";
+            String sql = "INSERT INTO posts (post, user_fk) VALUES ('test post123', 100)";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.executeUpdate();
             //if executing the query doesn't throw an exception, then the test should fail.
             System.out.println("problem1: foreign key constraint not added. \n");
             Assert.fail();
         } catch (SQLException e) {
-            if(e.getMessage().contains("Table \"POST\" not found;")){
+            if(e.getMessage().contains("Table \"POSTS\" not found;")){
                 Assert.fail();
             }
         }
@@ -112,12 +112,12 @@ public class CreateTableWithForeignKeyTest {
             Connection connection = ConnectionUtil.getConnection();
 
             //Write SQL logic here
-            String sql1 = "CREATE TABLE user (id SERIAL PRIMARY KEY, firstname varchar(100), lastname varchar(100));";
-            String sql2 = "INSERT INTO user (firstname, lastname) VALUES ('Steve', 'Garcia');";
-            String sql3 = "INSERT INTO user (firstname, lastname) VALUES ('Alexa', 'Smith');";
-            String sql4 = "INSERT INTO user (firstname, lastname) VALUES ('Steve', 'Jones');";
-            String sql5 = "INSERT INTO user (firstname, lastname) VALUES ('Brandon', 'Smith');";
-            String sql6 = "INSERT INTO user (firstname, lastname) VALUES ('Adam', 'Jones');";
+            String sql1 = "CREATE TABLE users (id SERIAL PRIMARY KEY, firstname varchar(100), lastname varchar(100));";
+            String sql2 = "INSERT INTO users (firstname, lastname) VALUES ('Steve', 'Garcia');";
+            String sql3 = "INSERT INTO users (firstname, lastname) VALUES ('Alexa', 'Smith');";
+            String sql4 = "INSERT INTO users (firstname, lastname) VALUES ('Steve', 'Jones');";
+            String sql5 = "INSERT INTO users (firstname, lastname) VALUES ('Brandon', 'Smith');";
+            String sql6 = "INSERT INTO users (firstname, lastname) VALUES ('Adam', 'Jones');";
 
             PreparedStatement ps = connection.prepareStatement(sql1 + sql2 + sql3 + sql4 + sql5 + sql6);
 
@@ -136,8 +136,8 @@ public class CreateTableWithForeignKeyTest {
         try {
 
             Connection connection = ConnectionUtil.getConnection();
-            String sql = "DROP TABLE post;";
-            String sql1 = "DROP TABLE user;";
+            String sql = "DROP TABLE posts;";
+            String sql1 = "DROP TABLE users;";
 
             PreparedStatement ps = connection.prepareStatement(sql + sql1);
 

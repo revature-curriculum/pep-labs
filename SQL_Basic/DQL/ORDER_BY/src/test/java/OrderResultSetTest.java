@@ -37,6 +37,37 @@ public class OrderResultSetTest {
         }
     }
 
+    @Test
+    public void problem2ReverseAlphabeticalOrder() {
+        try {
+            List<Character> expectedList = new LinkedList<>();
+            expectedList.add(new Character(2, "Vladimir", "Harkonnen"));
+            expectedList.add(new Character(5, "Feyd-Rautha", "Harkonnen"));
+            expectedList.add(new Character(4, "Paul", "Atreides"));
+            expectedList.add(new Character(1, "Leto", "Atreides"));
+            expectedList.add(new Character(3, "Jessica", "Atreides"));
+
+            List<Character> resultList = orderResultSetActivity.problem2();
+
+            Assert.assertEquals(expectedList, resultList);
+        }catch(Exception e) {
+            System.out.println("problem1: " + e.getMessage() + '\n');
+            fail();
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -45,7 +76,7 @@ public class OrderResultSetTest {
         try {
             conn = ConnectionUtil.getConnection();
 
-            String createTable = "CREATE TABLE character (" +
+            String createTable = "CREATE TABLE characters (" +
                     "id SERIAL PRIMARY KEY," +
                     "first_name VARCHAR(255)," +
                     "last_name VARCHAR(255)" +
@@ -53,7 +84,7 @@ public class OrderResultSetTest {
             PreparedStatement createTableStatement = conn.prepareStatement(createTable);
             createTableStatement.executeUpdate();
 
-            String insertData = "INSERT INTO character (first_name, last_name) VALUES" +
+            String insertData = "INSERT INTO characters (first_name, last_name) VALUES" +
                     "('Leto', 'Atreides')," +
                     "('Vladimir', 'Harkonnen')," +
                     "('Jessica', 'Atreides')," +
@@ -72,7 +103,7 @@ public class OrderResultSetTest {
         try {
             conn = ConnectionUtil.getConnection();
 
-            String dropTable = "DROP TABLE IF EXISTS character";
+            String dropTable = "DROP TABLE IF EXISTS characters";
             PreparedStatement createTableStatement = conn.prepareStatement(dropTable);
             createTableStatement.executeUpdate();
 

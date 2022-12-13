@@ -78,15 +78,12 @@ public class CreateTableWithForeignKey {
      */
     public void problem1(){
         /**
-         * Assignment: create a "post" table that has the following columns:
+         * Assignment: create a "posts" table that has the following columns:
          *       posts table:
          *       |   id  |     post        |        user_fk         |
          *       ----------------------------------------------------
-         *       where the id is of type SERIAL PRIMARY KEY, post is of type varchar(255), and user_fk is of type
-         *       int.
          *
-         * Note: The post column will hold the text content of the post and the user_fk column will be a foreign key to
-         * the user table's id.
+         * Note: The post column will hold the content of the post and the user_fk column will be a foreign key to the users table's id.
          */
         String sql = FileUtil.parseSQLFile("problem1.sql");
 

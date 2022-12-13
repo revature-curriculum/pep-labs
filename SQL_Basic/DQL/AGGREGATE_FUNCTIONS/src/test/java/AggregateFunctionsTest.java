@@ -72,7 +72,7 @@ public class AggregateFunctionsTest {
         try {
             Connection conn = ConnectionUtil.getConnection();
 
-            String createTable = "CREATE TABLE employee (" +
+            String createTable = "CREATE TABLE employees (" +
                     "id SERIAL PRIMARY KEY," +
                     "first_name VARCHAR(255)," +
                     "last_name VARCHAR(255)," +
@@ -81,7 +81,7 @@ public class AggregateFunctionsTest {
             PreparedStatement createTableStatement = conn.prepareStatement(createTable);
             createTableStatement.executeUpdate();
 
-            String insertData = "INSERT INTO employee (first_name, last_name, salary) VALUES" +
+            String insertData = "INSERT INTO employees (first_name, last_name, salary) VALUES" +
                     "('Steve', 'Garcia', 67400.00)," +
                     "('Alexa', 'Smith', 42500.00)," +
                     "('Steve', 'Jones', 99890.99)," +
@@ -99,7 +99,7 @@ public class AggregateFunctionsTest {
         try {
             Connection conn = ConnectionUtil.getConnection();
 
-            String dropTable = "DROP TABLE IF EXISTS employee";
+            String dropTable = "DROP TABLE IF EXISTS employees";
             PreparedStatement createTableStatement = conn.prepareStatement(dropTable);
             createTableStatement.executeUpdate();
 

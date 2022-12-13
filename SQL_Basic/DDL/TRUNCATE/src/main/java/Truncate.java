@@ -1,3 +1,5 @@
+
+
 import Util.ConnectionUtil;
 import Util.FileUtil;
 
@@ -19,7 +21,37 @@ import java.sql.Statement;
 public class Truncate {
 
     /**
-     *      Song Table Diagram:
+     *       users table
+     *       |   id  |     firstname        |        lastname        |
+     *       ----------------------------------------------------------
+     *       |1      |'Steve'               |'Garcia'                |
+     *       |2      |'Alexa'               |'Smith'                 |
+     *       |3      |'Steve'               |'Jones'                 |
+     *       |4      |'Brandon'             |'Smith'                 |
+     *       |5      |'Adam'                |'Jones'                 |
+     *
+     */
+    public void problem1(){
+        /**
+         * problem1: remove all the records from the table "users"
+         */
+
+        String sql = FileUtil.parseSQLFile("problem1.sql");
+
+
+
+        try {
+            Connection connection = ConnectionUtil.getConnection();
+            Statement s = connection.createStatement();
+            s.executeUpdate(sql);
+
+        } catch (SQLException e) {
+            System.out.println("problem1: " + e.getMessage() + '\n');
+        }
+    }
+
+    /**
+     *      Songs Table Diagram:
      *      |      title        |        artist         |
      *      ---------------------------------------------
      *      |'Let it be'        |'Beatles'              |
@@ -28,7 +60,7 @@ public class Truncate {
      */
     public void problem2(){
         /**
-         * problem2: remove all the records from the table "song"
+         * problem2: remove all the records from the table "songs"
          */
         String sql = FileUtil.parseSQLFile("problem2.sql");
 

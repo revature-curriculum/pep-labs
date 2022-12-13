@@ -50,7 +50,7 @@ SELECT * FROM employees WHERE salary < 100000.00;
 # Lab
 
 ## Problem 1
-employee table
+employees table
 |  id  |   first_name   |   last_name   |  salary  |
 |------|----------------|---------------|----------|
 |1     |'Steve'         |'Garcia'       |67400.00  |
@@ -59,12 +59,12 @@ employee table
 |4     |'Brandon'       |'Smith'        |120000.00 |
 |5     |'Adam'          |'Jones'        |55050.50  |
 
-#### Problem 1: Given the above employee table, query all the records from the table that have the lastname "Smith"
+#### Problem 1: Given the above employees table, query all the records from the table that have the lastname "Smith"
 
 - - -
 
 ## Problem 2 
-employee table
+employees table
 |  id  |   first_name   |   last_name   |  salary  |
 |------|----------------|---------------|----------|
 |1     |'Steve'         |'Garcia'       |67400.00  |
@@ -74,3 +74,17 @@ employee table
 |5     |'Adam'          |'Jones'        |55050.50  |
 
 #### Problem 2: Query the employees table for all records with a salary greater than $75,000
+
+- - -
+
+## Problem 3 
+employees table
+|  id  |   first_name   |   last_name   |  salary  |
+|------|----------------|---------------|----------|
+|1     |'Steve'         |'Garcia'       |67400.00  |
+|2     |'Alexa'         |'Smith'        |42500.00  |
+|3     |'Steve'         |'Jones'        |99890.99  |
+|4     |'Brandon'       |'Smith'        |120000.00 |
+|5     |'Adam'          |'Jones'        |55050.50  |
+
+#### Problem 3: Query the employees table for all records with a first name that starts with 'A'

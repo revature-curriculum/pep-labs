@@ -37,7 +37,7 @@ Example:
 </td></tr> </table>
 
 Note that there is no record in the right table for Foghorn, and there is no record in the left table for
-Porky. When we OUTER JOIN these two tables ON the character column, the missing data will be null. This is useful for finding rows where such a match does not exist, such as textbooks that have no associates classes, or classes that have no associate textbooks.
+Porky. When we OUTER JOIN these two tables ON the character column, the missing data will be null.
 
 ```SQL
 SELECT * FROM table_left
@@ -69,10 +69,10 @@ The output of the join would create the following result set:
 Consider the three tables below for the following problems:
 
 <table>
-<tr><th> class   </th><th> student </th><th> textbook </th></tr>
+<tr><th> faculty   </th><th> students </th><th> textbooks </th></tr>
 <tr><td>
 
-| id |teacher_name   |class_title|   
+| id |    teacher    |   class   |   
 | -- | ------------- | --------- |     
 |1   |'Mr. Tyson'    |'Physics'  |   
 |2   |'Ms. Lovelace' |'Math'     |
@@ -81,7 +81,7 @@ Consider the three tables below for the following problems:
 
 </td><td>
 
-| id | student_name      |class_title|
+| id |      student      |   class   |
 | -- | ----------------- | --------- |
 |1   |'John Stewart'     |'Writing'  |
 |2   |'Stephen Colbert'  |'Physics'  |
@@ -92,7 +92,7 @@ Consider the three tables below for the following problems:
 
 </td><td>
 
-| id |class_title|              textbook_title        |
+| id |   class   |              textbook              |
 | -- | ----------------- | --------- |
 |1   |'Physics'  |'Motion 101'                        |
 |2   |'Math'     |'What Even Is Modulus Anyway?'      |
@@ -103,7 +103,13 @@ Consider the three tables below for the following problems:
 </td></tr> </table>
 
 ## Problem 1
-Problem 1: Use a LEFT OUTER JOIN to combine the class (left side) and student (right side) tables using the class column as the join on column. This means that when no student exists for a class, a row with a NULL class will be in the resulting query. Hint: You should start with `SELECT * FROM class`
+Problem 1: Use a LEFT OUTER JOIN to combine the faculty and students tables using the class column as the join on 
+column.   
+
+Hint: You should start with `SELECT * FROM faculty`
 
 ## Problem 2
-Problem 2: Use a RIGHT OUTER JOIN to combine the class (left side) and textbook (right side) tables using the class column as the join on column. This means that when no class exists for a textbook, a row with a NULL class will be in the resulting query. Hint: You should start with `SELECT * FROM class`
+Problem 2: Use a RIGHT OUTER JOIN to combine the faculty and textbooks tables using the class column as the join on 
+column.  
+
+Hint: You should start with `SELECT * FROM faculty`

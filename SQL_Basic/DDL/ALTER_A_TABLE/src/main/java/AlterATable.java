@@ -35,17 +35,13 @@ import java.sql.Statement;
  *     NOTE: the [] in the "Adding a column" syntax means that the constraint is optional
  *
  *
- *    Additional reference material: https://www.w3schools.com/sql/sql_alter.asp
+ *    Additional reference material if needed: https://www.w3schools.com/sql/sql_alter.asp
  *
  */
 public class AlterATable {
 
     /**
-     *
-     * In problem1.sql, write a SQL statement that adds a "lastname" column to the site_user table, of type
-     * varchar(255).
-     *
-     *   site_user table:
+     *   users table:
      *   |    id    |     firstname     |
      *   --------------------------------
      *   |1         |'Kevin'            |
@@ -54,7 +50,12 @@ public class AlterATable {
      *
      */
     public void problem1(){
+        /**
+         * problem1: Use the ALTER keyword to add a "lastname" column to the "users" table.
+         */
         String sql = FileUtil.parseSQLFile("problem1.sql");
+
+
 
         try {
             Connection connection = ConnectionUtil.getConnection();
@@ -63,6 +64,23 @@ public class AlterATable {
 
         } catch (SQLException e) {
             System.out.println("problem1: " + e.getMessage() + '\n');
+        }
+    }
+
+
+    public void problem2(){
+        /**
+         *  problem2: Use the ALTER keyword to remove the "firstname" column from the "users" table.
+         */
+        //Write SQL statement here
+        String sql = FileUtil.parseSQLFile("problem2.sql");
+        try {
+            Connection connection = ConnectionUtil.getConnection();
+            Statement s = connection.createStatement();
+            s.executeUpdate(sql);
+
+        } catch (SQLException e) {
+            System.out.println("problem2: " + e.getMessage() + '\n');
         }
     }
 }

@@ -8,7 +8,7 @@
  used in conjunction with aggregate functions. However, you cannot group by the output of the function.
  Recall that the output of an aggregate function is a single aggregate value.
 
-employee table
+employees table
 |  id  |     employee   |   manager    |  salary  |
 |------|----------------|--------------|----------|
 |1     |'Steve'         |'Dave'        |67400.00  |
@@ -34,7 +34,7 @@ ORDER BY AVG(salary) DESC;
 # Lab
 
 ## Problem 1
-artist table
+artists table
 | id |     artist     |        album        |         song         |
 |----|----------------|---------------------|----------------------|
 |1   |'The Beatles'   |'Abbey Road'         |'Come Together'       |
@@ -46,3 +46,21 @@ artist table
 
 #### Problem 1: Use the `GROUP BY` clause with the `COUNT()` aggregate function to query the songs table for the number of songs by each artist.
 HINT: You should avoid using the wild card (*) in your statement. All projected columns must either be used in the `GROUP BY` clause or an aggregate function.
+
+- - -
+
+## Problem 2 
+artists table
+| id |     artist     |        album        |         song         |
+|----|----------------|---------------------|----------------------|
+|1   |'The Beatles'   |'Abbey Road'         |'Come Together'       |
+|2   |'The Beatles'   |'Let It Be'          |'Let It Be'           |
+|3   |'Led Zeppelin'  |'IV'                 |'Black Dog'           |
+|4   |'Led Zeppelin'  |'Physical Graffiti'  |'Kashmir'             |
+|5   |'Led Zeppelin'  |'IV'                 |'Going to California' |
+|6   |'The Eagles'    |'Hotel California'   |'Hotel California'    |
+
+#### Problem 2: Use COUNT(), GROUP BY, and ORDER BY to identify the album which contains the greatest number of songs in the table.
+NOTE: The results must be ordered properly, as we only consider the first result in the list.
+HINT: You should avoid using the wild card (*) in your statement.
+HINT2: You cannot `GROUP BY` the result of an aggregate function, but you can `ORDER BY` it.

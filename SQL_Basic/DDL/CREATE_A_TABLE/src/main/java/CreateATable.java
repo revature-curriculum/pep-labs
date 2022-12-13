@@ -10,13 +10,12 @@ import java.sql.Statement;
 /**
  * SQL sublanguage: DDL (Data Definition Language)
  *
- * As of right now, all the data that we are storing into variables in java are lost when the application ends.
- * We need a tool that will allow us to persist data past the lifetime of the java application. The most common
- * tool to achieve this is a database.
+ * As of right now, all the data that we are storing into variables in java are lost when the application ends. We need a tool that will
+ * allow us to persist data past the lifetime of the java application. The most common tool to achieve this is a database.
  *
  * The specific type of database we will be utilizing uses a language called SQL (Structure Query Language).
- * Before we store or retrieve any data, we need to define the format in which it is stored. SQL utilizes tables as its
- * format. This follows a similar format to a spreadsheet.
+ * Before we store or retrieve any data, we need to define the format in which it is stored. SQL utilizes tables as its format.
+ * This follows a similar format to a spreadsheet.
  *
  * The tables will have rows and columns:
  *      - A column defines one attribute of a table.
@@ -25,8 +24,8 @@ import java.sql.Statement;
  * Let's create our first SQL table.
  * The syntax for Creating a table is as follows:
  * CREATE TABLE table_name(
- *      variable_name1 datatype constraint,
- *      variable_name2 datatype constraint
+ *      variable_name datatype constraint,
+ *      ...
  * );
  *
  * Note: there are two terms in the above syntax that we need to understand:
@@ -45,17 +44,15 @@ import java.sql.Statement;
  *      - If a constraint that was defined is not met when inserting a record, a SQLException will be thrown.
  *
  *
- * Additional reference material:
+ * Additional reference material if needed:
  *      - https://www.w3schools.com/sql/sql_create_table.asp
+ *      - https://www.w3schools.com/sql/sql_constraints.asp
  *
  */
 public class CreateATable {
 
     /**
-     * Assignment: Create a new table in the problem1.sql file, called "song" with 2 columns "title" and "artist".
-     * both columns should have the datatype varchar(255), which represents a String of up to 255 characters.
-     *
-     *     Example Song Table Diagram:
+     *     Songs Table Diagram:
      *     |      title        |        artist         |
      *     ---------------------------------------------
      *     |'Let it be'        |'Beatles'              |
@@ -63,6 +60,9 @@ public class CreateATable {
      *     |'Kashmir'          |'Led Zeppelin'         |
      */
     public void problem1(){
+        /**
+         * Assignment: Create a new table in our database called "songs" with 2 columns "title" and "artist".
+         */
         String sql = FileUtil.parseSQLFile("problem1.sql");
 
         try {
@@ -71,6 +71,32 @@ public class CreateATable {
             s.executeUpdate(sql);
         } catch (SQLException e) {
             System.out.println("problem1: " + e.getMessage() + '\n');
+        }
+    }
+
+
+    /**
+     *
+     *     Songs Table Diagram:
+     *     |    title (NOT NULL and UNIQUE)        |    artist (NOT NULL)        |
+     *     -----------------------------------------------------------------------
+     *     |'Let it be'                            |'Beatles'                    |
+     *     |'Hotel California'                     |'Eagles'                     |
+     *     |'Kashmir'                              |'Led Zeppelin'               |
+     */
+    public void problem2(){
+        /**
+         * Assignment: Create the same table as above however the title column should have the NOT NULL and UNIQUE constraint and the artist column should have the NOT NULL CONSTRAINT.
+         */
+        String sql = FileUtil.parseSQLFile("problem2.sql");
+
+
+        try {
+            Connection connection = ConnectionUtil.getConnection();
+            PreparedStatement s = connection.prepareStatement(sql);
+            s.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println("problem2: " + e.getMessage() + '\n');
         }
     }
 

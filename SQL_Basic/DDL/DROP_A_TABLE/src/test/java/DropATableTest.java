@@ -13,13 +13,13 @@ public class DropATableTest {
     private DropATable dropATable = new DropATable();
 
     /**
-     * The before annotation runs before every test so that way we drop the tables to avoid conflicts in future tests
+     * The after annotation runs after every test so that way we drop the tables to avoid conflicts in future tests
      */
     @Before
     public void beforeTest(){
         try {
             Connection connection = ConnectionUtil.getConnection();
-            String sql = "CREATE TABLE song (Title varchar(100), Artist varchar(100));";
+            String sql = "CREATE TABLE songs (Title varchar(100), Artist varchar(100));";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.executeUpdate();
         } catch (SQLException e) {
@@ -35,7 +35,7 @@ public class DropATableTest {
 
         try {
             Connection connection = ConnectionUtil.getConnection();
-            String sql = "DROP TABLE song;";
+            String sql = "DROP TABLE songs;";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.executeUpdate();
 
@@ -51,10 +51,10 @@ public class DropATableTest {
         try {
             dropATable.problem1();
             Connection connection = ConnectionUtil.getConnection();
-            String sql = "INSERT INTO song (Title, Artist) VALUES ('Let it be', 'Beatles');";
+            String sql = "INSERT INTO songs (Title, Artist) VALUES ('Let it be', 'Beatles');";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.executeUpdate();
-            System.out.println("problem1: Table 'song' was not dropped.");
+            System.out.println("problem1: Table 'songs' was not dropped.");
             Assert.fail();
         } catch (SQLException e) {}
     }

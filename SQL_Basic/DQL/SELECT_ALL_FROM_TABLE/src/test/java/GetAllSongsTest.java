@@ -23,10 +23,10 @@ public class GetAllSongsTest {
         try {
             Connection connection = ConnectionUtil.getConnection();
             //Write SQL logic here
-            String sql1 = "CREATE TABLE song (Title varchar(100), Artist varchar(100));";
-            String sql2 = "INSERT INTO song VALUES ('Let it be', 'Beatles');";
-            String sql3 = "INSERT INTO song VALUES ('Hotel California', 'Eagles');";
-            String sql4 = "INSERT INTO song VALUES ('Kashmir', 'Led Zeppelin');";
+            String sql1 = "CREATE TABLE songs (Title varchar(100), Artist varchar(100));";
+            String sql2 = "INSERT INTO songs VALUES ('Let it be', 'Beatles');";
+            String sql3 = "INSERT INTO songs VALUES ('Hotel California', 'Eagles');";
+            String sql4 = "INSERT INTO songs VALUES ('Kashmir', 'Led Zeppelin');";
             PreparedStatement ps = connection.prepareStatement(sql1 + sql2 + sql3 + sql4);
             ps.executeUpdate();
         } catch (SQLException e) {
@@ -40,7 +40,7 @@ public class GetAllSongsTest {
     public void cleanup(){
         try {
             Connection connection = ConnectionUtil.getConnection();
-            String sql = "DROP TABLE song;";
+            String sql = "DROP TABLE songs;";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.executeUpdate();
         } catch (SQLException e) {

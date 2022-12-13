@@ -37,7 +37,7 @@ public class CreateAViewTest {
                 actualResult.add(new User(rs.getString(1), rs.getString(2)));
             }
 
-            String sql2 = "SELECT firstname, lastname FROM site_user;";
+            String sql2 = "SELECT firstname, lastname FROM users;";
 
             ps = connection.prepareStatement(sql2);
 
@@ -82,12 +82,12 @@ public class CreateAViewTest {
             Connection connection = ConnectionUtil.getConnection();
 
             //Write SQL logic here
-            String sql1 = "CREATE TABLE site_user (id SERIAL PRIMARY KEY, firstname varchar(100), lastname varchar(100), age int);";
-            String sql2 = "INSERT INTO site_user (firstname, lastname, age) VALUES ('Steve', 'Garcia', 23);";
-            String sql3 = "INSERT INTO site_user (firstname, lastname, age) VALUES ('Alexa', 'Smith', 40);";
-            String sql4 = "INSERT INTO site_user (firstname, lastname, age) VALUES ('Steve', 'Jones', 29);";
-            String sql5 = "INSERT INTO site_user (firstname, lastname, age) VALUES ('Brandon', 'Smith', 50);";
-            String sql6 = "INSERT INTO site_user (firstname, lastname, age) VALUES ('Adam', 'Jones', 61);";
+            String sql1 = "CREATE TABLE users (id SERIAL PRIMARY KEY, firstname varchar(100), lastname varchar(100), age int);";
+            String sql2 = "INSERT INTO users (firstname, lastname, age) VALUES ('Steve', 'Garcia', 23);";
+            String sql3 = "INSERT INTO users (firstname, lastname, age) VALUES ('Alexa', 'Smith', 40);";
+            String sql4 = "INSERT INTO users (firstname, lastname, age) VALUES ('Steve', 'Jones', 29);";
+            String sql5 = "INSERT INTO users (firstname, lastname, age) VALUES ('Brandon', 'Smith', 50);";
+            String sql6 = "INSERT INTO users (firstname, lastname, age) VALUES ('Adam', 'Jones', 61);";
 
             PreparedStatement ps = connection.prepareStatement(sql1 + sql2 + sql3 + sql4 + sql5 + sql6);
 
@@ -106,7 +106,7 @@ public class CreateAViewTest {
         try {
 
             Connection connection = ConnectionUtil.getConnection();
-            String sql = "DROP TABLE site_user;";
+            String sql = "DROP TABLE users;";
             String sql2 = "DROP VIEW firstname_lastname;";
 
             PreparedStatement ps = connection.prepareStatement(sql + sql2);
