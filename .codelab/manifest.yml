@@ -1,388 +1,387 @@
 ---
 :template: revpro.yml
 :labs:
-  - Start:
+  - Intro_To_Java/Start:
     Week: 1
     Order: 1
     Type: "lab"
-  - HelloWorld:
+  - Intro_To_Java/Hello_World:
     Week: 1
     Order: 2
     Type: "lab"
-  - MethodParameters:
+  - Intro_To_Java/Method_Parameters:
     Week: 1
     Order: 3
     Type: "lab"
-  - Comparisons:
+  - Boolean_Logic/Comparisons:
     Week: 1
     Order: 4
     Type: "lab"
 # Cannot Find Combining Two Strings in this Repo
-  - IfStatement:
+  - Intro_To_Java/If_Statement:
     Week: 1
     Order: 6
     Type: "lab"
-  - BooleanOperators:
+  - Boolean_Logic/BooleanOperators:
     Week: 1
     Order: 7
     Type: "lab"
-  - Add:
+  - Novice_Coding_Challenges/Add:
     Week: 1
     Order: 1
     Type: "challenge"
-  - Subtract:
+  - Novice_Coding_Challenges/Subtract:
     Week: 1
     Order: 2
     Type: "challenge"
-  - GreaterOrLesser:
+  - Novice_Coding_Challenges/GreaterOrLesser:
     Week: 1
     Order: 3
     Type: "challenge"
-  - IntroToOOP:
+  - OOP_Basic/IntroToOOP:
     Week: 2
     Order: 1
     Type: "lab"
-  - Instantiation:
+  - OOP_Basic/Instantiation:
     Week: 2
     Order: 2
     Type: "lab"
-  - Constructors:
+  - OOP_Basic/Constructors:
     Week: 2
     Order: 3
     Type: "lab"
-  - Arrays:
+  - Intro_To_Control_Flow/Arrays:
     Week: 2
     Order: 4
     Type: "lab"
-  - WhileLoop:
+  - Intro_To_Control_Flow/WhileLoop:
     Week: 2
     Order: 5
     Type: "lab"
-  - ForLoop:
+  - Intro_To_Control_Flow/ForLoop:
     Week: 2
     Order: 6
     Type: "lab"
-  - Math:
+  - OOP_Intermediate/Math:
     Week: 2
     Order: 7
     Type: "lab"
-  - EvenOrOdd:
+  - Novice_Coding_Challenges/EvenOrOdd:
     Week: 2
     Order: 8
     Type: "challenge"
-  - HardcodedLogin:
+  - Novice_Coding_Challenges/HardcodedLogin:
     Week: 2
     Order: 9
     Type: "challenge"
-  - FizzBuzz:
+  - Novice_Coding_Challenges/FizzBuzz:
     Week: 2
     Order: 10
     Type: "challenge"
-  - SetAllArrayElementsToN:
+  - Intermediate_Coding_Challenges/SetAllArrayElementsToN:
     Week: 2
     Order: 11
     Type: "challenge"
-  - ReturnArrayContents:
+  - Intermediate_Coding_Challenges/ReturnArrayContents:
     Week: 2
     Order: 12
     Type: "challenge"
-  - GuessingGame:
+  - Mini_Project_1_Guessing_Game/GuessingGame:
     Week: 2
     Order: 13
     Type: "project"
-  - Exceptions:
+  - Exceptions/Exceptions:
     Week: 3
     Order: 1
     Type: "lab"
-  - UncheckedException:
+  - Exceptions/UncheckedException:
     Week: 3
     Order: 2
     Type: "lab"
-  - ThrowCustomException:
+  - Exceptions/ThrowCustomException:
     Week: 3
     Order: 3
     Type: "lab"
-  - Lists:
+  - Collections/Lists:
     Week: 3
     Order: 4
     Type: "lab"
-  - Sets:
+  - Collections/Sets:
     Week: 3
     Order: 5
     Type: "lab"
-  - Map:
+  - Collectoins/Map:
     Week: 3
     Order: 6
     Type: "lab"
-  - Queue:
+  - Collectoins/Queue:
     Week: 3
     Order: 7
     Type: "lab"
-  - Stack:
+  - Collectoins/Stack:
     Week: 3
     Order: 8
     Type: "lab"
-  - Casting:
+  - OOP_Intermediate/Casting:
     Week: 3
     Order: 9
     Type: "lab"
-  - ArraySum:
+  - Intermediate_Coding_Challenges/ArraySum:
     Week: 3
     Order: 10
     Type: "challenge"
-  - Average:
+  - Intermediate_Coding_Challenges/Average:
     Week: 3
     Order: 11
     Type: "challenge"
-  - GetMax:
+  - Intermediate_Coding_Challenges/GetMax:
     Week: 3
     Order: 12
     Type: "challenge"
-  - BankAccount:
+  - Mini_Project_2_Bank_Account/BankAccount:
     Week: 3
     Order: 13
     Type: "project"
-  - StaticKeyword:
+  - OOP_Intermediate/StaticKeyword:
     Week: 4
     Order: 1
     Type: "lab"
-  - CreateTable:
+  - SQL_Basic/DDL/CREATE_A_TABLE:
     Week: 4
     Order: 2
     Type: "lab"
-  - DropTable:
+  - SQL_Basic/DDL/DROP_A_TABLE:
     Week: 4
     Order: 3
     Type: "lab"
-  - Insert:
+  - SQL_Basic/DML/INSERT_A_RECORD:
     Week: 4
     Order: 4
     Type: "lab"
-  - SelectAll:
+  - SQL_Basic/DQL/SELECT_ALL_FROM_TABLE:
     Week: 4
     Order: 5
     Type: "lab"
-  - PrimaryKey:
+  - SQL_Basic/DDL/CREATE_TABLE_WITH_PK:
     Week: 4
     Order: 6
     Type: "lab"
-  - SelectColumns:
+  - SQL_Basic/DQL/SELECTING_SPECIFIC_COLUMNS:
     Week: 4
     Order: 7
     Type: "lab"
-  - SelectWhere:
+  - SQL_Basic/DQL/SELECT_WHERE:
     Week: 4
     Order: 8
     Type: "lab"
-  - Update:
+  - SQL_Basic/DML/UPDATING_RECORDS:
     Week: 4
     Order: 9
     Type: "lab"
-  - Delete:
+  - SQL_Basic/DML/DELETING_RECORDS:
     Week: 4
     Order: 10
     Type: "lab"
-  - SelectWhereAndOr:
+  - SQL_Basic/DQL/SELECT_WHERE_AND_OR:
     Week: 4
     Order: 11
     Type: "lab"
-  - OrderBy:
+  - SQL_Basic/DQL/ORDER_BY:
     Week: 4
     Order: 12
     Type: "lab"
-  - Contains:
+  - Intermediate_Coding_Challenges/Contains:
     Week: 4
     Order: 13
     Type: "challenge"
-  - DoesNotContain:
+  - Intermediate_Coding_Challenges/DoesNotContain:
     Week: 4
     Order: 14
     Type: "challenge"
-  - ArrayAbsoluteValue:
+  - Intermediate_Coding_Challenges/ArraysAreEqual:
     Week: 4
     Order: 15
     Type: "challenge"
-  - MaxMinusMin:
+  - Intermediate_Coding_Challenges/MaxMinusMin:
     Week: 4
     Order: 16
     Type: "challenge"
-  - GroceryList:
+  - Mini_Project_3_Grocery_List/GroceryList:
     Week: 4
     Order: 17
     Type: "project"
-  - Truncate:
+  - SQL_Basic/DDL/TRUNCATE:
     Week: 5
     Order: 1
     Type: "lab"
-  - AlterTable:
+  - SQL_Basic/DDL/ALTER_A_TABLE:
     Week: 5
     Order: 2
     Type: "lab"
-  - AggregateFunctions:
+  - SQL_Basic/DQL/AGGREGATE_FUNCTIONS:
     Week: 5
     Order: 3
     Type: "lab"
-  - GroupBy:
+  - SQL_Basic/DQL/GROUP_BY:
     Week: 5
     Order: 4
     Type: "lab"
-  - StringMethods:
+  - String_Manipulation/StringMethods:
     Week: 5
     Order: 5
     Type: "lab"
-  - CreatingEndpoints:
+  - Javalin/1_Creating_Endpoints:
     Week: 5
     Order: 6
     Type: "lab"
-  - StatusCodes:
+  - Javalin/2_Status_Codes:
     Week: 5
     Order: 7
     Type: "lab"
-  - PathParameters:
+  - Javalin/3_Path_Parameters:
     Week: 5
     Order: 8
     Type: "lab"
-  - RequestBody:
+  - Javalin/4_Request_Body:
     Week: 5
     Order: 9
     Type: "lab"
-  - IndexOf:
+  - Intermediate_Coding_Challenges/IndexOf:
     Week: 5
     Order: 10
     Type: "challenge"
-  - IsSorted:
+  - Intermediate_Coding_Challenges/IsSorted:
     Week: 5
     Order: 11
     Type: "challenge"
-  - ReturnLongestString:
+  - Intermediate_Coding_Challenges/ReturnLongestString:
     Week: 5
     Order: 12
     Type: "challenge"
-  - FlightTracker:
+  - Mini_Project_4_Flight_Tracker/FlightTracker:
     Week: 5
     Order: 13
     Type: "project"
-  - ForeignKey:
+  - SQL_Advanced/DDL/CREATE_TABLE_WITH_FK:
     Week: 6
     Order: 1
     Type: "lab"
-  - InnerJoin:
+  - SQL_Advanced/DQL/INNER_JOIN:
     Week: 6
     Order: 2
     Type: "lab"
-  - OuterJoin:
+  - SQL_Advanced/DQL/OUTER_JOIN:
     Week: 6
     Order: 3
     Type: "lab"
-  - CreateView:
+  - SQL_Advanced/DDL/CREATE_A_VIEW:
     Week: 6
     Order: 4
     Type: "lab"
-  - Pyramid:
+  - Intermediate_Coding_Challenges/Pyramid:
     Week: 6
     Order: 5
     Type: "challenge"
-  - ContainsDuplicates:
+  - Intermediate_Coding_Challenges/ContainsDuplicates:
     Week: 6
     Order: 6
     Type: "challenge"
-  - Search2dArray:
+  - Intermediate_Coding_Challenges/Search2dArray:
     Week: 6
     Order: 7
     Type: "challenge"
-  - CombineArrays:
+  - Intermediate_Coding_Challenges/CombineArrays:
     Week: 6
     Order: 8
     Type: "challenge"
-  - Library:
+  - Mini_Project_5_Flight_Tracker/Library:
     Week: 6
     Order: 9
     Type: "project"
-  - AdvancedBooleans:
+  - Boolean_Logic/AdvancedBooleans:
     Week: 7
     Order: 1
     Type: "lab"
-  - OtherStringMethods:
+  - String_Manipulation/OtherStringMethods:
     Week: 7
     Order: 2
     Type: "lab"
-  - RemoveAllCharacter:
+  - Intermediate_Coding_Challenges/RemoveAllCharacter:
     Week: 7
     Order: 3
     Type: "challenge"
-  - IsThereSum:
+  - Intermediate_Coding_Challenges/IsThereSum:
     Week: 7
     Order: 4
     Type: "challenge"
-  - WordCount:
+  - Intermediate_Coding_Challenges/WordCount:
     Week: 7
     Order: 5
     Type: "challenge"
-  - ArrayAbsoluteValue:
+  - Intermediate_Coding_Challenges/ArrayAbsoluteValue:
     Week: 7
     Order: 6
     Type: "challenge"
-  - Equals:
+  - OOP_Intermediate/ParentObjectClassMethods:
     Week: 8
     Order: 1
     Type: "lab"
-  - ToString:
+  - OOP_Intermediate/Overriding:
     Week: 8
     Order: 2
     Type: "lab"
-  - Overriding:
+  - OOP_Intermediate/Interfaces:
     Week: 8
     Order: 3
     Type: "lab"
-  - Interfaces:
+  - OOP_Intermediate/Generic:
     Week: 8
     Order: 4
     Type: "lab"
-  - Generic:
+  - Intermediate_Coding_Challenges/PigLatin:
     Week: 8
     Order: 5
-    Type: "lab"
-  - PigLatin:
+    Type: "challenge"
+  - Intermediate_Coding_Challenges/CharComparison:
     Week: 8
     Order: 6
     Type: "challenge"
-  - CharComparison:
+  - Intermediate_Coding_Challenges/Isogram:
     Week: 8
     Order: 7
     Type: "challenge"
-  - Isogram:
+  - Intermediate_Coding_Challenges/InsertPosition:
     Week: 8
     Order: 8
     Type: "challenge"
-  - InsertPosition:
-    Week: 8
-    Order: 9
-    Type: "challenge"
-  - ReverseAString:
+  - Intermediate_Coding_Challenges/ReverseAString:
     Week: 9
     Order: 1
     Type: "challenge"
-  - LargestSum:
+  - Intermediate_Coding_Challenges/LargestSum:
     Week: 9
     Order: 2
     Type: "challenge"
-  - MostCommonCharacter:
+  - Intermediate_Coding_Challenges/MostCommonCharacter:
     Week: 9
     Order: 3
     Type: "challenge"
-  - Fibonacci:
+  - Intermediate_Coding_Challenges/Fibonacci:
     Week: 9
     Order: 4
     Type: "challenge"
-  - StringIsPalindrome:
+  - Intermediate_Coding_Challenges/StringIsPalindrome:
     Week: 10
     Order: 1
     Type: "challenge"
-  - SubArray:
+  - Intermediate_Coding_Challenges/SubArray:
     Week: 10
     Order: 2
     Type: "challenge"
-  - WordCountMap:
+  - Intermediate_Coding_Challenges/WordCountMap:
     Week: 10
     Order: 3
     Type: "challenge"
+
+  
+  
