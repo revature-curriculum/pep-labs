@@ -18,15 +18,15 @@ Additional resource if needed: https://www.w3schools.com/sql/sql_delete.asp
 # Lab
 
 ## Problem 1
-users table:
-|   id  |     firstname        |        lastname        |
-|-------|----------------------|------------------------|
-|1      |'Steve'               |'Garcia'                |
-|2      |'Alexa'               |'Smith'                 |
-|3      |'Steve'               |'Jones'                 |
-|4      |'Brandon'             |'Smith'                 |
-|5      |'Adam'                |'Jones'                 |
+site_user table:
+```
+|   id  |     firstname        |
+|-------|----------------------|
+|1      |'Steve'               |
+|2      |'Alexa'               |
+|3      |'Steve'               |
+|4      |'Brandon'             |
+|5      |'Adam'                |
+```
 
-#### Problem 1: Delete "Steve Jones" from the users table
-
-- - -
+#### Problem 1: Delete everyone named "Steve" from the site_user table in problem1.sql

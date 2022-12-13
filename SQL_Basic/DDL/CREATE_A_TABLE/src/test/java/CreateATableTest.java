@@ -25,7 +25,7 @@ public class CreateATableTest {
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.executeUpdate();
         } catch (SQLException e) {}
-    }   
+    }
 
     /**
      * To test that the table exists, we are attempting to insert a row into the table and if table does not exist,

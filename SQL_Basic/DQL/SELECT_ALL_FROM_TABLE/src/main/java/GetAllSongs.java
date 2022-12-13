@@ -21,9 +21,10 @@ import java.util.List;
 public class GetAllSongs {
 
     /**
-     *  The db table we will utilize for this problem is the "songs" table below
+     *  Assignment: write the SQL statement in the problem1.sql file to retrieve all the rows and columns from the
+     *  table "song". The db table we will utilize for this problem is the "song" table below
      *
-     *  Songs Table Diagram:
+     *  Song Table Diagram:
      *  |      title        |        artist         |
      *  ---------------------------------------------
      *  |"Let it be"        |Beatles                |
@@ -33,9 +34,6 @@ public class GetAllSongs {
      */
     public List<Song> problem1(){
 
-        /**
-         * Assignment: write the SQL statement below to retrieve all the rows and columns from the table "songs"
-         */
         String sql = FileUtil.parseSQLFile("problem1.sql");
 
 

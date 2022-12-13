@@ -24,14 +24,14 @@ import java.util.List;
  * For example, one might add the ORDER BY clause after the WHERE clause of a query to order employees from highest to
  * lowest salary:
  *
- *      SELECT * FROM employee_table WHERE current = true ORDER BY salary DESC
+ *      SELECT * FROM employee WHERE current = true ORDER BY salary DESC
  *
  * Additional reference material if needed: https://www.w3schools.com/sql/sql_orderby.asp
  */
 public class OrderResultSetActivity {
     /**
      *
-     *      characters table
+     *      character table
      *      | id |  first_name  |  last_name  |
      *      -----------------------------------
      *      |1   |'Leto'        |'Atreides'   |
@@ -68,30 +68,5 @@ public class OrderResultSetActivity {
         return resultList;
     }
 
-
-    public List<Character> problem2() {
-        /**
-         * Problem 2: Write a statement below to query the database for all characters. This time reverse the order
-         * so that the characters are in reverse alphabetical order by last name, then first name.
-         */
-        String sql = FileUtil.parseSQLFile("problem2.sql");
-
-
-        List<Character> resultList = new LinkedList<>();
-        try {
-            Connection connection = ConnectionUtil.getConnection();
-            Statement s = connection.createStatement();
-            ResultSet rs =s.executeQuery(sql);
-
-            while(rs.next()) {
-                resultList.add(new Character(rs.getInt(1), rs.getString(2), rs.getString(3)));
-            }
-
-        } catch (SQLException e) {
-            System.out.println("problem2: " + e.getMessage() + '\n');
-        }
-
-        return resultList;
-    }
 }
 

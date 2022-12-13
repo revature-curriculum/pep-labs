@@ -23,7 +23,7 @@ import java.sql.Statement;
 public class UpdateARecord {
 
     /**
-     *  users table:
+     *  site_user table:
      *  |   id  |     firstname        |        lastname        |
      *  ----------------------------------------------------------
      *  |1      |'Steve'               |'Garcia'                |
@@ -36,7 +36,7 @@ public class UpdateARecord {
 
     public void problem1(){
         /**
-         * Problem 1: Update Alexa's last name to be 'Rush' in the users table.
+         * Problem 1: Update Alexa's last name to be 'Rush' in the site_user table.
          */
         String sql = FileUtil.parseSQLFile("problem1.sql");
 
@@ -47,45 +47,6 @@ public class UpdateARecord {
 
         } catch (SQLException e) {
             System.out.println("problem1: " + e.getMessage() + '\n');
-        }
-    }
-
-
-
-    public void problem2(){
-        /**
-         * Problem 2: Update id 4 to have the firstname 'Chad' and the lastname 'Irving'
-         */
-        //Write SQL statement here
-        String sql = FileUtil.parseSQLFile("problem2.sql");
-
-        try {
-            Connection connection = ConnectionUtil.getConnection();
-            Statement s = connection.createStatement();
-            s.executeUpdate(sql);
-
-        } catch (SQLException e) {
-            System.out.println("problem2: " + e.getMessage() + '\n');
-        }
-    }
-
-
-    public void problem3(){
-        /**
-         * Problem 3: Update id 1 and 3 to have the firstname 'Steven'
-         *
-         * HINT: How would you filter id 1 OR 3?
-         */
-        //Write SQL statement here
-        String sql = FileUtil.parseSQLFile("problem3.sql");
-
-        try {
-            Connection connection = ConnectionUtil.getConnection();
-            Statement s = connection.createStatement();
-            s.executeUpdate(sql);
-
-        } catch (SQLException e) {
-            System.out.println("problem3: " + e.getMessage() + '\n');
         }
     }
 }
