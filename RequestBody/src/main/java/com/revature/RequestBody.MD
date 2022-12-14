@@ -10,7 +10,7 @@ The most common ways to retrieve data from the HTTP requests:
 We have already learned in the previous last lab how to use path parameters. This lab is going to talk about 
 retrieving data from the request body.
 
-## HTTP Request Body and Jackson.
+## HTTP Request Body
 
 Clients can send data in the body of an HTTP request. The type of data varies but in this curriculum we will be passing json strings in the body of our HTTP Requests.
 
