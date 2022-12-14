@@ -1,8 +1,5 @@
 package com.revature;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
-
 import io.javalin.Javalin;
 
 /**
@@ -16,18 +13,22 @@ public class JavalinSingleton {
         
         /**
          * problem1: retrieve the song object from the request body and return the artist name.
+         * 
+         * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
          */
         app.post("/problem1", ctx -> {
-
+                //implement logic here
         });
 
         /**
          * problem2: retrieve the song object from the request body...
          *      1. update the artist in the song object to "Beatles"
          *      2. return the updated song object in the response body
-        */
+         * 
+         * Note: Please refer to the "RequestBody.MD" file for more assistance if needed.
+         */
         app.post("/problem2", ctx -> {
-
+               //implement logic here
         });
 
 

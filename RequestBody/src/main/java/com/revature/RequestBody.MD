@@ -10,9 +10,20 @@ The most common ways to retrieve data from the HTTP requests:
 We have already learned in the previous last lab how to use path parameters. This lab is going to talk about 
 retrieving data from the request body.
 
-## HTTP Request Body
+## HTTP Request Body and Jackson.
 
-Clients can send data in the body of an HTTP request.
+Clients can send data in the body of an HTTP request. The type of data varies but in this curriculum we will be passing json strings in the body of our HTTP Requests.
+
+
+## Jackson
+Since Java does not understand json, we need to convert that json string into a something that java understands (like a java object). Jackson is a dependency that we can add to our project to achieve just that.
+
+Jackson utilizes a class called `ObjectMapper` and you can instantiate it as shown below:
+```java
+ObjectMapper om = new ObjectMapper();
+```
+
+There are 2 methods defined in the `ObjectMapper` class that we will use:
 
 - `om.readValue()`: converts json strings to java objects
 
