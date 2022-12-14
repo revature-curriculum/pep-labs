@@ -13,10 +13,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * To create test cases, we're leveraging junit. Junit is a testing framework which we've added to our application
- * using the Maven dependency manager. You can take a look at the pom.xml to understand Maven better.
- * Junit will run methods marked with its annotations and test if they pass Assert.
- *
  * We write test cases so that way a computer can verify that our program works as expected - although it takes
  * time and skilled professionals to write automated tests, it is more efficient than having humans manually
  * test the application in the long-run.
