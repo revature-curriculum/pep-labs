@@ -9,9 +9,12 @@ public class JavalinSingleton {
         
         /**
          * Assignment: return the status code for a generic "client side error" in the http response
+         * 
+         * Note: Please refer to the "StatusCodes.MD" file for more assistance if needed.
          */
         app.get("/client-side-err", ctx -> {
-            ctx.status(400);
+        
+            //write logic here
 
         });
 

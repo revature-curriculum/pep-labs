@@ -4,8 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.javalin.Javalin;
 
-//TODO: Half way done removing the Jackson stuff from the lab. Will have to complete and test later
-
 /*
  * You could run this method to start the server, and then access it using the 'curl' command. For example, you can
  * type into a terminal the following command:
