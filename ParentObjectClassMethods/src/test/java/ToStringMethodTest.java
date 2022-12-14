@@ -1,14 +1,14 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ImplementToStringMethodTest {
+public class ToStringMethodTest {
     /**
      * Whatever the output that a toString contains, if an object is created with the values 1, 1, true it should
      * contain all of those values.
      */
     @Test
     public void toStringTest1(){
-        SampleClassB ts = new SampleClassB();
+        SampleClass ts = new SampleClass();
         ts.a=1;
         ts.b=true;
         String output = ts.toString();
@@ -23,7 +23,7 @@ public class ImplementToStringMethodTest {
      */
     @Test
     public void toStringTest2(){
-        SampleClassB ts = new SampleClassB();
+        SampleClass ts = new SampleClass();
         ts.a=2;
         ts.b=true;
         String output = ts.toString();
@@ -38,7 +38,7 @@ public class ImplementToStringMethodTest {
      */
     @Test
     public void toStringTest3(){
-        SampleClassB ts = new SampleClassB();
+        SampleClass ts = new SampleClass();
         ts.a=1;
         ts.b=false;
         String output = ts.toString();
@@ -53,7 +53,7 @@ public class ImplementToStringMethodTest {
      */
     @Test
     public void toStringTest4(){
-        SampleClassB ts = new SampleClassB();
+        SampleClass ts = new SampleClass();
         ts.a=2;
         ts.b=false;
         String output = ts.toString();

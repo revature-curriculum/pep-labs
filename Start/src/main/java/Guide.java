@@ -51,7 +51,7 @@ public class Guide {
         return "Success from guide object "+ id+"! it says: " + message ;
     }
     /**
-     *  Now, locate the test class and run its test. It should pass, revealing green checkmarks in your run window.
+     *  Now, locate the test class and run its test. It should pass.
      *  Your task will be modifying the code in the remainder of the repo so that their test cases pass rather
      *  than fail.
      */
