@@ -15,7 +15,8 @@ public class FilterRecordsTest {
     FilterRecords filterRecords = new FilterRecords();
 
     /**
-     * This test calls the problem1 method and then compares it to the hardcoded list here, if they are the same then the test passes.
+     * This test calls the problem1 method and then compares it to the hardcoded list here, if they are the same then
+     * the test passes.
      */
     @Test
     public void problem1GetAllSmiths(){
@@ -34,7 +35,8 @@ public class FilterRecordsTest {
     }
 
     /**
-     * This test calls the problem2 method and then compares it to the hardcoded list here, if they are the same then the test passes.
+     * This test calls the problem2 method and then compares it to the hardcoded list here, if they are the same then
+     * the test passes.
      */
     @Test
     public void problem2SalaryGreaterThan(){
@@ -52,41 +54,6 @@ public class FilterRecordsTest {
         Assert.assertEquals(expectedResult, actualResult);
     }
 
-
-    /**
-     * This test calls the problem2 method and then compares it to the hardcoded list here, if they are the same then the test passes.
-     */
-    @Test
-    public void problem3NamesStartingWithA(){
-        //arrange
-        User user1 = new User(2,"Alexa", "Smith", 42500.00);
-        User user2 = new User(5, "Adam", "Jones", 55050.50);
-        List<User> expectedResult = new ArrayList<>();
-        expectedResult.add(user1);
-        expectedResult.add(user2);
-
-        //act
-        List<User> actualResult = filterRecords.problem3();
-
-        //assert
-        Assert.assertEquals(expectedResult, actualResult);
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /**
      * The @Before annotation runs before every test so that way we create the tables required prior to running the test
      */
@@ -98,12 +65,12 @@ public class FilterRecordsTest {
             Connection connection = ConnectionUtil.getConnection();
 
             //Write SQL logic here
-            String sql1 = "CREATE TABLE employees (id SERIAL PRIMARY KEY, first_name varchar(100), last_name varchar(100), salary DOUBLE PRECISION);";
-            String sql2 = "INSERT INTO employees (first_name, last_name, salary) VALUES ('Steve', 'Garcia', 67400.00);";
-            String sql3 = "INSERT INTO employees (first_name, last_name, salary) VALUES ('Alexa', 'Smith', 42500.00);";
-            String sql4 = "INSERT INTO employees (first_name, last_name, salary) VALUES ('Steve', 'Jones', 99890.99);";
-            String sql5 = "INSERT INTO employees (first_name, last_name, salary) VALUES ('Brandon', 'Smith', 120000.00);";
-            String sql6 = "INSERT INTO employees (first_name, last_name, salary) VALUES ('Adam', 'Jones', 55050.50);";
+            String sql1 = "CREATE TABLE employee (id SERIAL PRIMARY KEY, first_name varchar(100), last_name varchar(100), salary DOUBLE PRECISION);";
+            String sql2 = "INSERT INTO employee (first_name, last_name, salary) VALUES ('Steve', 'Garcia', 67400.00);";
+            String sql3 = "INSERT INTO employee (first_name, last_name, salary) VALUES ('Alexa', 'Smith', 42500.00);";
+            String sql4 = "INSERT INTO employee (first_name, last_name, salary) VALUES ('Steve', 'Jones', 99890.99);";
+            String sql5 = "INSERT INTO employee (first_name, last_name, salary) VALUES ('Brandon', 'Smith', 120000.00);";
+            String sql6 = "INSERT INTO employee (first_name, last_name, salary) VALUES ('Adam', 'Jones', 55050.50);";
 
 
             PreparedStatement ps = connection.prepareStatement(sql1 + sql2 + sql3 + sql4 + sql5 + sql6);
@@ -126,7 +93,7 @@ public class FilterRecordsTest {
 
             Connection connection = ConnectionUtil.getConnection();
 
-            String sql = "DROP TABLE IF EXISTS employees;";
+            String sql = "DROP TABLE IF EXISTS employee;";
 
             PreparedStatement ps = connection.prepareStatement(sql);
 
