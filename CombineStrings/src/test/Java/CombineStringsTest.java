@@ -20,7 +20,7 @@ public class CombineStringsTest {
      */
     @Test
     public void combineTest2(){
-        String input1 = "123";
+        String input1 = "123"; 
         String input2 = "456";
         String expected = "123456";
         String actual = cs.combine(input1, input2);
