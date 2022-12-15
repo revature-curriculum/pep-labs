@@ -35,7 +35,7 @@ Additional reference material if needed:
 # Lab
 
 ## Problem 1
-employees table
+employee table
 |  id  |   first_name   |   last_name   |  salary  |
 |------|----------------|---------------|----------|
 |1     |'Steve'         |'Garcia'       |67400.00  |
@@ -51,7 +51,7 @@ Note: the output should not contain any other info but the sum.
 - - -
 
 ## Problem 2 
-employees table
+employee table
 |  id  |   first_name   |   last_name   |  salary  |
 |------|----------------|---------------|----------|
 |1     |'Steve'         |'Garcia'       |67400.00  |
@@ -67,7 +67,7 @@ Note: the output should not contain any other info but the count
 - - -
 
 ## Problem 3 
-employees table
+employee table
 |  id  |   first_name   |   last_name   |  salary  |
 |------|----------------|---------------|----------|
 |1     |'Steve'         |'Garcia'       |67400.00  |
@@ -82,7 +82,7 @@ Note: the output should not contain any other info but the salary.
 - - -
 
 ## Problem 4 
-employees table
+employee table
 |  id  |   first_name   |   last_name   |  salary  |
 |------|----------------|---------------|----------|
 |1     |'Steve'         |'Garcia'       |67400.00  |

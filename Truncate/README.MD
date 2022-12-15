@@ -17,26 +17,12 @@ NOTE: The documentation in W3 schools has a TRUNCATE demo under the DROP TABLE d
 
 # Lab
 
-## Problem 1
-users table
-|   id  |     firstname        |        lastname        |
-|-------|----------------------|------------------------|
-|1      |'Steve'               |'Garcia'                |
-|2      |'Alexa'               |'Smith'                 |
-|3      |'Steve'               |'Jones'                 | 
-|4      |'Brandon'             |'Smith'                 |
-|5      |'Adam'                |'Jones'                 |
-
-#### Problem1: remove all the records from the table "users"
-
-- - -
-
-## Problem 2 
-Songs Table Diagram:
+## Problem
+Song Table Diagram:
 |      title        |        artist         |
 |-------------------|-----------------------|
 |'Let it be'        |'Beatles'              |
 |'Imagine'          |'Beatles'              |
 |'Kashmir'          |'Led Zeppelin'         |
 
-#### Problem 2: remove all the records from the table "songs"
+#### Problem : remove all the records from the table "song"

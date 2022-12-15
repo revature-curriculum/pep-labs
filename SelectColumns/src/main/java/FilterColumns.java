@@ -24,7 +24,10 @@ import java.util.List;
 public class FilterColumns {
 
     /**
-     *      users table:
+     * problem 1: Write the SQL statement in the problem1.sql file to return only the 'firstname' column from the
+     * users table
+     *
+     *      site_user table:
      *      |   id  |     firstname        |        lastname        |
      *      ----------------------------------------------------------
      *      |1      |'Steve'               |'Garcia'                |
@@ -34,11 +37,7 @@ public class FilterColumns {
      *      |5      |'Adam'                |'Jones'                 |
      */
 
-
     public List<User> problem1(){
-        /**
-         * problem 1: Write the SQL statement to return only the 'firstname' column from the users table
-         */
         String sql = FileUtil.parseSQLFile("problem1.sql");
 
         List<User> users = new ArrayList<>();
@@ -56,53 +55,4 @@ public class FilterColumns {
         return users;
     }
 
-
-    public List<User> problem2(){
-        /**
-         * problem 2: Write the SQL statement to return only the 'lastname' column from the users table
-         */
-        //Write SQL statement here
-        String sql = FileUtil.parseSQLFile("problem2.sql");
-
-        List<User> users = new ArrayList<>();
-        try {
-            Connection connection = ConnectionUtil.getConnection();
-            Statement s = connection.createStatement();
-            ResultSet rs =s.executeQuery(sql);
-
-            while(rs.next()){
-                users.add(new User(0, null, rs.getString(1)));
-            }
-
-        } catch (SQLException e) {
-            System.out.println("problem2: " + e.getMessage() + '\n');
-        }
-
-        return users;
-    }
-
-
-    public List<User> problem3(){
-        /**
-         * problem 3: Write the SQL statement to return the 'firstname' AND 'lastname' column from the users table
-         */
-        //Write SQL statement here
-        String sql = FileUtil.parseSQLFile("problem3.sql");
-
-        List<User> users = new ArrayList<>();
-        try {
-            Connection connection = ConnectionUtil.getConnection();
-            Statement s = connection.createStatement();
-            ResultSet rs =s.executeQuery(sql);
-
-            while(rs.next()){
-                users.add(new User(0, rs.getString(1), rs.getString(2)));
-            }
-
-        } catch (SQLException e) {
-            System.out.println("problem3: " + e.getMessage() + '\n');
-        }
-
-        return users;
-    }
 }

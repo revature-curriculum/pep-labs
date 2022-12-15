@@ -80,20 +80,20 @@ public class OuterJoinTest {
     public void beforeEach() {
         try {
 
-            String dropTable = "DROP TABLE IF EXISTS faculty, students, textbooks";
+            String dropTable = "DROP TABLE IF EXISTS class, student, textbook";
             PreparedStatement createTableStatement = conn.prepareStatement(dropTable);
             createTableStatement.executeUpdate();
 
 
-            String facultyTable = "CREATE TABLE faculty (" +
+            String facultyTable = "CREATE TABLE class (" +
                     "id SERIAL PRIMARY KEY," +
-                    "teacher VARCHAR(255)," +
-                    "class VARCHAR(255)" +
+                    "teacher_name VARCHAR(255)," +
+                    "class_title VARCHAR(255)" +
                     ");";
             PreparedStatement facultyTableStatement = conn.prepareStatement(facultyTable);
             facultyTableStatement.executeUpdate();
 
-            String insertFaculty = "INSERT INTO faculty (teacher, class) VALUES" +
+            String insertFaculty = "INSERT INTO class (teacher_name, class_title) VALUES" +
                     "('Mr. Tyson', 'Physics')," +
                     "('Ms. Lovelace', 'Math')," +
                     "('Mr. McCarthy', 'Writing')," +
@@ -102,15 +102,15 @@ public class OuterJoinTest {
             insertFacultyData.executeUpdate();
 
 
-            String studentsTable = "CREATE TABLE students (" +
+            String studentsTable = "CREATE TABLE student (" +
                     "id SERIAL PRIMARY KEY," +
-                    "student VARCHAR(255)," +
-                    "class VARCHAR(255)" +
+                    "student_name VARCHAR(255)," +
+                    "class_title VARCHAR(255)" +
                     ");";
             PreparedStatement studentsTableStatement = conn.prepareStatement(studentsTable);
             studentsTableStatement.executeUpdate();
 
-            String insertStudents = "INSERT INTO students (student, class) VALUES" +
+            String insertStudents = "INSERT INTO student (student_name, class_title) VALUES" +
                     "('John Stewart', 'Writing')," +
                     "('Stephen Colbert', 'Physics')," +
                     "('Samantha Bee', 'Math')," +
@@ -121,15 +121,15 @@ public class OuterJoinTest {
             insertStudentsData.executeUpdate();
 
 
-            String textbooksTable = "CREATE TABLE textbooks (" +
+            String textbooksTable = "CREATE TABLE textbook (" +
                     "id SERIAL PRIMARY KEY," +
-                    "class VARCHAR(255)," +
-                    "textbook VARCHAR(255)" +
+                    "class_title VARCHAR(255)," +
+                    "textbook_title VARCHAR(255)" +
                     ");";
             PreparedStatement textbooksTableStatement = conn.prepareStatement(textbooksTable);
             textbooksTableStatement.executeUpdate();
 
-            String insertTextbooks = "INSERT INTO textbooks (class, textbook) VALUES" +
+            String insertTextbooks = "INSERT INTO textbook (class_title, textbook_title) VALUES" +
                     "('Physics' , 'Motion 101')," +
                     "('Math', 'What even is modulus anyway?')," +
                     "('Biology', 'Lions, Tigers, and Organs 5th ed')," +
@@ -139,6 +139,7 @@ public class OuterJoinTest {
             insertTextbooksStatement.executeUpdate();
 
         } catch(SQLException e) {
+            e.printStackTrace();
         }
     }
 
@@ -147,7 +148,7 @@ public class OuterJoinTest {
         try {
             conn = ConnectionUtil.getConnection();
 
-            String dropTable = "DROP TABLE IF EXISTS faculty, students, textbooks";
+            String dropTable = "DROP TABLE IF EXISTS class, student, textbook";
             PreparedStatement createTableStatement = conn.prepareStatement(dropTable);
             createTableStatement.executeUpdate();
 

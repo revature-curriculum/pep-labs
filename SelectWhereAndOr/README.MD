@@ -13,7 +13,7 @@
 
  Consider the example:
 ```sql      
-SELECT * FROM employees WHERE last_name = 'Jones' OR first_name = 'Steve';
+SELECT * FROM employee WHERE last_name = 'Jones' OR first_name = 'Steve';
 ```
 
    |  id  |   first_name   |   last_name   |
@@ -44,7 +44,7 @@ SELECT * FROM table WHERE value NOT IN ('value1', 'value2');
 # Lab
 
 ## Problem 1
-employees table
+employee table
 |  id  |   first_name   |   last_name   |  salary  |
 |------|----------------|---------------|----------|
 |1     |'Steve'         |'Garcia'       |67400.00  |
@@ -58,7 +58,7 @@ employees table
 - - -
 
 ## Problem 2 
-employees table
+employee table
 |  id  |   first_name   |   last_name   |  salary  |
 |------|----------------|---------------|----------|
 |1     |'Steve'         |'Garcia'       |67400.00  |
@@ -72,7 +72,7 @@ employees table
 - - -
 
 ## Problem 3 
-employees table
+employee table
 |  id  |   first_name   |   last_name   |  salary  |
 |------|----------------|---------------|----------|
 |1     |'Steve'         |'Garcia'       |67400.00  |

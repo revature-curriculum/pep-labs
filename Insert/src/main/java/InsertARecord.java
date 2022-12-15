@@ -23,8 +23,10 @@ import java.sql.Statement;
 public class InsertARecord {
 
     /**
+     * Activity: Assuming the table "song" already exists, write the sql statement in the problem1.sql file that allows
+     * us to add a new record into the table "song".
      *
-     *          songs Table Diagram:
+     *          song Table Diagram:
      *          |      title        |        artist         |
      *          ---------------------------------------------
      *          |'Let it be'        |'Beatles'              |
@@ -34,12 +36,7 @@ public class InsertARecord {
      * Note: when inserting strings, you wrap the string in a single quote.
      * */
     public boolean problem1(){
-        /**
-         * Activity: Assuming the table "songs" already exists, write the sql statement that allows us to add a new record into the table "songs".
-         */
         String sql = FileUtil.parseSQLFile("problem1.sql");
-
-
         try {
             Connection connection = ConnectionUtil.getConnection();
             Statement s = connection.createStatement();

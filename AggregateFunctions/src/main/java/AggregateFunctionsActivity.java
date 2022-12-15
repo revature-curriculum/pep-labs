@@ -34,7 +34,7 @@ import java.sql.*;
  */
 public class AggregateFunctionsActivity {
 /**
- *   employees table
+ *   employee table
  *   |  id  |   first_name   |   last_name   |  salary  |
  *   --------------------------------------------------
  *   |1     |'Steve'         |'Garcia'       |67400.00  |

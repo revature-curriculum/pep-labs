@@ -49,8 +49,8 @@ aggregate function AVG() like so: `SELECT AVG(age) from steve_view;`
  - [SQL Views](https://www.w3schools.com/sql/sql_view.asp)
 
 # Lab
-For the following problems, consider the users table below:
-<table><tr><th> users </th></tr><tr><td>
+For the following problems, consider the site_user table below:
+<table><tr><th> site_user </th></tr><tr><td>
 
 |   id  |     firstname        |        lastname        |   age   |
 | ----- | ------------------ | ---------------------- | ---- |

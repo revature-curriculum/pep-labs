@@ -4,6 +4,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * utility class to read a .sql file in Java - Do not change anything in this class
+ */
 public class FileUtil {
     public static String parseSQLFile(String fileName) {
 
