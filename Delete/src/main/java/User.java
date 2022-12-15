@@ -4,20 +4,17 @@ import java.util.Objects;
 public class User {
     private int id;
     private String firstname;
-    private String lastname;
 
     public User() {
     }
 
-    public User(String firstname, String lastname) {
+    public User(String firstname) {
         this.firstname = firstname;
-        this.lastname = lastname;
     }
 
-    public User(int id, String firstname, String lastname) {
+    public User(int id, String firstname) {
         this.id = id;
         this.firstname = firstname;
-        this.lastname = lastname;
     }
 
     public int getId() {
@@ -36,25 +33,18 @@ public class User {
         this.firstname = firstname;
     }
 
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id && Objects.equals(firstname, user.firstname) && Objects.equals(lastname, user.lastname);
+        return id == user.id && Objects.equals(firstname, user.firstname);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstname, lastname);
+        return Objects.hash(id, firstname);
     }
 
     @Override
@@ -62,7 +52,6 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
                 '}';
     }
 }

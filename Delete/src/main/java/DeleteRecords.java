@@ -14,28 +14,28 @@ import java.sql.Statement;
  * The syntax for deleting records from a table is as follows:
  * DELETE FROM table_name WHERE condition;
  *
- * NOTE: Whenever you execute a DELETE statement, have a WHERE condition that identifies exactly what records you would like to delete.
- * Leaving this out will remove ALL records from the table.
+ * NOTE: Whenever you execute a DELETE statement, have a WHERE condition that identifies exactly what records you would
+ * like to delete. Leaving this out will remove ALL records from the table.
  *
- * Additional resource if needed: https://www.w3schools.com/sql/sql_delete.asp
+ * Additional resource: https://www.w3schools.com/sql/sql_delete.asp
  */
 public class DeleteRecords {
 
     /**
-     *        users table:
-     *        |   id  |     firstname        |        lastname        |
-     *        ----------------------------------------------------------
-     *        |1      |'Steve'               |'Garcia'                |
-     *        |2      |'Alexa'               |'Smith'                 |
-     *        |3      |'Steve'               |'Jones'                 |
-     *        |4      |'Brandon'             |'Smith'                 |
-     *        |5      |'Adam'                |'Jones'                 |
+     * Assignment: In the problem1.sql, write the SQL command to delete "Steve Jones" from the site_user table, assuming
+     * that the table and "Steve Jones" record already exist.
+     *
+     *        site_user table:
+     *        |   id  |     firstname        |
+     *        --------------------------------
+     *        |1      |'Steve'               |
+     *        |2      |'Alexa'               |
+     *        |3      |'Steve'               |
+     *        |4      |'Brandon'             |
+     *        |5      |'Adam'                |
      */
     public void problem1(){
 
-        /**
-         * Assignment: Delete "Steve Jones" from the users table.
-         */
         String sql = FileUtil.parseSQLFile("problem1.sql");
 
         try {

@@ -20,7 +20,7 @@ public class InsertARecordTest {
     public void beforeEach(){
         try {
             Connection connection = ConnectionUtil.getConnection();
-            String sql = "CREATE TABLE songs (Title varchar(100), Artist varchar(100));";
+            String sql = "CREATE TABLE song (Title varchar(100), Artist varchar(100));";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.executeUpdate();
         } catch (SQLException e) {
@@ -34,7 +34,7 @@ public class InsertARecordTest {
     public void afterEach(){
         try {
             Connection connection = ConnectionUtil.getConnection();
-            String sql = "DROP TABLE songs;";
+            String sql = "DROP TABLE song;";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.executeUpdate();
         } catch (SQLException e) {

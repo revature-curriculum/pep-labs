@@ -19,7 +19,8 @@ import java.sql.Statement;
 public class DropATable {
 
     /**
-     *      songs Table Diagram:
+     *      Task: Drop the table "song"
+     *      song Table Diagram:
      *      |      title        |        artist         |
      *      ---------------------------------------------
      *      |'Let it be'        |'Beatles'              |
@@ -27,9 +28,6 @@ public class DropATable {
      *      |'Kashmir'          |'Led Zeppelin'         |
      */
     public void problem1(){
-        /**
-         * Activity: Drop the table "songs"
-         */
         String sql = FileUtil.parseSQLFile("problem1.sql");
 
         try {

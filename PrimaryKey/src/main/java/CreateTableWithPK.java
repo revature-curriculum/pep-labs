@@ -21,7 +21,7 @@ import java.sql.Statement;
  *
  * Since we will only be utilizing surrogate keys throughout pre-training, lets look at how the syntax will be.
  *
- * Let's say we want to create a "users" table that has the following columns:
+ * Let's say we want to create a "user" table that has the following columns:
  *      |   id  |      username        |        password         |
  *      ----------------------------------------------------------
  *      |1      |"user1"               |"pass123"                |
@@ -29,7 +29,7 @@ import java.sql.Statement;
  *      |3      |"user3"               |"pass123"                |
  *
  *      The SQL syntax would be as follows:
- *      CREATE TABLE users (
+ *      CREATE TABLE user (
  *          id SERIAL PRIMARY KEY,
  *          username varchar(100),
  *          password varchar(100)
@@ -43,7 +43,7 @@ import java.sql.Statement;
 public class CreateTableWithPK {
 
     /**
-     *      songs table
+     *      song table
      *      |   id  |      title        |        artist         |
      *      -----------------------------------------------------
      *      |1      |'Let it be'        |'Beatles'              |
@@ -53,7 +53,7 @@ public class CreateTableWithPK {
     public void problem1(){
 
         /**
-         * Assignment: create a table called "songs" that has 3 columns listed above
+         * Assignment: create a table in problem1.sql called "song" that has 3 columns listed above
          *
          * NOTE: The "id" column is what we are going to define as the primary key.
          */

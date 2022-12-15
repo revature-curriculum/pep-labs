@@ -5,7 +5,7 @@ import java.util.Objects;
  * This class defines a Character object. Objects of this class represent one row of a database table. The table
  * should be defined as follows to be compatible with these objects:
  *
- * CREATE TABLE characters (
+ * CREATE TABLE character (
  *      id SERIAL PRIMARY KEY,
  *      first_name VARCHAR(255),
  *      last_name VARCHAR(255)

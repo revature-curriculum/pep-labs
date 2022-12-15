@@ -29,7 +29,7 @@ Additional reference material if needed: https://www.w3schools.com/sql/sql_order
 # Lab
 
 ## Problem 1
-characters table
+character table
 | id |  first_name  |  last_name  |
 |----|--------------|-------------|
 |1   |'Leto'        |'Atreides'   |
@@ -39,17 +39,3 @@ characters table
 |5   |'Feyd-Rautha' |'Harkonnen'  |
 
 #### Problem 1: Write a statement below to query the database for all characters. Make sure the results are in ascending order by last name, and first name as a tie-breaker.
-
-- - -
-
-## Problem 2 
-characters table
-| id |  first_name  |  last_name  |
-|----|--------------|-------------|
-|1   |'Leto'        |'Atreides'   |
-|2   |'Vladimir'    |'Harkonnen'  |
-|3   |'Jessica'     |'Atreides'   |
-|4   |'Paul'        |'Atreides'   |
-|5   |'Feyd-Rautha' |'Harkonnen'  |
-
-#### Problem 2: Write a statement below to query the database for all characters. This time reverse the order so that the characters are in reverse alphabetical order by last name, then first name.

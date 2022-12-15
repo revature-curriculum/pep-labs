@@ -9,15 +9,15 @@ import java.util.Map;
 /**
  * SQL sublanguage: DQL (Data Query Language)
  *
- * NOTE: Before attempting this activity, you should have already completed the Order By
- * and Aggregate Functions activities.
+ * NOTE: Before attempting this activity, you should have already completed the
+ * Aggregate Functions activities.
  *
  * The GROUP BY clause allows you to group your results and can be used with the ORDER BY clause. Group By is
  * used in conjunction with aggregate functions. However, you cannot group by the output of the function.
  * Recall that the output of an aggregate function is a single aggregate value.
  *
  *
- *   employees table
+ *   employee table
  *   |  id  |     employee   |   manager    |  salary  |
  *   --------------------------------------------------
  *   |1     |'Steve'         |'Dave'        |67400.00  |
@@ -39,7 +39,7 @@ import java.util.Map;
  */
 public class GroupByActivity {
     /**
-     *   artists table
+     *   song table
      *   | id |     artist     |        album        |         song         |
      *   --------------------------------------------------------------------
      *   |1   |'The Beatles'   |'Abbey Road'         |'Come Together'       |
@@ -52,14 +52,14 @@ public class GroupByActivity {
 
     public Map<String, Integer> problem1() {
         /**
-         * Problem 1: Use the GROUP BY clause with the COUNT() aggregate function to query the songs table for the
-         * number of songs by each artist.
+         * Problem 1: Use the GROUP BY clause with the COUNT() aggregate function to query the song table for the
+         * number of songs by each artist. Your SQL query should select both the artist column and the COUNT(song)
+         * columns, while also leveraging the group by keywords.
+         *
          * HINT: You should avoid using the wild card (*) in your statement. All projected columns must either be used
          * in the GROUP BY clause or an aggregate function.
          */
         String sql = FileUtil.parseSQLFile("problem1.sql");
-
-
 
         Map<String, Integer> counts = new HashMap<>();
         try {
@@ -75,35 +75,6 @@ public class GroupByActivity {
         }
 
         return counts;
-    }
-
-    public String problem2() {
-        /**
-         * Problem 2: Use COUNT(), GROUP BY, and ORDER BY to identify the album which contains the greatest number of
-         * songs in the table.
-         * NOTE: The results must be ordered properly, as we only consider the first result in the list.
-         * HINT: You should avoid using the wild card (*) in your statement.
-         * HINT: You cannot GROUP BY the result of an aggregate function, but you can ORDER BY it.
-         */
-
-        String sql = FileUtil.parseSQLFile("problem2.sql");
-
-
-
-        String album = "";
-        try {
-            Connection connection = ConnectionUtil.getConnection();
-            Statement s = connection.createStatement();
-            ResultSet rs =s.executeQuery(sql);
-
-            if(rs.next()) {
-                album = rs.getString("album");
-            }
-        } catch (SQLException e) {
-            System.out.println("problem2: " + e.getMessage() + '\n');
-        }
-
-        return album;
     }
 
 }

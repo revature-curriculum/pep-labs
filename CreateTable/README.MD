@@ -44,21 +44,10 @@ Additional reference material if needed:
 # Lab
 
 ## Problem 1
-songs table
+song table
 | title     | artist  |    	    
 |-----------|---------|
 | Let it be | Beatles |          
 | Imagine   | Beatles |
 
-#### Problem 1: Create a new table in the "problem1.sql" file called "songs" with 2 columns "Title" and "Artist" (shown above).
-
-- - -
-
-## Problem 2 
-songs table:
-| title (UNIQUE and NOT NULL) | artist (NOT NULL) |    	    
-|-----------------------------|-------------------|
-| Let it be                   | Beatles           |          
-| Imagine                     | Beatles           |
-
-#### Problem 2: Create the same table in the "problem2.sql" however the title column should have the NOT NULL and UNIQUE constraint and the artist column should have the NOT NULL CONSTRAINT.
+#### Problem 1: Create a new table in the "problem1.sql" file called "song" with 2 columns "Title" and "Artist" (shown above).

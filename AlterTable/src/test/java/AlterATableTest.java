@@ -20,7 +20,7 @@ public class AlterATableTest {
         try {
 
             Connection connection = ConnectionUtil.getConnection();
-            String sql = "select lastname from users;";
+            String sql = "select lastname from site_user;";
 
             PreparedStatement ps = connection.prepareStatement(sql);
 
@@ -31,41 +31,6 @@ public class AlterATableTest {
             Assert.fail();
         }
     }
-
-    @Test
-    public void problem2Test(){
-        alterATable.problem2();
-
-        try {
-
-            Connection connection = ConnectionUtil.getConnection();
-            String sql = "select firstname from users;";
-
-            PreparedStatement ps = connection.prepareStatement(sql);
-
-            ps.executeQuery();
-            System.out.println("problem2: Column 'firstname' was not removed from the table 'users' \n");
-            Assert.fail();
-        } catch (SQLException e) {
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /**
      * The @Before annotation runs before every test so that way we create the tables required prior to running the test
      */
@@ -76,10 +41,10 @@ public class AlterATableTest {
             Connection connection = ConnectionUtil.getConnection();
 
             //Write SQL logic here
-            String sql1 = "CREATE TABLE users (id SERIAL PRIMARY KEY, firstname varchar(100));";
-            String sql2 = "INSERT INTO users (firstname) VALUES ('Kevin');";
-            String sql3 = "INSERT INTO users (firstname) VALUES ('Brian');";
-            String sql4 = "INSERT INTO users (firstname) VALUES ('Charles');";
+            String sql1 = "CREATE TABLE site_user (id SERIAL PRIMARY KEY, firstname varchar(100));";
+            String sql2 = "INSERT INTO site_user (firstname) VALUES ('Kevin');";
+            String sql3 = "INSERT INTO site_user (firstname) VALUES ('Brian');";
+            String sql4 = "INSERT INTO site_user (firstname) VALUES ('Charles');";
 
             PreparedStatement ps = connection.prepareStatement(sql1 + sql2 + sql3 + sql4);
 
@@ -98,7 +63,7 @@ public class AlterATableTest {
         try {
 
             Connection connection = ConnectionUtil.getConnection();
-            String sql = "DROP TABLE users;";
+            String sql = "DROP TABLE site_user;";
 
             PreparedStatement ps = connection.prepareStatement(sql);
 
