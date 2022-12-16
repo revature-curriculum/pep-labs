@@ -1,7 +1,14 @@
 
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
+import util.ConnectionUtil;
 
 /**
  * JDBC stands for Java DataBase Connectivity.  It is utilized to connect our java code with a database.
@@ -30,13 +37,13 @@ import java.util.List;
 public class Jdbc {
 
     public void createSong(Song song)  {
-        //implement JDBC logic here
+        //write jdbc code here
     }
 
     public List<Song> getAllSongs(){
         List<Song> songs = new ArrayList<>();
 
-        //implement JDBC logic here
+        //write jdbc code here
 
         return songs;
     }

@@ -1,5 +1,5 @@
 
-import Util.ConnectionUtil;
+import util.ConnectionUtil;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
