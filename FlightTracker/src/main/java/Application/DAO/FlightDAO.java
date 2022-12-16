@@ -42,7 +42,7 @@ public class FlightDAO {
                 flights.add(flight);
             }
         }catch(SQLException e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return flights;
     }
@@ -77,7 +77,7 @@ public class FlightDAO {
                 return flight;
             }
         }catch(SQLException e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return null;
     }
@@ -118,7 +118,7 @@ public class FlightDAO {
                 return new Flight(generated_flight_id, flight.departure_city, flight.departure_city);
             }
         }catch(SQLException e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return null;
     }
@@ -151,7 +151,7 @@ public class FlightDAO {
 
             preparedStatement.executeUpdate();
         }catch(SQLException e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -189,7 +189,7 @@ public class FlightDAO {
                 flights.add(flight);
             }
         }catch(SQLException e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return flights;
     }

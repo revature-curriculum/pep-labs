@@ -36,7 +36,7 @@ public class AuthorDAO {
                 authors.add(author);
             }
         }catch(SQLException e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return authors;
     }
@@ -65,7 +65,7 @@ public class AuthorDAO {
                 return new Author(generated_author_id, author.getName());
             }
         }catch(SQLException e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return null;
     }

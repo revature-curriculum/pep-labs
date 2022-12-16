@@ -43,7 +43,7 @@ public class BookDAO {
                 books.add(book);
             }
         }catch(SQLException e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return books;
     }
@@ -71,7 +71,7 @@ public class BookDAO {
                 return book;
             }
         }catch(SQLException e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return null;
     }
@@ -95,7 +95,7 @@ public class BookDAO {
             preparedStatement.executeUpdate();
             return book;
         }catch(SQLException e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return null;
     }
@@ -123,7 +123,7 @@ public class BookDAO {
                 books.add(book);
             }
         }catch(SQLException e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         return books;
     }
