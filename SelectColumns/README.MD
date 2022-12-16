@@ -22,7 +22,7 @@ Additional reference material if needed: https://www.w3schools.com/sql/sql_selec
 # Lab
 
 ## Problem 1
-user table
+site_user table
 |   id  |     firstname        |        lastname        |
 |-------|----------------------|------------------------|
 |1      |'Steve'               |'Garcia'                |
@@ -31,4 +31,4 @@ user table
 |4      |'Brandon'             |'Smith'                 |
 |5      |'Adam'                |'Jones'                 |
 
-#### Problem 1: Write the SQL statement to return only the 'firstname' column from the user table
+#### Problem 1: Write the SQL statement to return only the 'firstname' column from the site_user table

@@ -28,6 +28,6 @@ song Table Diagram:
 
 Note: when inserting strings, you wrap the string in a single quote.
 
-#### Problem 1: Assuming the table "song" already exists, write the sql statement that allows us to add a new record into the table "song".
+#### Problem 1: Assuming the table "song" already exists, write the sql statement in the problem1.sql file that allows us to add a new record into the table "song". It should work with any values for title and artist!
 
 - - -

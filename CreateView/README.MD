@@ -2,7 +2,7 @@
 A VIEW in SQL is a virtual table that was created based on a SQL statement 
 that was predefined. For example, lets say we had the following table:
 
-<table><tr><th> users </th></tr><tr><td>
+<table><tr><th> site_user </th></tr><tr><td>
 
 |   id  |     firstname        |        lastname        |   age   |
 | ----- | ------------------ | ---------------------- | ---- |
@@ -15,7 +15,7 @@ that was predefined. For example, lets say we had the following table:
 </td></tr></table>
 
 If we wanted to retrieve all the records with the firstname 'Steve', we 
-can do that with the following statement: SELECT * FROM users WHERE 
+can do that with the following statement: SELECT * FROM site_user WHERE 
 firstname = 'Steve';
 
 <table><tr><th> steve_view </th></tr><tr><td>
@@ -38,7 +38,7 @@ CREATE VIEW view_name AS sql_statement;
 
 So the syntax for creating the 'steve view' table above would be:
 ```SQL
-CREATE VIEW steve_view AS SELECT * FROM users WHERE firstname = 'Steve';
+CREATE VIEW steve_view AS SELECT * FROM site_user WHERE firstname = 'Steve';
 ```
 This is beneficial because we can now execute SQL queries on this view 
 instead of the entire table. For example if I wanted to get the average 
@@ -63,7 +63,7 @@ For the following problems, consider the site_user table below:
 </td></tr></table>
 
 ### Problem 1
-Create a view called "firstname_lastname" from the users table 
+Create a view called "firstname_lastname" from the site_user table 
 that only has the firstname and lastname columns.  
 
 NOTE: This view should NOT contain the id and age columns.

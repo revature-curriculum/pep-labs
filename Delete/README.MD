@@ -29,6 +29,6 @@ site_user table:
 |5      |'Adam'                |
 ```
 
-#### Problem 1: Delete "Steve" from the site_user table in problem1.sql
+#### Problem 1: Delete everyone named "Steve" from the site_user table in problem1.sql
 
 - - -

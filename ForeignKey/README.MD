@@ -11,7 +11,7 @@ key in another table.
 For example we have two tables, artists and songs.  
 
 <table>
-<tr><th> artists </th><th> songs </th></tr>
+<tr><th> artist </th><th> song </th></tr>
 <tr><td>
 
 | id | artist |
@@ -36,7 +36,7 @@ will match the primary key in the other table. Let's add this column to the song
 so they look like this:
 
 <table>
-<tr><th> artists </th><th> songs </th></tr>
+<tr><th> artist </th><th> song </th></tr>
 <tr><td>
 
 | id | artist       |
@@ -64,22 +64,22 @@ foreign key constraint stops us from violating that integrity.
 To create a table with a foreign key constraint we add the constraint after the column
 definition. For example:
 ```SQL
-CREATE TABLE songs (
+CREATE TABLE song (
     id SERIAL PRIMARY KEY,
     song VARCHAR(100),
-    artist_fk INT REFERENCES artists(id)
+    artist_fk INT REFERENCES artist(id)
 );
 ```
 Note that this syntax isn't uniform across all flavors of SQL. The line
-`artist_fk INT REFERENCES artists(id)` adds our foreign key constraint. The column,
+`artist_fk INT REFERENCES artist(id)` adds our foreign key constraint. The column,
 artist_fk holds INT type data and REFERENCES the id column of the artists table.
 
 ## Additional Reference Material
  - [Foreign Keys](https://www.w3schools.com/sql/sql_foreignkey.asp)
 
 # Lab
-For the following problems, consider the users table below:
-<table><tr><th> users </th></tr><tr><td>
+For the following problems, consider the site_user table below:
+<table><tr><th> site_user </th></tr><tr><td>
 
 | id | firstname | lastname |
 | ----- | -------------------- | ---------------------- |
@@ -95,9 +95,9 @@ For the following problems, consider the users table below:
 Create a new table in the file problem1.sql. This table will contain posts
 linked to specific users. It should have three columns: id, post, and user_fk.
 The user_fk column should be a foreign key that references the id column in the 
-users table. The table will look like this:
+site_user table. The table will look like this:
 
-<table><tr><th> posts </th></tr><tr><td>
+<table><tr><th> post </th></tr><tr><td>
 
 | id | post | user_fk |
 | -- | ---- | ------- |

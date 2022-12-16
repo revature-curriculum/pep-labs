@@ -26,7 +26,7 @@ import java.sql.*;
  * - LAST() - outputs the last value found in a column of the result set
  *
  * Example: You might use the SUM() function to find the total of all employee salaries:
- *      SELECT SUM(salary) FROM employees;
+ *      SELECT SUM(salary) FROM employee;
  *
  * Additional reference material if needed:
  *      - https://www.w3schools.com/sql/sql_count_avg_sum.asp

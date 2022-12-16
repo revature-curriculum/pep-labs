@@ -23,7 +23,7 @@ There are many aggregate functions built into SQL, some commonly used ones inclu
 
 Example: You might use the `SUM()` function to find the total of all employee salaries:
 ```sql
-SELECT SUM(salary) FROM employees;
+SELECT SUM(salary) FROM employee;
 ```
 
 Additional reference material if needed:

@@ -11,7 +11,7 @@ import java.sql.Statement;
  * SQL sublanguage: DDL (Data Definition Language)
  *
  * Let's say we created the following table:
- * users table:
+ * site_user table:
  * |    id    |     firstname     |
  * --------------------------------
  * |1         |'Kevin'            |

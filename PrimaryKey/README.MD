@@ -12,7 +12,7 @@ There are 3 types of Primary Keys:
  
 Since we will only be utilizing surrogate keys throughout pre-training, lets look at how the syntax will be.
  
-Let's say we want to create a "users" table that has the following columns:
+Let's say we want to create a "site_user" table that has the following columns:
 
 |   id  |      username        |        password         |
 |-------|----------------------|-------------------------|
@@ -22,7 +22,7 @@ Let's say we want to create a "users" table that has the following columns:
 
 The SQL syntax would be as follows:
 ```roomsql
-CREATE TABLE users (
+CREATE TABLE site_user (
      id SERIAL PRIMARY KEY,
      username varchar(100),
      password varchar(100)

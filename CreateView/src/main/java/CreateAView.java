@@ -13,7 +13,7 @@ import java.sql.Statement;
  * A VIEW in SQL is a virtual table that was created based on a SQL statement that was predefined.
  *
  * For example, lets say we had the following table:
- *      user table:
+ *      site_user table:
  *      |   id  |     firstname        |        lastname        |   age   |
  *      -------------------------------------------------------------------
  *      |1      |'Steve'               |'Garcia'                |23       |
@@ -23,7 +23,7 @@ import java.sql.Statement;
  *      |5      |'Adam'                |'Jones'                 |61       |
  *
  * If we wanted to retrieve all the records with the firstname 'Steve', we can do that with the following statement:
- * SELECT * FROM user WHERE firstname = 'Steve';
+ * SELECT * FROM site_user WHERE firstname = 'Steve';
  *
  * This statement would give us the following virtual table:
  *      virtual table:
@@ -40,7 +40,7 @@ import java.sql.Statement;
  *
  *
  * So the syntax for creating the 'steve table' table above would be:
- * CREATE VIEW stevesview AS SELECT * FROM user WHERE firstname = 'Steve';
+ * CREATE VIEW stevesview AS SELECT * FROM site_user WHERE firstname = 'Steve';
  *
  *
  * This is beneficial because we can now execute SQL queries on this view instead of the entire table.

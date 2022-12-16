@@ -21,7 +21,7 @@ import java.sql.Statement;
  *
  * Since we will only be utilizing surrogate keys throughout pre-training, lets look at how the syntax will be.
  *
- * Let's say we want to create a "user" table that has the following columns:
+ * Let's say we want to create a "site_user" table that has the following columns:
  *      |   id  |      username        |        password         |
  *      ----------------------------------------------------------
  *      |1      |"user1"               |"pass123"                |
@@ -29,7 +29,7 @@ import java.sql.Statement;
  *      |3      |"user3"               |"pass123"                |
  *
  *      The SQL syntax would be as follows:
- *      CREATE TABLE user (
+ *      CREATE TABLE site_user (
  *          id SERIAL PRIMARY KEY,
  *          username varchar(100),
  *          password varchar(100)
