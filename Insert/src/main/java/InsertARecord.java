@@ -24,7 +24,7 @@ public class InsertARecord {
 
     /**
      * Activity: Assuming the table "song" already exists, write the sql statement in the problem1.sql file that allows
-     * us to add a new record into the table "song".
+     * us to add a new record into the table "song". It should work with any values for title and artist!
      *
      *          song Table Diagram:
      *          |      title        |        artist         |
@@ -33,7 +33,7 @@ public class InsertARecord {
      *          |'Hotel California' |'Eagles'               |
      *          |'Kashmir'          |'Led Zeppelin'         |
      *
-     * Note: when inserting strings, you wrap the string in a single quote.
+     * Note: when inserting strings, you wrap the string in a single quote. 'like this'
      * */
     public boolean problem1(){
         String sql = FileUtil.parseSQLFile("problem1.sql");

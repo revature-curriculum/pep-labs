@@ -16,16 +16,16 @@ import java.sql.Statement;
  *
  * A foreign key is a column in one table that refers to the primary key in another table.
  *
- * For example lets say we have the "artists" table below:
- *      artists table:
+ * For example lets say we have the "artist" table below:
+ *      artist table:
  *      |    id    |        artist_name     |
  *      -------------------------------------
  *      |1         |'Beatles'               |
  *      |2         |'Eagles'                |
  *      |3         |'Led Zeppelin'          |
  *
- * Now lets say we want a songs table.
- *      songs table:
+ * Now lets say we want a song table.
+ *      song table:
  *      |    id    |        song_name       |
  *      -------------------------------------
  *      |1         |'Let it be'             |
@@ -33,10 +33,10 @@ import java.sql.Statement;
  *      |3         |'Kashmir'               |
  *
  *
- * Currently, the songs table has no reference to the artist that made the song. To make that reference we are going to want to use a foreign key.
+ * Currently, the song table has no reference to the artist that made the song. To make that reference we are going to want to use a foreign key.
  * The songs table with a foreign key would look like the table below
  *
- *      songs table with fk:
+ *      song table with fk:
  *      |    id    |        song_name       |   artist_fk   |
  *      -----------------------------------------------------
  *      |1         |'Let it be'             |1              |
@@ -48,10 +48,10 @@ import java.sql.Statement;
  * If we try to input an "artist_fk" that isn't in the artist table, an exception will be thrown.
  *
  * the syntax for creating the songs table with an artist fk is as follows:
- * CREATE TABLE songs (
+ * CREATE TABLE song (
  *  id SERIAL PRIMARY KEY,
  *  song_name varchar(100),
- *  artist_fk int REFERENCES artists(id)
+ *  artist_fk int REFERENCES artist(id)
  * );
  *
  *
@@ -66,7 +66,7 @@ import java.sql.Statement;
 public class CreateTableWithForeignKey {
 
     /**
-     *       users table:
+     *       user table:
      *       |   id  |     firstname        |        lastname        |
      *       ----------------------------------------------------------
      *       |1      |'Steve'               |'Garcia'                |
@@ -79,7 +79,7 @@ public class CreateTableWithForeignKey {
     public void problem1(){
         /**
          * Assignment: create a "post" table that has the following columns:
-         *       posts table:
+         *       post table:
          *       |   id  |     post        |        user_fk         |
          *       ----------------------------------------------------
          *       where the id is of type SERIAL PRIMARY KEY, post is of type varchar(255), and user_fk is of type
