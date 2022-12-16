@@ -100,7 +100,12 @@ public class ArrayBasicsTest {
     public void returnNewArraySizeNTest1(){
         int input = 5;
         int[] output = ab.returnNewArraySizeN(input);
-        Assert.assertEquals(output.length, input);
+        if(output == null){
+            Assert.fail("array nas not been created.");
+        }else{
+            Assert.assertEquals(output.length, input);
+        }
+        
     }
     /**
      * returnNewArraySizeN(2) should return a new array of size 2.
@@ -109,6 +114,10 @@ public class ArrayBasicsTest {
     public void returnNewArraySizeNTest2(){
         int input = 2;
         int[] output = ab.returnNewArraySizeN(input);
-        Assert.assertEquals(output.length, input);
+        if(output == null){
+            Assert.fail("array nas not been created.");
+        }else{
+            Assert.assertEquals(output.length, input);
+        }
     }
 }
