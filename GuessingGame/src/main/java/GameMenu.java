@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 /**
  * Let's finish up our number-related challenges by creating a little game for users to play - for instance,
- * we could a game where the player is asked to name a number such as pi, 3.14. Some of the logic is in
+ * we code a game where the player is asked to name a number such as pi, 3.14. Some of the logic is in
  * GameService.class. The app will be considered functional when all test cases pass.
  *
  * There is no need to change anything in this class. It does not affect the outcome of the test cases.

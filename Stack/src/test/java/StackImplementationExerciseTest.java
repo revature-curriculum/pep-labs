@@ -26,7 +26,11 @@ public class StackImplementationExerciseTest {
     @Test
     public void getSizeTest1(){
         Deque<String> stack = se.createNewStack();
-        Assert.assertEquals(se.getSize(stack), 0);
+        if(stack == null){
+            Assert.fail();
+        }else{
+            Assert.assertEquals(se.getSize(stack), 0);
+        }
     }
     /**
      * An empty stack which has had an item added to it should have a size of 1.
@@ -34,8 +38,12 @@ public class StackImplementationExerciseTest {
     @Test
     public void getSizeTest2(){
         Deque<String> stack = se.createNewStack();
-        se.addToTopOfStack(stack, "Crime and Punishment");
-        Assert.assertEquals(se.getSize(stack), 1);
+        if(stack == null){
+            Assert.fail();
+        }else{
+            se.addToTopOfStack(stack, "Crime and Punishment");
+            Assert.assertEquals(se.getSize(stack), 1);
+        }
     }
     /**
      * An empty stack which has had two items added to it should have a size of 2.
@@ -43,9 +51,13 @@ public class StackImplementationExerciseTest {
     @Test
     public void addToTopOfStackTest1(){
         Deque<String> stack = se.createNewStack();
-        se.addToTopOfStack(stack, "Crime and Punishment");
-        se.addToTopOfStack(stack, "Finnegan's Wake");
-        Assert.assertEquals(se.getSize(stack), 2);
+        if(stack == null){
+            Assert.fail();
+        }else{
+            se.addToTopOfStack(stack, "Crime and Punishment");
+            se.addToTopOfStack(stack, "Finnegan's Wake");
+            Assert.assertEquals(se.getSize(stack), 2);
+        }
     }
 
     /**
@@ -55,12 +67,16 @@ public class StackImplementationExerciseTest {
     @Test
     public void removeFromTopOfStackTest1(){
         Deque<String> stack = se.createNewStack();
-        se.addToTopOfStack(stack, "Crime and Punishment");
-        se.addToTopOfStack(stack, "Finnegan's Wake");
-        se.addToTopOfStack(stack, "Don Quixote");
-        String bookName = se.removeFromTopOfStack(stack);
-        Assert.assertEquals(se.getSize(stack), 2);
-        Assert.assertEquals(bookName, "Don Quixote");
+        if(stack == null){
+            Assert.fail();
+        }else{
+            se.addToTopOfStack(stack, "Crime and Punishment");
+            se.addToTopOfStack(stack, "Finnegan's Wake");
+            se.addToTopOfStack(stack, "Don Quixote");
+            String bookName = se.removeFromTopOfStack(stack);
+            Assert.assertEquals(se.getSize(stack), 2);
+            Assert.assertEquals(bookName, "Don Quixote");
+        }
     }
     /**
      * A stack with 3 items which then has 2 items removed should have a size of 1. The most recently
@@ -69,14 +85,18 @@ public class StackImplementationExerciseTest {
     @Test
     public void removeFromTopOfStackTest2(){
         Deque<String> stack = se.createNewStack();
-        se.addToTopOfStack(stack, "Crime and Punishment");
-        se.addToTopOfStack(stack, "Finnegan's Wake");
-        se.addToTopOfStack(stack, "Don Quixote");
-        String bookName = se.removeFromTopOfStack(stack);
-        Assert.assertEquals(bookName, "Don Quixote");
-        bookName = se.removeFromTopOfStack(stack);
-        Assert.assertEquals(se.getSize(stack), 1);
-        Assert.assertEquals(bookName, "Finnegan's Wake");
+        if(stack == null){
+            Assert.fail();
+        }else{
+            se.addToTopOfStack(stack, "Crime and Punishment");
+            se.addToTopOfStack(stack, "Finnegan's Wake");
+            se.addToTopOfStack(stack, "Don Quixote");
+            String bookName = se.removeFromTopOfStack(stack);
+            Assert.assertEquals(bookName, "Don Quixote");
+            bookName = se.removeFromTopOfStack(stack);
+            Assert.assertEquals(se.getSize(stack), 1);
+            Assert.assertEquals(bookName, "Finnegan's Wake");
+        }
     }
 
     /**
@@ -85,11 +105,15 @@ public class StackImplementationExerciseTest {
     @Test
     public void getTopOfStackWithoutRemovingTest1(){
         Deque<String> stack = se.createNewStack();
-        se.addToTopOfStack(stack, "Crime and Punishment");
-        se.addToTopOfStack(stack, "Finnegan's Wake");
-        se.addToTopOfStack(stack, "Don Quixote");
-        String bookName = se.getTopOfStackWithoutRemoving(stack);
-        Assert.assertEquals(bookName, "Don Quixote");
-        Assert.assertEquals(se.getSize(stack), 3);
+        if(stack == null){
+            Assert.fail();
+        }else{
+            se.addToTopOfStack(stack, "Crime and Punishment");
+            se.addToTopOfStack(stack, "Finnegan's Wake");
+            se.addToTopOfStack(stack, "Don Quixote");
+            String bookName = se.getTopOfStackWithoutRemoving(stack);
+            Assert.assertEquals(bookName, "Don Quixote");
+            Assert.assertEquals(se.getSize(stack), 3);
+        }
     }
 }

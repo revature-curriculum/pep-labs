@@ -3,7 +3,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class InstantiationTest {
-//    lol
+
     InstantiationExample i = new InstantiationExample();
 
     /**
@@ -16,6 +16,8 @@ public class InstantiationTest {
      */
     @Test
     public void testObjectNotNull(){
-        Assert.assertNotNull(i.instantiateANewObject());
+        if(i.instantiateANewObject() == null){
+            Assert.fail("object has not been instantiated");
+        }
     }
 }

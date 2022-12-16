@@ -17,7 +17,11 @@ public class QueueExerciseTest {
     @Test
     public void createQueueTest(){
         Queue<String> queue = qe.createQueue();
-        Assert.assertNotNull(queue);
+        if(queue == null){
+            Assert.fail();
+        }else{
+            Assert.assertNotNull(queue);
+        }
     }
 
     /**
@@ -26,7 +30,11 @@ public class QueueExerciseTest {
     @Test
     public void getSizeTest1(){
         Queue<String> queue = qe.createQueue();
-        Assert.assertEquals(qe.getSize(queue), 0);
+         if(queue == null){
+            Assert.fail();
+        }else{
+            Assert.assertEquals(qe.getSize(queue), 0);
+        }
     }
 
     /**
@@ -35,8 +43,12 @@ public class QueueExerciseTest {
     @Test
     public void addToQueueTest1(){
         Queue<String> queue = qe.createQueue();
-        qe.addToEndOfQueue(queue, "Jim");
-        Assert.assertEquals(qe.getSize(queue), 1);
+        if(queue == null){
+            Assert.fail();
+        }else{
+            qe.addToEndOfQueue(queue, "Jim");
+            Assert.assertEquals(qe.getSize(queue), 1);
+        }
     }
 
     /**
@@ -45,10 +57,14 @@ public class QueueExerciseTest {
     @Test
     public void addToQueueTest2(){
         Queue<String> queue = qe.createQueue();
-        qe.addToEndOfQueue(queue, "Jim");
-        qe.addToEndOfQueue(queue, "Sally");
-        qe.addToEndOfQueue(queue, "Kate");
-        Assert.assertEquals(qe.getSize(queue), 3);
+        if(queue == null){
+            Assert.fail();
+        }else{
+            qe.addToEndOfQueue(queue, "Jim");
+            qe.addToEndOfQueue(queue, "Sally");
+            qe.addToEndOfQueue(queue, "Kate");
+            Assert.assertEquals(qe.getSize(queue), 3);
+        }
     }
 
     /**
@@ -58,12 +74,16 @@ public class QueueExerciseTest {
     @Test
     public void removeFromStartOfQueueTest1(){
         Queue<String> queue = qe.createQueue();
-        qe.addToEndOfQueue(queue, "Jim");
-        qe.addToEndOfQueue(queue, "Sally");
-        qe.addToEndOfQueue(queue, "Kate");
-        String name = qe.removeFromStartOfQueue(queue);
-        Assert.assertEquals(name, "Jim");
-        Assert.assertEquals(qe.getSize(queue), 2);
+         if(queue == null){
+            Assert.fail();
+        }else{
+            qe.addToEndOfQueue(queue, "Jim");
+            qe.addToEndOfQueue(queue, "Sally");
+            qe.addToEndOfQueue(queue, "Kate");
+            String name = qe.removeFromStartOfQueue(queue);
+            Assert.assertEquals(name, "Jim");
+            Assert.assertEquals(qe.getSize(queue), 2);
+        }
     }
     /**
      * If the values "Jim", "Sally", "Kate" are added to a queue, they should be removed in the order "Jim", "Sally",
@@ -72,16 +92,20 @@ public class QueueExerciseTest {
     @Test
     public void removeFromStartOfQueueTest2(){
         Queue<String> queue = qe.createQueue();
-        qe.addToEndOfQueue(queue, "Jim");
-        qe.addToEndOfQueue(queue, "Sally");
-        qe.addToEndOfQueue(queue, "Kate");
-        String name = qe.removeFromStartOfQueue(queue);
-        Assert.assertEquals(name, "Jim");
-        name = qe.removeFromStartOfQueue(queue);
-        Assert.assertEquals(name, "Sally");
-        name = qe.removeFromStartOfQueue(queue);
-        Assert.assertEquals(name, "Kate");
-        Assert.assertEquals(qe.getSize(queue), 0);
+         if(queue == null){
+            Assert.fail();
+        }else{
+            qe.addToEndOfQueue(queue, "Jim");
+            qe.addToEndOfQueue(queue, "Sally");
+            qe.addToEndOfQueue(queue, "Kate");
+            String name = qe.removeFromStartOfQueue(queue);
+            Assert.assertEquals(name, "Jim");
+            name = qe.removeFromStartOfQueue(queue);
+            Assert.assertEquals(name, "Sally");
+            name = qe.removeFromStartOfQueue(queue);
+            Assert.assertEquals(name, "Kate");
+            Assert.assertEquals(qe.getSize(queue), 0);
+        }
     }
     /**
      * If the values "Jim", "Sally", "Kate" are added to a queue, the next value to be removed should be "Jim".
@@ -91,11 +115,15 @@ public class QueueExerciseTest {
     @Test
     public void getStartOfQueueWithoutRemovingTest1(){
         Queue<String> queue = qe.createQueue();
-        qe.addToEndOfQueue(queue, "Jim");
-        qe.addToEndOfQueue(queue, "Sally");
-        qe.addToEndOfQueue(queue, "Kate");
-        String name = qe.getStartOfQueueWithoutRemoving(queue);
-        Assert.assertEquals(name, "Jim");
-        Assert.assertEquals(qe.getSize(queue), 3);
+        if(queue == null){
+            Assert.fail();
+        }else{
+            qe.addToEndOfQueue(queue, "Jim");
+            qe.addToEndOfQueue(queue, "Sally");
+            qe.addToEndOfQueue(queue, "Kate");
+            String name = qe.getStartOfQueueWithoutRemoving(queue);
+            Assert.assertEquals(name, "Jim");
+            Assert.assertEquals(qe.getSize(queue), 3);
+        }
     }
 }

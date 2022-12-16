@@ -18,7 +18,10 @@ public class ListExerciseTest {
     @Test
     public void createListTest1(){
         List<Integer> list = le.createList();
-        Assert.assertNotNull(list);
+
+        if(list == null){
+            Assert.fail("list not correctly instantiated");
+        }
     }
 
     /**
@@ -27,7 +30,12 @@ public class ListExerciseTest {
     @Test
     public void getSizeTest1(){
         List<Integer> list = le.createList();
-        Assert.assertTrue(le.getSize(list) == 0);
+        if(list == null){
+            Assert.fail();
+        }else{
+            Assert.assertTrue(le.getSize(list) == 0);
+        }
+        
     }
 
     /**
@@ -36,8 +44,13 @@ public class ListExerciseTest {
     @Test
     public void getSizeTest2(){
         List<Integer> list = le.createList();
-        le.addToList(list, 1);
-        Assert.assertTrue(le.getSize(list) == 1);
+        if(list == null){
+            Assert.fail();        
+        }else{
+            le.addToList(list, 1);
+            Assert.assertTrue(le.getSize(list) == 1);        
+        }
+        
     }
 
     /**
@@ -46,8 +59,12 @@ public class ListExerciseTest {
     @Test
     public void addItemTest1(){
         List<Integer> list = le.createList();
-        le.addToList(list, 1);
-        Assert.assertTrue(list.contains(1));
+        if(list == null){
+            Assert.fail();        
+        }else{
+            le.addToList(list, 1);
+            Assert.assertTrue(list.contains(1));
+        } 
     }
 
     /**
@@ -56,10 +73,16 @@ public class ListExerciseTest {
     @Test
     public void addItemTest2(){
         List<Integer> list = le.createList();
-        le.addToList(list, 1);
-        le.addToList(list, 2);
-        Assert.assertTrue(list.contains(1));
-        Assert.assertTrue(list.contains(2));
+
+        if(list == null){
+            Assert.fail();        
+        }else{
+            le.addToList(list, 1);
+            le.addToList(list, 2);
+            Assert.assertTrue(list.contains(1));
+            Assert.assertTrue(list.contains(2));
+        }
+        
     }
 
     /**
@@ -67,8 +90,13 @@ public class ListExerciseTest {
      */
     public @Test void getItemTest1(){
         List<Integer> list = le.createList();
-        le.addToList(list, 1);
-        Assert.assertTrue(le.get(list, 0) == 1);
+        if(list == null){
+            Assert.fail();        
+        }else{
+            le.addToList(list, 1);
+            Assert.assertTrue(le.get(list, 0) == 1);
+        }
+        
     }
 
     /**
@@ -76,9 +104,13 @@ public class ListExerciseTest {
      */
     public @Test void getItemTest2(){
         List<Integer> list = le.createList();
-        le.addToList(list, 1);
-        le.addToList(list, 2);
-        Assert.assertTrue(le.get(list, 1) == 2);
+        if(list == null){
+            Assert.fail();        
+        }else{
+            le.addToList(list, 1);
+            le.addToList(list, 2);
+            Assert.assertTrue(le.get(list, 1) == 2);
+        }
     }
 
     /**
@@ -86,10 +118,15 @@ public class ListExerciseTest {
      */
     public @Test void removeFromListTest1(){
         List<Integer> list = le.createList();
-        le.addToList(list, 1);
-        le.removeFromList(list, 0);
-        Assert.assertFalse(list.contains(1));
-        Assert.assertTrue(le.getSize(list) == 0);
+
+        if(list == null){
+            Assert.fail();        
+        }else{
+            le.addToList(list, 1);
+            le.removeFromList(list, 0);
+            Assert.assertFalse(list.contains(1));
+            Assert.assertTrue(le.getSize(list) == 0);
+        }
     }
 
     /**
@@ -98,12 +135,16 @@ public class ListExerciseTest {
      */
     public @Test void removeFromListTest2(){
         List<Integer> list = le.createList();
-        le.addToList(list, 1);
-        le.addToList(list, 2);
-        le.removeFromList(list, 1);
-        Assert.assertTrue(list.contains(1));
-        Assert.assertFalse(list.contains(2));
-        Assert.assertTrue(le.getSize(list) == 1);
+        if(list == null){
+            Assert.fail();        
+        }else{
+            le.addToList(list, 1);
+            le.addToList(list, 2);
+            le.removeFromList(list, 1);
+            Assert.assertTrue(list.contains(1));
+            Assert.assertFalse(list.contains(2));
+            Assert.assertTrue(le.getSize(list) == 1);
+        }
     }
 
     /**
@@ -111,11 +152,15 @@ public class ListExerciseTest {
      */
     public @Test void updatePositionTest1(){
         List<Integer> list = le.createList();
-        le.addToList(list, 1);
-        le.addToList(list, 2);
-        le.updateAtPosition(list, 0, 3);
-        Assert.assertTrue(list.contains(3));
-        Assert.assertFalse(list.contains(1));
+        if(list == null){
+            Assert.fail();        
+        }else{
+            le.addToList(list, 1);
+            le.addToList(list, 2);
+            le.updateAtPosition(list, 0, 3);
+            Assert.assertTrue(list.contains(3));
+            Assert.assertFalse(list.contains(1));
+        }
     }
 
     /**
@@ -123,10 +168,15 @@ public class ListExerciseTest {
      */
     public @Test void updatePositionTest2(){
         List<Integer> list = le.createList();
-        le.addToList(list, 1);
-        le.addToList(list, 2);
-        le.updateAtPosition(list, 1, 3);
-        Assert.assertTrue(list.contains(3));
-        Assert.assertFalse(list.contains(2));
+        if(list == null){
+            Assert.fail();        
+        }else{
+            le.addToList(list, 1);
+            le.addToList(list, 2);
+            le.updateAtPosition(list, 1, 3);
+            Assert.assertTrue(list.contains(3));
+            Assert.assertFalse(list.contains(2));
+        }
+        
     }
 }
