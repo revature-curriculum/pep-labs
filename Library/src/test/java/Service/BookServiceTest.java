@@ -41,9 +41,13 @@ public class BookServiceTest {
         bookList.add(b3);
         Mockito.when(mockBookDAO.getAllBooks()).thenReturn(bookList);
         List<Book> returnedBooks = bookService.getAllBooks();
-        Assert.assertTrue(returnedBooks.contains(b1));
-        Assert.assertTrue(returnedBooks.contains(b2));
-        Assert.assertTrue(returnedBooks.contains(b3));
+        if(returnedBooks == null){
+            Assert.fail();
+        }else{
+            Assert.assertTrue(returnedBooks.contains(b1));
+            Assert.assertTrue(returnedBooks.contains(b2));
+            Assert.assertTrue(returnedBooks.contains(b3));
+        }
     }
 
     /**
@@ -102,8 +106,13 @@ public class BookServiceTest {
         Mockito.when(mockBookDAO.getAllBooks()).thenReturn(bookList);
         Mockito.when(mockBookDAO.getBooksWithBookCountOverZero()).thenReturn(bookListOverZero);
         List<Book> returnedBooks = bookService.getAllAvailableBooks();
-        Assert.assertTrue(returnedBooks.contains(b1));
-        Assert.assertTrue(returnedBooks.contains(b3));
-        Assert.assertFalse(returnedBooks.contains(b2));
+        if(returnedBooks == null){
+            Assert.fail();
+        }else{
+            Assert.assertTrue(returnedBooks.contains(b1));
+            Assert.assertTrue(returnedBooks.contains(b3));
+            Assert.assertFalse(returnedBooks.contains(b2));
+        }
+        
     }
 }

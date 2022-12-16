@@ -38,8 +38,13 @@ public class AuthorServiceTest {
         authors.add(a2);
         Mockito.when(mockAuthorDAO.getAllAuthors()).thenReturn(authors);
         List<Author> returnedAuthors = authorService.getAllAuthors();
-        Assert.assertTrue(returnedAuthors.contains(a1));
-        Assert.assertTrue(returnedAuthors.contains(a2));
+        if(returnedAuthors == null){
+            Assert.fail();
+        }else{
+            Assert.assertTrue(returnedAuthors.contains(a1));
+            Assert.assertTrue(returnedAuthors.contains(a2));
+        }
+        
     }
 
     /**

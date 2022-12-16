@@ -55,8 +55,12 @@ public class FlightDAOTest {
     @Test
     public void getFlightByIDTest1(){
         Flight flight = flightDAO.getFlightById(6);
-        Flight f6 = new Flight(6, "dallas", "tampa");
-        Assert.assertTrue(flight.equals(f6));
+        if(flight == null){
+            Assert.fail();
+        }else{
+            Flight f6 = new Flight(6, "dallas", "tampa");
+            Assert.assertTrue(flight.equals(f6));
+        }
     }
     /**
      * The flightDAO should retrieve a flight with a specific ID when getFlightById is called.
@@ -64,8 +68,12 @@ public class FlightDAOTest {
     @Test
     public void getFlightByIDTest2(){
         Flight flight = flightDAO.getFlightById(4);
-        Flight f9012 = new Flight(4, "morgantown", "dallas");
-        Assert.assertTrue(flight.equals(f9012));
+        if(flight == null){
+            Assert.fail();
+        }else{
+            Flight f9012 = new Flight(4, "morgantown", "dallas");
+            Assert.assertTrue(flight.equals(f9012));
+        }
     }
 
     /**

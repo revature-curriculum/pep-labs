@@ -23,7 +23,12 @@ public class GenericExerciseTest {
         GenericExercise<Integer> ge = new GenericExercise<>();
         ge.loadGenericItem(5);
         int expected = 5;
-        int actual = ge.returnGenericItem();
-        Assert.assertEquals(expected, actual);
+
+        if(ge.returnGenericItem() == null){
+            Assert.fail();
+        }else{
+            int actual = ge.returnGenericItem();
+            Assert.assertEquals(expected, actual);
+        }
     }
 }
