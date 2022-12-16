@@ -3,6 +3,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GroceryRepositoryTest {
@@ -22,19 +23,27 @@ public class GroceryRepositoryTest {
      */
     @Test
     public void groceryListEmptyOnStartTest(){
+        
+        List<String> expectedOutput = new ArrayList<>();
+
         List<String> allGroceries = groceryDAO.getAllGroceries();
-        boolean expected = false;
-        boolean actual = allGroceries.isEmpty();
-        Assert.assertEquals(expected, actual);
+
+        Assert.assertEquals(expectedOutput, allGroceries);
+        
     }
     /**
      * When a grocery is added, the grocery database should contain the grocery.
      */
     @Test
     public void groceryListAddTest1(){
-        List<String> allGroceries = groceryDAO.getAllGroceries();
-        boolean expected = false;
-        boolean actual = allGroceries.isEmpty();
-        Assert.assertEquals(expected, actual);
+        List<String> expectedOutput = new ArrayList<>();
+        expectedOutput.add("apples");
+        
+        groceryDAO.addGrocery("apples");
+
+        List<String> actualOutput = groceryDAO.getAllGroceries();
+
+        Assert.assertEquals(expectedOutput, actualOutput);
+
     }
 }
