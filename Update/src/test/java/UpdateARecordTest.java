@@ -42,7 +42,7 @@ public class UpdateARecordTest {
         try {
             Connection connection = ConnectionUtil.getConnection();
 
-            String sql = "SELECT * FROM users;";
+            String sql = "SELECT * FROM site_user;";
 
             PreparedStatement ps = connection.prepareStatement(sql);
 
@@ -71,12 +71,12 @@ public class UpdateARecordTest {
             Connection connection = ConnectionUtil.getConnection();
 
             //Write SQL logic here
-            String sql1 = "CREATE TABLE users (id SERIAL PRIMARY KEY, firstname varchar(100), lastname varchar(100));";
-            String sql2 = "INSERT INTO users (firstname, lastname) VALUES ('Steve', 'Garcia');";
-            String sql3 = "INSERT INTO users (firstname, lastname) VALUES ('Alexa', 'Smith');";
-            String sql4 = "INSERT INTO users (firstname, lastname) VALUES ('Steve', 'Jones');";
-            String sql5 = "INSERT INTO users (firstname, lastname) VALUES ('Brandon', 'Smith');";
-            String sql6 = "INSERT INTO users (firstname, lastname) VALUES ('Adam', 'Jones');";
+            String sql1 = "CREATE TABLE site_user (id SERIAL PRIMARY KEY, firstname varchar(100), lastname varchar(100));";
+            String sql2 = "INSERT INTO site_user (firstname, lastname) VALUES ('Steve', 'Garcia');";
+            String sql3 = "INSERT INTO site_user (firstname, lastname) VALUES ('Alexa', 'Smith');";
+            String sql4 = "INSERT INTO site_user (firstname, lastname) VALUES ('Steve', 'Jones');";
+            String sql5 = "INSERT INTO site_user (firstname, lastname) VALUES ('Brandon', 'Smith');";
+            String sql6 = "INSERT INTO site_user (firstname, lastname) VALUES ('Adam', 'Jones');";
 
             PreparedStatement ps = connection.prepareStatement(sql1 + sql2 + sql3 + sql4 + sql5 + sql6);
 
@@ -98,7 +98,7 @@ public class UpdateARecordTest {
 
             Connection connection = ConnectionUtil.getConnection();
 
-            String sql = "DROP TABLE users;";
+            String sql = "DROP TABLE site_user;";
 
             PreparedStatement ps = connection.prepareStatement(sql);
 

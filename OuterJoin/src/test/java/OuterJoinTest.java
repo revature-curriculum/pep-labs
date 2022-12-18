@@ -17,8 +17,8 @@ public class OuterJoinTest {
     @Test
     public void activityOuterJoin1() {
         Set<ExampleEntity> expected = new HashSet<>();
-        expected.add(new ExampleEntity("Physics", "Mr. Tyson", "Robert Riggle", ""));
-        expected.add(new ExampleEntity("Physics", "Mr. Tyson", "Stephen Colbert", ""));
+        expected.add(new ExampleEntity("Physics", "Ms. Lovelace", "Robert Riggle", ""));
+        expected.add(new ExampleEntity("Physics", "Ms. Lovelace", "Stephen Colbert", ""));
         expected.add(new ExampleEntity("Math", "Ms. Lovelace", "Samantha Bee", ""));
         expected.add(new ExampleEntity("Writing", "Mr. McCarthy", "Aasif Mandvi", ""));
         expected.add(new ExampleEntity("Writing", "Mr. McCarthy", "John Stewart", ""));
@@ -34,7 +34,7 @@ public class OuterJoinTest {
     @Test
     public void activityOuterJoin2() {
         Set<ExampleEntity> expected = new HashSet<>();
-        expected.add(new ExampleEntity("Physics", "Mr. Tyson", "", "Motion 101"));
+        expected.add(new ExampleEntity("Physics", "Ms. Lovelace", "", "Motion 101"));
         expected.add(new ExampleEntity("Math", "Ms. Lovelace", "", "What even is modulus anyway?"));
         expected.add(new ExampleEntity("Biology", "Ms. Goodall", "", "Lions, Tigers, and Organs 5th ed"));
         expected.add(new ExampleEntity("Writing", "Mr. McCarthy", "", "The Story Circle Workbook"));
@@ -94,7 +94,7 @@ public class OuterJoinTest {
             facultyTableStatement.executeUpdate();
 
             String insertFaculty = "INSERT INTO class (teacher_name, class_title) VALUES" +
-                    "('Mr. Tyson', 'Physics')," +
+                    "('Ms. Lovelace', 'Physics')," +
                     "('Ms. Lovelace', 'Math')," +
                     "('Mr. McCarthy', 'Writing')," +
                     "('Ms. Goodall', 'Biology');";

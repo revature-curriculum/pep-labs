@@ -51,7 +51,7 @@ public class FilterRecords {
 
     /**
      * Problem 1: Given the employee table, write a query in the problem1.sql file to retrieve all the records
-     * from the employee table that have the lastname "Smith"
+     * from the employee table that have the last_name 'Smith'
      *
      *   employee table
      *   |  id  |   first_name   |   last_name   |  salary  |

@@ -41,15 +41,15 @@ import java.util.Set;
  *                                        |6   |'Jessica Williams' |'Art'      |
  *
  * We can query these tables with an INNER JOIN ON the "class" column in each table:
- *      SELECT * FROM faculty
- *      INNER JOIN students ON faculty.class = students.class;
+ *      SELECT * FROM class
+ *      INNER JOIN student ON class.class_title = students.class_title;
  *
  *  The output of the join would create the following result set.
  *              class                                  student
  * | id     |  teacher_name |class_title  | id    |      student_name  |class_title|
  *  -------------------------------------------------------------------------------
- *  |1     |'Mr. Tyson'      |'Physics'   |2     |'Stephen Colbert'    |'Physics' |
- *  |1     |'Mr. Tyson'      |'Physics'   |5     |'Robert Riggle'      |'Physics' |
+ *  |1     |'Ms. Lovelace'   |'Physics'   |2     |'Stephen Colbert'    |'Physics' |
+ *  |1     |'Ms. Lovelace'   |'Physics'   |5     |'Robert Riggle'      |'Physics' |
  *  |2     |'Ms. Lovelace'   |'Math'      |3     |'Samantha Bee'       |'Math'    |
  *  |3     |'Mr. McCarthy'   |'Writing'   |1     |'John Stewart'       |'Writing' |
  *  |3     |'Mr. McCarthy'   |'Writing'   |4     |'Aasif Mandvi'       |'Writing' |

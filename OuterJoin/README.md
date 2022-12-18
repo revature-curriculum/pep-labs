@@ -17,16 +17,16 @@ RIGHT OUTER JOIN will return all data from table_right, and any missing data fro
 Example:
 
 <table>
-<tr><th> table_left   </th><th> table_right </th></tr>
+<tr><th> table_left  </th></tr>
 <tr><td>
-
 | id | character |  species  |   
-| -- | ------------- | --------- |     
+| -- | --------- | --------- |     
 |1   |'Bugs'     |'Rabbit'   |     
 |2   |'Daffy'    |'Duck'     |     
 |3   |'Foghorn'  |'Chicken'  |
-
-</td><td>
+</td><td></tr></table>
+<table></th><th> table_right </th></tr>
+<tr><td>
 
 | id | character | catchphrase |
 | -- | ----------------- | --------- |
@@ -37,7 +37,7 @@ Example:
 </td></tr> </table>
 
 Note that there is no record in the right table for Foghorn, and there is no record in the left table for
-Porky. When we OUTER JOIN these two tables ON the character column, the missing data will be null. This is useful for finding rows where such a match does not exist, such as textbooks that have no associates classes, or classes that have no associate textbooks.
+Porky. When we OUTER JOIN these two tables ON the character column, the missing data will be null. This is useful for finding rows where such a match does not exist, such as characters with no catchphrases, or catchphrases with no characters.
 
 ```SQL
 SELECT * FROM table_left
@@ -74,7 +74,7 @@ Consider the three tables below for the following problems:
 
 | id |teacher_name   |class_title|   
 | -- | ------------- | --------- |     
-|1   |'Mr. Tyson'    |'Physics'  |   
+|1   |'Ms. Lovelace' |'Physics'  |   
 |2   |'Ms. Lovelace' |'Math'     |
 |3   |'Mr. McCarthy' |'Writing'  |
 |4   |'Ms. Goodall'  |'Biology'  |

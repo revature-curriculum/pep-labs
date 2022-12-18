@@ -23,7 +23,7 @@ import java.sql.Statement;
 public class UpdateARecord {
 
     /**
-     *  users table:
+     *  site_user table:
      *  |   id  |     firstname        |        lastname        |
      *  ----------------------------------------------------------
      *  |1      |'Steve'               |'Garcia'                |
@@ -36,7 +36,7 @@ public class UpdateARecord {
 
     public void problem1(){
         /**
-         * Problem 1: Update Alexa's last name to be 'Rush' in the users table.
+         * Problem 1: Update Alexa's last name to be 'Rush' in the site_user table.
          */
         String sql = FileUtil.parseSQLFile("problem1.sql");
 
