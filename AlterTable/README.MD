@@ -39,4 +39,4 @@ site_user table
 |2         |'Brian'            |
 |3         |'Charles'          |
 
-#### Problem 1: Use the ALTER keyword to add a "lastname" column to the "site_user" table.
+#### Problem 1: Use the ALTER keyword to add a "lastname" column to the "site_user" table, of type varchar(100).

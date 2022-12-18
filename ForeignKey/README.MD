@@ -92,9 +92,12 @@ For the following problems, consider the site_user table below:
 </td></tr></table>
 
 ### Problem 1
-Create a new table in the file problem1.sql. This table will contain posts
-linked to specific users. It should have three columns: id, post, and user_fk.
-The user_fk column should be a foreign key that references the id column in the 
+Create a new table in the file problem1.sql named Post. This table will contain posts
+linked to specific users. It should have three columns: id (which is of type serial, and is a primary key), 
+post (of type varchar(255)), and user_fk (which is of type int, but is also a foreign key referencing the id column
+of the table site_user).
+
+Be sure that user_fk column should be an int foreign key that references the id column in the 
 site_user table. The table will look like this:
 
 <table><tr><th> post </th></tr><tr><td>

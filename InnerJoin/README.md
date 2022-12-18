@@ -21,19 +21,21 @@ WHERE table_left.column1 = value;
 ```
 
 <table>
-<tr><th> class </th><th> student </th></tr>
-<tr><td>
+<tr><th> class </th></tr><tr><td>
 
-| id |    teacher    |   class   |    
+| id | teacher_name  |class_title|    
 | -- | ------------- | --------- |     
-|1   |'Mr. Tyson'    |'Physics'  |     
+|1   |'Ms. Lovelace' |'Physics'  |     
 |2   |'Ms. Lovelace' |'Math'     |     
 |3   |'Mr. McCarthy' |'Writing'  |     
-|4   |'Ms. Goodall'  |'Biology'  |     
+|4   |'Ms. Goodall'  |'Biology'  |
+</td></tr>
+</table>
 
-</td><td>
+<table>
+<tr><th> student </th></tr><tr><td>
 
-| id |      student      |   class   |
+| id |   student_name    |class_title|
 | -- | ----------------- | --------- |
 |1   |'John Stewart'     |'Writing'  |
 |2   |'Stephen Colbert'  |'Physics'  |
@@ -47,20 +49,20 @@ WHERE table_left.column1 = value;
 We can query these tables with an INNER JOIN ON the "class" column in each table:
 ```SQL
 SELECT * FROM class
-INNER JOIN students ON class.class_title = students.class.class_title;
+INNER JOIN student ON class.class_title = students.class_title;
 ```
 
 The output of the join would create the following result set:
 
 <table><tr><th> results </th></tr><tr><td>
 
-|  id  |     teacher     |    class   |  id   | student           |  class   |
-| ---- | --------------- | ---------- | ----- |-------------------|----------|
-|1     |'Mr. Tyson'      |'Physics'   |2     | 'Stephen Colbert' |'Physics' |
-|1     |'Mr. Tyson'      |'Physics'   |5     | 'Robert Riggle'   |'Physics' |
-|2     |'Ms. Lovelace'   |'Math'      |3     | 'Samantha Bee'    |'Math'    |
-|3     |'Mr. McCarthy'   |'Writing'   |1     | 'John Stewart'    |'Writing' |
-|3     |'Mr. McCarthy'   |'Writing'   |4     | 'Aasif Mandvi'    |'Writing' |
+| class.id | class.teacher_name | class.class_title | student.id | student.student_name | student.class_title |
+|--------|--------------------|-------------------|-------------|----------------------|---------------------|
+| 1      | 'Ms. Lovelace'        | 'Physics'         | 2           | 'Stephen Colbert'    | 'Physics'           |
+| 1      | 'Ms. Lovelace'        | 'Physics'         | 5           | 'Robert Riggle'      | 'Physics'           |
+| 2      | 'Ms. Lovelace'     | 'Math'            | 3           | 'Samantha Bee'       | 'Math'              |
+| 3      | 'Mr. McCarthy'     | 'Writing'         | 1           | 'John Stewart'       | 'Writing'           |
+| 3      | 'Mr. McCarthy'     | 'Writing'         | 4           | 'Aasif Mandvi'       | 'Writing'           |
 
 </td></tr></table>
 
@@ -73,10 +75,9 @@ are no students taking biology.)
 
 # Lab
 
-Problem 1: Write a query that will return the id, and name of each of Ms. Lovelace's students. Notice that
+Problem 1: Write a query that will return the id and student_name of each of Ms. Lovelace's students. Notice that
 Ms. Lovelace teaches two classes, but which classes she teaches aren't known from the data in the student
 table. This means that you will need a way to combine the data from the two tables (inner join). You will
-need to simultaneously filter those results WHERE class.teacher_name = student.student_name.
+need to simultaneously filter those results WHERE class.teacher_name = student.student_name to retrieve only her students from the resultset shown above.
 
-Note: There should not be a wild card (*) in your statement. You will need to specify the column in your
-statement by writing table.column, because the column names may be ambiguous between class and student.
+Note: There should not be a wild card (*) in your statement. You will need to specify the columns in your statement by writing columns in the format table.column (for instance, student.class_title), because the column names may be ambiguous between class and student.

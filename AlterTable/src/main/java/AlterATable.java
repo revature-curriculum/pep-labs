@@ -18,7 +18,7 @@ import java.sql.Statement;
  * |2         |'Brian'            |
  * |3         |'Charles'          |
  *
- * The users table when it was created, forgot to add the 'lastname' column.
+ * The site_user table when it was created, forgot to add the 'lastname' column.
  *
  * We could go about solving this in 2 different ways:
  * - We could remove the table completely and create the table again with the correct number of columns
@@ -43,7 +43,7 @@ public class AlterATable {
     /**
      *
      * In problem1.sql, write a SQL statement that adds a "lastname" column to the site_user table, of type
-     * varchar(255).
+     * varchar(100).
      *
      *   site_user table:
      *   |    id    |     firstname     |

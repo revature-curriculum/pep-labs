@@ -59,7 +59,7 @@ employee table
 |4     |'Brandon'       |'Smith'        |120000.00 |
 |5     |'Adam'          |'Jones'        |55050.50  |
 
-#### Problem 1: Given the above employee table, query all the records from the table that have the lastname "Smith"
+#### Problem 1: Given the above employee table, query all the records from the table that have the last_name 'Smith'. Remember to use single quotes when filtering for varchars, not double quotes.
 
 - - -
 
