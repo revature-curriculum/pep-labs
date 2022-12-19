@@ -19,11 +19,13 @@ Example:
 <table>
 <tr><th> table_left  </th></tr>
 <tr><td>
+
 | id | character |  species  |   
 | -- | --------- | --------- |     
 |1   |'Bugs'     |'Rabbit'   |     
 |2   |'Daffy'    |'Duck'     |     
 |3   |'Foghorn'  |'Chicken'  |
+
 </td><td></tr></table>
 <table></th><th> table_right </th></tr>
 <tr><td>
@@ -107,3 +109,6 @@ Problem 1: Use a LEFT OUTER JOIN to combine the class (left side) and student (r
 
 ## Problem 2
 Problem 2: Use a RIGHT OUTER JOIN to combine the class (left side) and textbook (right side) tables using the class column as the join on column. This means that when no class exists for a textbook, a row with a NULL class will be in the resulting query. Hint: You should start with `SELECT * FROM class`
+
+
+NOTE: please write the SQL statements on one line for this lab.

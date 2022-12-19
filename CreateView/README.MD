@@ -67,3 +67,5 @@ Create a view called "firstname_lastname" from the site_user table
 that only has the firstname and lastname columns.  
 
 NOTE: This view should NOT contain the id and age columns.
+
+NOTE2: please write the SQL statement on one line for this lab.

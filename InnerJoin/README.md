@@ -81,3 +81,6 @@ table. This means that you will need a way to combine the data from the two tabl
 need to simultaneously filter those results WHERE class.teacher_name = student.student_name to retrieve only her students from the resultset shown above.
 
 Note: There should not be a wild card (*) in your statement. You will need to specify the columns in your statement by writing columns in the format table.column (for instance, student.class_title), because the column names may be ambiguous between class and student.
+
+
+NOTE: please write the SQL statement on one line for this lab.
