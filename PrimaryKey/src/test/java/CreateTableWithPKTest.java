@@ -1,6 +1,7 @@
 
 import Util.ConnectionUtil;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.sql.Connection;
@@ -37,7 +38,7 @@ public class CreateTableWithPKTest {
             Connection connection = ConnectionUtil.getConnection();
 
             //Notice that we are NOT manually adding a number for the primary key here. The db will do this for us because of the "SERIAL" datatype that we used.
-            String sql = "INSERT into song (Title, Artist) VALUES ('Let it Be', 'Beatles')";
+            String sql = "INSERT into song (id, Title, Artist) VALUES (1,'Let it Be', 'Beatles')";
 
             PreparedStatement ps = connection.prepareStatement(sql);
 
@@ -47,12 +48,40 @@ public class CreateTableWithPKTest {
             System.out.println("problem1: " + e.getMessage() + '\n');
             fail();
         }
+
+
+
     }
 
 
 
 
+    @Test
+    public void TestPrimaryKeyUniqueConstraint(){
 
+        try {
+            createTableWithPK.problem1();
+
+            Connection connection = ConnectionUtil.getConnection();
+
+            //Notice that we are NOT manually adding a number for the primary key here. The db will do this for us because of the "SERIAL" datatype that we used.
+            String sql = "INSERT into song (id, Title, Artist) VALUES (1,'Let it Be', 'Beatles');";
+            String sql2 = "INSERT into song (id, Title, Artist) VALUES (1,'Imagine', 'Beatles');";
+
+            PreparedStatement ps = connection.prepareStatement(sql + sql2);
+
+            ps.executeUpdate();
+            fail("Primary Key constraint not implemented due to unique constraint not being enforced");
+
+        } catch (SQLException e) {
+            if(!(e.getMessage().substring(0, "Unique index or primary key violation".length()).equals("Unique index or primary key violation"))){
+                Assert.fail(e.getMessage());
+            }
+        }
+
+
+        
+    }
 
 
 
