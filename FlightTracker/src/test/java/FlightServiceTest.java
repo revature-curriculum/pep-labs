@@ -50,8 +50,8 @@ public class FlightServiceTest {
         Flight newFlight = new Flight( "dallas", "morgantown");
         Flight persistedFlight = new Flight(1, "dallas", "morgantown");
         Mockito.when(mockFlightDAO.insertFlight(newFlight)).thenReturn(persistedFlight);
-        Flight actualFlight = flightService.addFlight(persistedFlight);
-        Assert.assertEquals(persistedFlight, flightService.addFlight(actualFlight));
+        Flight actualFlight = flightService.addFlight(newFlight);
+        Assert.assertEquals(persistedFlight, actualFlight);
 //        verify that addFlight was actually used (Mockito.any will accept any parameters)
         Mockito.verify(mockFlightDAO).insertFlight(Mockito.any());
     }
@@ -80,10 +80,15 @@ public class FlightServiceTest {
         Mockito.when(mockFlightDAO.getAllFlightsFromCityToCity("tampa", "dallas"))
                 .thenReturn(cityToCityFlightsReturned);
         Mockito.when(mockFlightDAO.getAllFlights()).thenReturn(allFlightsReturned);
-        Assert.assertTrue(flightService.getAllFlightsFromCityToCity("tampa", "dallas")
-                .contains(f801));
-        Assert.assertTrue(flightService.getAllFlightsFromCityToCity("tampa", "dallas")
-                .contains(f804));
+        if(flightService.getAllFlightsFromCityToCity("tampa", "dallas") == null){
+            Assert.fail();
+        }else{
+            Assert.assertTrue(flightService.getAllFlightsFromCityToCity("tampa", "dallas")
+            .contains(f801));
+            Assert.assertTrue(flightService.getAllFlightsFromCityToCity("tampa", "dallas")
+            .contains(f804));
+        }
+        
 
     }
 
@@ -102,11 +107,12 @@ public class FlightServiceTest {
         Flight f801 = new Flight( "dallas", "morgantown");
         Flight expectedFlight = new Flight(801, "dallas", "morgantown");
         Mockito.when(mockFlightDAO.getAllFlights()).thenReturn(allFlightsReturned);
-        Mockito.when(mockFlightDAO.getFlightById(801)).thenReturn(f801);
-        Assert.assertEquals(flightService.updateFlight(801, f801), expectedFlight);
-//        Verify that updateFlight was actually called (Mockito.any() will accept any parameters)
-        Mockito.verify(mockFlightDAO).updateFlight(801, Mockito.any());
+        Mockito.when(mockFlightDAO.getFlightById(801)).thenReturn(expectedFlight);
+
+        Flight actualFlight = flightService.updateFlight(801, f801);
+        Assert.assertEquals(expectedFlight, actualFlight);
     }
+
     /**
      * When a flight does not exist, attempting to update it should return null. Also, verify that
      * flightDAO.updateFlight was never called.

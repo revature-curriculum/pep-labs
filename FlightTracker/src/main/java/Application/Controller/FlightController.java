@@ -56,7 +56,7 @@ public class FlightController {
     /**
      * Method defines the structure of the Javalin Flights API. Javalin methods will use handler methods
      * to manipulate the Context object, which is a special object provided by Javalin which contains information about
-     * HTTP requests and can generate responses. There is no need to change anything in this method.
+     * HTTP requests and can generate responses. There is no need to change anything in this method. 
      */
     public Javalin startAPI(){
         Javalin app = Javalin.create();
@@ -83,7 +83,7 @@ public class FlightController {
         if(addedFlight==null){
             ctx.status(400);
         }else{
-            ctx.json(flight);
+            ctx.json(mapper.writeValueAsString(addedFlight));
         }
     }
 
@@ -104,10 +104,11 @@ public class FlightController {
         Flight flight = mapper.readValue(ctx.body(), Flight.class);
         int flight_id = Integer.parseInt(ctx.pathParam("flight_id"));
         Flight updatedFlight = flightService.updateFlight(flight_id, flight);
+        System.out.println(updatedFlight);
         if(updatedFlight == null){
             ctx.status(400);
         }else{
-            ctx.json(flight);
+            ctx.json(mapper.writeValueAsString(updatedFlight));
         }
 
     }

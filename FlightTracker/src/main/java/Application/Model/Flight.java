@@ -46,7 +46,7 @@ public class Flight {
      * @return flight_id
      */
     public int getFlight_id() {
-        return flight_id;
+        return this.flight_id;
     }
 
     /**
@@ -119,7 +119,7 @@ public class Flight {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Flight flight = (Flight) o;
-        return flight_id == flight.flight_id && Objects.equals(departure_city, flight.departure_city) && Objects.equals(arrival_city, flight.arrival_city);
+        return this.flight_id == flight.flight_id && Objects.equals(departure_city, flight.departure_city) && Objects.equals(arrival_city, flight.arrival_city);
     }
 
 }
