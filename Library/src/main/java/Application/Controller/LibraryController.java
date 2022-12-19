@@ -50,6 +50,12 @@ import java.util.List;
 public class LibraryController {
     BookService bookService;
     AuthorService authorService;
+
+    public LibraryController(){
+        this.bookService = new BookService();
+        this.authorService = new AuthorService();
+    }
+
     /**
      * Method defines the structure of the Javalin Library API. Javalin methods will use handler methods
      * to manipulate the Context object, which is a special object provided by Javalin which contains information about
@@ -79,7 +85,7 @@ public class LibraryController {
         Author author = mapper.readValue(ctx.body(), Author.class);
         Author addedAuthor = authorService.addAuthor(author);
         if(addedAuthor!=null){
-            ctx.json(author);
+            ctx.json(mapper.writeValueAsString(addedAuthor));
         }else{
             ctx.status(400);
         }
@@ -107,7 +113,7 @@ public class LibraryController {
         Book book = mapper.readValue(ctx.body(), Book.class);
         Book addedBook = bookService.addBook(book);
         if(addedBook!=null){
-            ctx.json(book);
+            ctx.json(mapper.writeValueAsString(addedBook));
         }else{
             ctx.status(400);
         }

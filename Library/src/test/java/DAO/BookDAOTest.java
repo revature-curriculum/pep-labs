@@ -11,14 +11,14 @@ import java.util.List;
 /**
  * This class will use the dummy data inserted in the Application.databaseSetup() method.
  * The Book table contains the following records:
- *      (100, 0, 'ficciones', 2),
- *      (101, 0, 'book of sand', 0),
- *      (102, 1, 'mr palomar', 1),
- *      (103, 1, 'invisible cities', 3),
- *      (104, 2, 'crying of lot 49', 0),
- *      (105, 2, 'mason and dixon', 0),
- *      (106, 3, 'understanding media', 1),
- *      (107, 4, 'critique of pure reason', 7)
+ *      (100, 1, 'ficciones', 2),
+ *      (101, 1, 'book of sand', 0),
+ *      (102, 2, 'mr palomar', 1),
+ *      (103, 2, 'invisible cities', 3),
+ *      (104, 3, 'crying of lot 49', 0),
+ *      (105, 3, 'mason and dixon', 0),
+ *      (106, 4, 'understanding media', 1),
+ *      (107, 5, 'critique of pure reason', 7)
  * For the purpose of DAO methods that require joins with the Author table, these are the records in Author:
  *      (0, 'jorge luis borges'),
  *      (1, 'italo calvino'),
@@ -49,7 +49,7 @@ public class BookDAOTest {
      */
     @Test
     public void getBookByIsbnTest(){
-        Book b1 = new Book(100, 0, "ficciones", 2);
+        Book b1 = new Book(100, 1, "ficciones", 2);
         Book book = bookDAO.getBookByIsbn(100);
         Assert.assertEquals(b1, book);
     }
@@ -79,11 +79,11 @@ public class BookDAOTest {
      */
     @Test
     public void getBooksWithBookCountOverZeroTest(){
-        Book b0 = new Book(100, 0, "ficciones", 2);
-        Book b1 = new Book(102, 1, "mr palomar", 1);
-        Book b2 = new Book(103, 1, "invisible cities", 3);
-        Book b3 = new Book(106, 3, "understanding media", 1);
-        Book b4 = new Book(107, 4, "critique of pure reason", 7);
+        Book b0 = new Book(100, 1, "ficciones", 2);
+        Book b1 = new Book(102, 2, "mr palomar", 1);
+        Book b2 = new Book(103, 2, "invisible cities", 3);
+        Book b3 = new Book(106, 4, "understanding media", 1);
+        Book b4 = new Book(107, 5, "critique of pure reason", 7);
         List<Book> availableBooks = bookDAO.getBooksWithBookCountOverZero();
         Assert.assertTrue(availableBooks.contains(b0));
         Assert.assertTrue(availableBooks.contains(b1));

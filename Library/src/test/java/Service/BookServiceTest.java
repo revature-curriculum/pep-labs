@@ -60,12 +60,13 @@ public class BookServiceTest {
         Book b1 = new Book(101, 1, "Ulysses", 2);
         Book b2 = new Book(102, 1, "Finnegan's Wake", 0);
         Book b3 = new Book(103, 2, "War and Peace", 1);
-        Book b4 = new Book(103, 3, "Roadside Picnic", 1);
+        Book b4 = new Book(104, 3, "Roadside Picnic", 1);
         bookList.add(b1);
         bookList.add(b2);
         bookList.add(b3);
         Mockito.when(mockBookDAO.getAllBooks()).thenReturn(bookList);
         Mockito.when(mockBookDAO.getBookByIsbn(104)).thenReturn(null);
+        Mockito.when(mockBookDAO.insertBook(b4)).thenReturn(b4);
         Assert.assertEquals(b4, bookService.addBook(b4));
         Mockito.verify(mockBookDAO).insertBook(b4);
     }
