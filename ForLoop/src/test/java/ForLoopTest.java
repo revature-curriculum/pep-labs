@@ -1,5 +1,3 @@
-package Intro_To_Control_Flow.ForLoop;
-
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
