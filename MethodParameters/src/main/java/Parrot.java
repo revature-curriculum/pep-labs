@@ -13,6 +13,6 @@ public class Parrot {
      */
     public static void main(String[] args){}
     public String copy(String text){
-        return ("hello");
+        return("text"); 
     }
 }
