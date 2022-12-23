@@ -2,7 +2,7 @@
 :lab_name: pep-labs
 :repo_path: "/workspace/pep-gitpod-workspace/pep-labs"
 :previous_lab: 
-:current_lab: 
+:current_lab: Add
 :origin_remote: https://github.com/S-Yohan/pep-labs.git
 :repo_clone_folder: "/workspace/pep-gitpod-workspace/pep-labs"
 :github_username: S-Yohan
@@ -40,12 +40,12 @@
     :git_user_name: S-Yohan
 :progress:
   :count_labs_total: 96
-  :count_labs_passed: 0
+  :count_labs_passed: 1
   :count_tests_total: 361
-  :count_tests_passed: 0
+  :count_tests_passed: 2
 :progress_test:
   :count_tests_total: 361
-  :count_tests_passed: 0
+  :count_tests_passed: 2
   Start:
     :Week: 1
     :Order: 1
@@ -137,10 +137,10 @@
     :Order: 8
     :Type: challenge
     :count_tests: 2
-    :count_tests_passed: 0
+    :count_tests_passed: 2
     :tests:
-      addTest1: 0
-      addTest2: 0
+      addTest1: 1
+      addTest2: 1
   Subtract:
     :Week: 1
     :Order: 9
