@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Parrot {
     /**
@@ -13,10 +14,8 @@ public class Parrot {
      * @return text.
      */
     public static void main(String[] args){
-        String hello = ("hello");
-        System.out.println(hello);
-    }
-    public String copy(String textrevpro ){
-        return("hello");
+        Scanner sc = new Scanner(System.in);
+        String str = ("hello");
+        System.out.println(str);
     }
 }

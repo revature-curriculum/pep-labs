@@ -40,12 +40,12 @@
     :git_user_name: melscottjr77
 :progress:
   :count_labs_total: 96
-  :count_labs_passed: 0
+  :count_labs_passed: 1
   :count_tests_total: 361
-  :count_tests_passed: 0
+  :count_tests_passed: 2
 :progress_test:
   :count_tests_total: 361
-  :count_tests_passed: 0
+  :count_tests_passed: 2
   Start:
     :Week: 1
     :Order: 1
@@ -68,10 +68,10 @@
     :Order: 3
     :Type: lab
     :count_tests: 2
-    :count_tests_passed: 0
+    :count_tests_passed: 2
     :tests:
-      parrotTestHello: 0
-      parrotTestPolly: 0
+      parrotTestHello: 1
+      parrotTestPolly: 1
   Comparisons:
     :Week: 1
     :Order: 4
