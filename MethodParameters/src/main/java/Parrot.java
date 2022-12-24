@@ -1,7 +1,9 @@
+import java.util.Scanner;
 
 public class Parrot {
     /**
-     * This method should return whatever String was passed into it by whatever invoked it (in this case, the test),
+     * This method should return whatever String was passed into it by whatever
+     * invoked it (in this case, the test),
      * instead of returning "return text please!"
      *
      * for example:
@@ -11,7 +13,9 @@ public class Parrot {
      * @param text is a parameter passed into this method by whatever called it.
      * @return text.
      */
-    public String copy(String text){
-        return "return text please!";
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String str = ("polly");
+        System.out.println(str);
     }
 }
