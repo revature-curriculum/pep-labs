@@ -33,8 +33,8 @@
     checkoutLocation: pep-gitpod-workspace
     upstreamRemoteURI: https://github.com/revature-curriculum/pep-gitpod-workspace.git
   :gitpod_workspace:
-    :workspace_id: melscottjr7-pepgitpodwo-gm3sxfc7p5f
-    :workspace_url: https://melscottjr7-pepgitpodwo-gm3sxfc7p5f.ws-us79.gitpod.io
+    :workspace_id: melscottjr7-pepgitpodwo-f0858233qtl
+    :workspace_url: https://melscottjr7-pepgitpodwo-f0858233qtl.ws-us80.gitpod.io
     :repo_root: "/workspace/pep-gitpod-workspace"
     :git_user_email: melscottjr77@gmail.com
     :git_user_name: melscottjr77
