@@ -15,7 +15,7 @@ public class Parrot {
      */
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        String str = ("polly");
+        String str = ("hello");
         System.out.println(str);
     }
 }
