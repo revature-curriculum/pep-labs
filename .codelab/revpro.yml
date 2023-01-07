@@ -3,7 +3,7 @@
 :repo_path: "/workspace/revpro-cli/pep-labs"
 :previous_lab: 
 :current_lab: 
-:origin_remote: https://github.com/kaivont85/pep-labs
+:origin_remote: https://github.com/kaivont85/pep-labs.git
 :repo_clone_folder: "/workspace/revpro-cli/pep-labs"
 :github_username: kaivont85
 :git_name: Kaivon K Tolooee
@@ -33,8 +33,8 @@
     checkoutLocation: pep-gitpod-workspace
     upstreamRemoteURI: https://github.com/revature-curriculum/pep-gitpod-workspace.git
   :gitpod_workspace:
-    :workspace_id: kaivont85-pepgitpodwork-7ub2ik7ek1c
-    :workspace_url: https://kaivont85-pepgitpodwork-7ub2ik7ek1c.ws-us79.gitpod.io
+    :workspace_id: kaivont85-pepgitpodwork-gjnvmqotp98
+    :workspace_url: https://kaivont85-pepgitpodwork-gjnvmqotp98.ws-us81.gitpod.io
     :repo_root: "/workspace/pep-gitpod-workspace"
     :git_user_email: kaivont@gmail.com
     :git_user_name: Kaivon K Tolooee
