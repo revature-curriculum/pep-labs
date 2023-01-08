@@ -43,6 +43,9 @@ public class ForLoop {
         String buildingString = "";
 
 //        code here
+        int i = start;
+        i < end;
+        i++;
 
         return buildingString;
     }
