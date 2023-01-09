@@ -40,12 +40,12 @@
     :git_user_name: Kaivon K Tolooee
 :progress:
   :count_labs_total: 96
-  :count_labs_passed: 0
+  :count_labs_passed: 1
   :count_tests_total: 361
-  :count_tests_passed: 0
+  :count_tests_passed: 3
 :progress_test:
   :count_tests_total: 361
-  :count_tests_passed: 0
+  :count_tests_passed: 3
   Start:
     :Week: 1
     :Order: 1
@@ -221,11 +221,11 @@
     :Order: 6
     :Type: lab
     :count_tests: 3
-    :count_tests_passed: 0
+    :count_tests_passed: 3
     :tests:
-      returnStringTest1: 0
-      returnStringTest2: 0
-      returnStringTest3: 0
+      returnStringTest1: 1
+      returnStringTest2: 1
+      returnStringTest3: 1
   Math:
     :Week: 2
     :Order: 7
