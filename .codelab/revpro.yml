@@ -1,7 +1,7 @@
 ---
 :lab_name: pep-labs
 :repo_path: "/workspace/revpro-cli/pep-labs"
-:previous_lab: 
+:previous_lab: ForLoop
 :current_lab: ForLoop
 :origin_remote: https://github.com/kaivont85/pep-labs.git
 :repo_clone_folder: "/workspace/revpro-cli/pep-labs"
