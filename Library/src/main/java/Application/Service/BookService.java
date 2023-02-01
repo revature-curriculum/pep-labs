@@ -52,14 +52,11 @@ public class BookService {
      */
     public Book addBook(Book book) {
         // Check if the ISBN exists in the database
-        boolean isbnExists = true;
-        isbnExists = book.getIsbn();
-        if (isbnExists) {
-            return null;
+        Book nBook = this.bookDAO.insertBook(book);
+        if (this.bookDAO.getBookByIsbn(book.getIsbn()) == null ) {
+            return nBook;
         } else {
-            // Add the book to the database
-            bookDAO.insertBook(book);
-            return book;
+            return null;
         }
 
     }
@@ -68,7 +65,7 @@ public class BookService {
      * @return all available books (bookCount over zero)
      */
     public List<Book> getAllAvailableBooks() {
-        return null;
+        return bookDAO.getBooksWithBookCountOverZero();
     }
 
 }
