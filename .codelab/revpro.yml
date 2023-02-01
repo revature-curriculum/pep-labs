@@ -42,10 +42,10 @@
   :count_labs_total: 96
   :count_labs_passed: 0
   :count_tests_total: 361
-  :count_tests_passed: 0
+  :count_tests_passed: 3
 :progress_test:
   :count_tests_total: 361
-  :count_tests_passed: 0
+  :count_tests_passed: 3
   Start:
     :Week: 1
     :Order: 1
@@ -816,18 +816,18 @@
     :Order: 9
     :Type: project
     :count_tests: 13
-    :count_tests_passed: 0
+    :count_tests_passed: 3
     :tests:
       getAllAuthorsDAOTest: 0
       insertAuthorCheckWithGetAllTest: 0
       getAllAuthorsServiceTest: 0
       addAuthorTest: 0
-      getAllBooksTest: 0
-      getBookByIsbnTest: 0
+      getAllBooksTest: 1
+      getBookByIsbnTest: 1
       insertBookCheckWithGetAllTest: 0
       insertBookCheckWithGetByIdTest: 0
       getBooksWithBookCountOverZeroTest: 0
-      getAllBooksTest1: 0
+      getAllBooksTest1: 1
       addBookVerifyNotNullOnSuccessfulAddTest: 0
       addBookVerifyNullOnUnsuccessfulAdd: 0
       getAllAvailableBooksTest: 0
