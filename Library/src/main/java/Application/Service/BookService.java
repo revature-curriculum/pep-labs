@@ -52,9 +52,9 @@ public class BookService {
      */
     public Book addBook(Book book) {
         // Check if the ISBN exists in the database
-        Book nBook = this.bookDAO.insertBook(book);
-        if (this.bookDAO.getBookByIsbn(book.getIsbn()) == null ) {
-            return nBook;
+        if (bookDAO.getBookByIsbn(book.getIsbn()) == null ) {
+            bookDAO.insertBook(book);
+            return book;
         } else {
             return null;
         }

@@ -40,12 +40,12 @@
     :git_user_name: oseghale
 :progress:
   :count_labs_total: 96
-  :count_labs_passed: 0
+  :count_labs_passed: 1
   :count_tests_total: 361
-  :count_tests_passed: 8
+  :count_tests_passed: 13
 :progress_test:
   :count_tests_total: 361
-  :count_tests_passed: 8
+  :count_tests_passed: 13
   Start:
     :Week: 1
     :Order: 1
@@ -816,12 +816,12 @@
     :Order: 9
     :Type: project
     :count_tests: 13
-    :count_tests_passed: 8
+    :count_tests_passed: 13
     :tests:
-      getAllAuthorsDAOTest: 0
-      insertAuthorCheckWithGetAllTest: 0
-      getAllAuthorsServiceTest: 0
-      addAuthorTest: 0
+      getAllAuthorsDAOTest: 1
+      insertAuthorCheckWithGetAllTest: 1
+      getAllAuthorsServiceTest: 1
+      addAuthorTest: 1
       getAllBooksTest: 1
       getBookByIsbnTest: 1
       insertBookCheckWithGetAllTest: 1
@@ -829,7 +829,7 @@
       getBooksWithBookCountOverZeroTest: 1
       getAllBooksTest1: 1
       addBookVerifyNotNullOnSuccessfulAddTest: 1
-      addBookVerifyNullOnUnsuccessfulAdd: 0
+      addBookVerifyNullOnUnsuccessfulAdd: 1
       getAllAvailableBooksTest: 1
   AdvancedBooleans:
     :Week: 7
