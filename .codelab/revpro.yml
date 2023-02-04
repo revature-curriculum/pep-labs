@@ -1,7 +1,7 @@
 ---
 :lab_name: pep-labs
 :repo_path: "/workspace/pep-gitpod-workspace/pep-labs"
-:previous_lab: 
+:previous_lab: AdvancedBooleans
 :current_lab: AdvancedBooleans
 :origin_remote: https://github.com/S-Yohan/pep-labs.git
 :repo_clone_folder: "/workspace/pep-gitpod-workspace/pep-labs"
